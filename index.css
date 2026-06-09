@@ -1311,41 +1311,7 @@ p {
   transform: scale(1.15);
 }
 
-/* ---- WhatsApp Bubble ---- */
-.whatsapp-bubble {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 999;
-  width: 60px;
-  height: 60px;
-  background: #25d366;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
-  cursor: pointer;
-  transition: all 0.3s var(--ease-out);
-  animation: pulse-whatsapp 2s infinite;
-}
 
-.whatsapp-bubble:hover {
-  transform: scale(1.1);
-  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5);
-}
-
-.whatsapp-bubble svg {
-  width: 32px;
-  height: 32px;
-  fill: var(--white);
-}
-
-@keyframes pulse-whatsapp {
-  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
-  70% { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-}
 
 /* ---- Animations ---- */
 @keyframes fadeSlideUp {
