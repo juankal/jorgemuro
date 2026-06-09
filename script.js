@@ -558,7 +558,9 @@ document.addEventListener('DOMContentLoaded', () => {
       footer_resources: 'Recursos',
       footer_topics: 'Temas',
       footer_rights: '© 2026 Jorge Muro. Todos los derechos reservados. Lima, Perú',
-      footer_design: 'Diseñado por Juankal'
+      footer_design: 'Diseñado por Juankal',
+      meta_title: 'Dr. Jorge Muro | Físico y Experto en Liderazgo y Negociación',
+      meta_description: 'Descubre al Dr. Jorge Muro, físico de la UNLP y graduado de Harvard. Especialista en energía nuclear, mecánica cuántica, simulaciones Monte Carlo e IA.'
     },
     en: {
       // Navigation
@@ -645,7 +647,9 @@ document.addEventListener('DOMContentLoaded', () => {
       footer_resources: 'Resources',
       footer_topics: 'Topics',
       footer_rights: '© 2026 Jorge Muro. All rights reserved. Lima, Peru',
-      footer_design: 'Designed by Juankal'
+      footer_design: 'Designed by Juankal',
+      meta_title: 'Dr. Jorge Muro | Physicist & Leadership/Negotiation Expert',
+      meta_description: 'Explore Dr. Jorge Muro, physicist from UNLP and Harvard graduate. Expert in nuclear energy, quantum mechanics, Monte Carlo simulation, and AI business.'
     }
   };
 
@@ -653,6 +657,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const langToggle = document.getElementById('langToggle');
   
   const updateDOMTranslations = () => {
+    // Dynamic Meta Tags (Title & Description) for SEO
+    if (translations[currentLang]['meta_title']) {
+      document.title = translations[currentLang]['meta_title'];
+    }
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc && translations[currentLang]['meta_description']) {
+      metaDesc.setAttribute('content', translations[currentLang]['meta_description']);
+    }
+
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
       if (translations[currentLang][key]) {
