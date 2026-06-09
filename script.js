@@ -62,33 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ]
       }
     },
-    {
-      id: 'strategic-decisions',
-      category: 'strategy',
-      date: '2022',
-      readTime: { en: '1 min read', es: '1 min de lectura' },
-      image: 'images/strategic-decisions.jpg',
-      en: {
-        tag: 'Strategy',
-        title: 'Strategic Decisions in Times of Change',
-        desc: 'Exploring agility, foresight, and innovation in organizational decision-making for sustained growth and competitive advantage.',
-        content: [
-          "Making strategic choices under pressure requires a combination of analytical frameworks and behavioral insights. In times of rapid market transformation, traditional static planning models fail to predict fluid scenarios.",
-          "Dr. Muro applies Harvard's negotiation methodology, focusing on identifying underlying interests rather than fixed positions. By combining this with game theory and scenario analysis, decision-makers can construct flexible pathways to absorb uncertainty.",
-          "Success lies in establishing high-performance collaborative teams, breaking organizational silos, and executing decisions with agility and foresight."
-        ]
-      },
-      es: {
-        tag: 'Estrategia',
-        title: 'Decisiones Estratégicas en Tiempos de Cambio',
-        desc: 'Explorando la agilidad, la previsión y la innovación en la toma de decisiones organizacionales para un crecimiento sostenido.',
-        content: [
-          "Tomar decisiones estratégicas bajo presión requiere una combinación de marcos analíticos y conocimientos del comportamiento. En tiempos de transformación del mercado, los modelos tradicionales de planificación estática fallan.",
-          "El Dr. Muro aplica la metodología de negociación de Harvard, enfocándose en identificar los intereses subyacentes en lugar de posiciones fijas. Al combinar esto con la teoría de juegos y el análisis de escenarios, se construyen caminos flexibles.",
-          "El éxito radica en establecer equipos colaborativos de alto rendimiento, romper los silos organizacionales y ejecutar las decisiones con agilidad y previsión."
-        ]
-      }
-    },
+
     {
       id: 'machine-learning',
       category: 'physics',
