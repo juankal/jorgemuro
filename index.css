@@ -211,6 +211,11 @@ p {
   transform: translateY(-2px);
 }
 
+.btn-sm {
+  padding: 8px 20px;
+  font-size: 0.85rem;
+}
+
 /* ---- Navigation ---- */
 .navbar {
   position: fixed;

@@ -4,6 +4,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   // ---- Publications Data ----
+  // ---- Publications Data ----
   const publications = [
     {
       id: 'quantum-computing',
@@ -39,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
       date: '2026',
       readTime: { en: '3 min read', es: '3 min de lectura' },
       image: 'images/ia-trabajo.png',
+      pdfLink: 'https://drive.google.com/file/d/1iPWRU-EyuyIV_O37vQ4g8BbWz5j4Jlc9/view?usp=sharing',
       en: {
         tag: 'AI & Work',
         title: 'AI & the Future of Work',
@@ -54,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         title: 'IA y el Trabajo Actual y Futuro',
         desc: 'Este artículo analiza la transformación radical del mercado laboral ante el avance de la inteligencia artificial generativa y la "escalera rota del talento".',
         content: [
-          "El rápido avance de la inteligencia artificial generativa está transformando el mercado laboral. Más allá del temor común al desempleo, esta transición presenta una crisis estructural para los modelos piramidales de formación en empresas de tecnología y consultoría.",
+          "El rápido avance de la inteligencia artificial generativa está transformando el mercado laboral. Más allá del temor común al desempleo, esta transición presenta una crisis estructural para los modelos pirambidales de formación en empresas de tecnología y consultoría.",
           "Tradicionalmente, los profesionales junior adquieren experiencia realizando tareas repetitivas. Al automatizarse estas tareas, la 'escalera del talento' se rompe, arriesgando una futura escasez de expertos senior capaces de supervisar los resultados de la IA.",
           "El criterio humano y la supervisión técnica siguen siendo esenciales. Las organizaciones deben rediseñar sus programas de capacitación para garantizar la transferencia de conocimientos en la era de la automatización."
         ]
@@ -120,6 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
       date: '2026',
       readTime: { en: '1 min read', es: '1 min de lectura' },
       image: 'images/markov-montecarlo.png',
+      pdfLink: 'https://drive.google.com/file/d/1YBjvFmIByX7sXqmBOni_PRlRjWSfOyUb/view?usp=sharing',
       en: {
         tag: 'Math & Risk',
         title: 'Markov Chains & Monte Carlo Method',
@@ -147,6 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
       date: '2026',
       readTime: { en: '1 min read', es: '1 min de lectura' },
       image: 'images/qatar.jpg',
+      pdfLink: 'https://drive.google.com/file/d/1Bmqz-c6ItMFxyRNSP4NSkIImEivtTfN6/view?usp=sharing',
       en: {
         tag: 'Geopolitics',
         title: 'The Day Qatar Burned',
@@ -165,6 +169,37 @@ document.addEventListener('DOMContentLoaded', () => {
           "La crisis energética global de marzo de 2026 expuso la fragilidad de las cadenas de suministro cuando se comprometen los cuellos de botella marítimos.",
           "Tras interrupciones en Ras Laffan en Qatar y el bloqueo del Estrecho de Ormuz, el tráfico marítimo de gas natural licuado (GNL) cayó un 91%. Este cuello de botella ahogó instantáneamente el 20% del suministro mundial de gas y petróleo.",
           "El Dr. Muro analiza cómo la seguridad nacional y la independencia energética dependen de redes de distribución redundantes y reservas estratégicas."
+        ]
+      }
+    },
+    {
+      id: 'models',
+      category: 'physics',
+      date: '2024',
+      readTime: { en: '1 min read', es: '1 min de lectura' },
+      image: 'images/models.jpg',
+      pdfLink: {
+        en: 'https://drive.google.com/file/d/1i9b9wVyYNdidtEKSR1k1QEOOUlNxDQ1m/view?usp=sharing',
+        es: 'https://drive.google.com/file/d/1gk3ZRkhni5mu59GlVgFwLoUTQL3SaP1l/view?usp=sharing'
+      },
+      en: {
+        tag: 'Models',
+        title: 'Models',
+        desc: 'Dr. Muro presents a collection of mathematical models, AI automation algorithms, and business process optimization frameworks.',
+        content: [
+          "Mathematical modeling and automation frameworks form the backbone of modern enterprise efficiency, enabling companies to predict outcomes and optimize resources under uncertainty.",
+          "Through a structured collection of models, Dr. Muro highlights practical applications of algorithms, no-code integrations, and artificial intelligence in scaling operational productivity and automating complex business pipelines.",
+          "Access the full documentation and repository of models to see detailed structures, equations, and implementation guidelines."
+        ]
+      },
+      es: {
+        tag: 'Modelos',
+        title: 'Modelos',
+        desc: 'El Dr. Muro presenta una colección de modelos matemáticos, algoritmos de automatización con IA y marcos de optimización de procesos.',
+        content: [
+          "El modelado matemático y los marcos de automatización constituyen la columna vertebral de la eficiencia empresarial moderna, permitiendo predecir resultados y optimizar recursos bajo incertidumbre.",
+          "A través de una colección estructurada de modelos, el Dr. Muro destaca aplicaciones prácticas de algoritmos, integraciones no-code e inteligencia artificial para escalar la productividad operativa y automatizar flujos complejos.",
+          "Acceda a la documentación completa y al repositorio de modelos para ver las estructuras detalladas, ecuaciones y pautas de implementación."
         ]
       }
     },
@@ -226,16 +261,26 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'fertilizantes',
       category: 'strategy',
       date: '2022',
-      readTime: { en: '6 min read', es: '6 min de lectura' },
+      readTime: { en: '8 min read', es: '8 min de lectura' },
       image: 'images/fertilizantes.png',
       en: {
         tag: 'Geopolitics',
         title: 'Fertilizer Crisis & Famine Risks in Peru',
         desc: 'Analysis of agricultural vulnerability and international supply chain disruptions affecting national food security.',
         content: [
-          "The fertilizer supply shocks of 2022 revealed the deep vulnerability of Peru's agricultural sector and national food security.",
-          "Due to complete reliance on imported synthetic fertilizers (such as urea) and disruptions in global distribution networks, local crop yields faced a catastrophic drop. The threat of localized famines became a real policy challenge.",
-          "Dr. Muro analyzes this crisis by calling for strategic investments in organic fertilizer production, chemical diversification, and local agricultural resilience models."
+          "As of April 2022, Peru's fertilizer deficit reached 180,000 tons of urea. Consequently, the national food outlook for 2022 registered an accumulated inflation rate of 3.15% by April, with the FAO projecting global food price increases of 8% to 22% for the remainder of the year.",
+          "It is little known that it was not the writings of Rousseau and the encyclopedists that triggered the French Revolution (1789), but famine. Years of climate stress, financial instability, and political conflict converged brutally in 1788 and 1789. A severe drought in the spring of 1788 left basic crops stunted and withered, followed by one of the most severe hailstorms in recorded history on July 13, which devastated fields and vineyards. Grain shortages caused prices to skyrocket, forcing families that previously spent 50% of their income on food to allocate over 90% of their household budget to it.",
+          "Earlier, from June 1783 and lasting eight months, a fissure in the Laki volcano in Iceland spewed 120 million tons of sulfur dioxide into the atmosphere. Crops and livestock were lost, prompting John Adams, future U.S. President and then ambassador in Europe, to write of the situation in France: 'The country is a heap of ashes. Grass is scarcely to be seen and all kinds of grain is short, thin, pale and feeble while the flax is quite dead... I pity these people from my soul.'",
+          "Ultimately, it was the famine and a sequence of concurrent events that unleashed the French Revolution, in which 16,594 French citizens, including the king and queen, were guillotined. This historical precedent serves as a stark reminder that famine can act as a catalyst for severe social upheaval.",
+          "Following the Russia-Ukraine war, rising gas prices triggered an international energy crisis, prompting the temporary closure of several fertilizer plants. Coupled with reduced gas and fertilizer exports from the United States and China, and maritime freight costs multiplying by at least five, the cost of both imports and exports soared.",
+          "Another critical factor was China's zero-COVID policy. During the lock-down, Shanghai (representing over 3% of China's GDP and 10% of its total trade since 2018) was completely isolated, shutting down vital port infrastructure. Furthermore, China confined 400 million residents across 45 cities, severely disrupting global supply chains and port operations.",
+          "According to the BBC, vaccination rates among the vulnerable over-80 demographic in China remained much lower than in other age groups. The country relied heavily on domestic vaccines, which struggled against newer variants. While strict lockdowns eventually eased, President Xi Jinping's insistence on zero-COVID policies hampered economic prosperity, although it did not threaten the government's stability.",
+          "This caused widespread shortages of products and materials, including fertilizers. The surge in urea prices affected not only agriculture but also logistics: urea is a key component in producing diesel exhaust fluid, which is required to reduce emissions in diesel-powered transport vehicles.",
+          "Consequently, forecasts warned of inflation, poverty, and severe food supply shortages. While the implications for national defense remain unpredictable, the effects on national development are clearly disastrous. This price hike struck Peru amidst an existing food insecurity crisis, which had worsened during the pandemic, leaving approximately 15.5 million Peruvians unable to access three healthy meals a day.",
+          "Additionally, the World Bank noted that rising thermal coal prices in China led to power rationing in several provinces, forcing fertilizer factories to scale back production.",
+          "Famine is a critical national security threat. Food is the most basic human need. Given the loss of state authority in areas like Las Bambas, Apumayo, and Cuajone, protests and riots could become uncontainable, generating widespread social lawlessness (anomie).",
+          "Immediate solutions must include the urgent procurement of fertilizers and urea reactors. Although installation and startup take time, utilizing local natural gas resources ensures long-term availability. A dual-set urea manufacturing plant costs approximately US $10,000 with a throughput of 8,000 kg/hour, which is suitable for producing ammonium bicarbonate, ammonium chloride, and other key agricultural inputs. Isla guano is not a viable long-term solution as it is finite and can only fertilize 1% to 5% of arable land.",
+          "Peruvian Constitution: Article 1.- The defense of the human person and respect for their dignity are the supreme end of society and the State."
         ]
       },
       es: {
@@ -243,9 +288,19 @@ document.addEventListener('DOMContentLoaded', () => {
         title: 'Crisis de Fertilizantes y Riesgo de Hambruna en Perú',
         desc: 'Análisis de la vulnerabilidad agrícola nacional y las interrupciones en la cadena de suministro internacional que afectan la seguridad alimentaria.',
         content: [
-          "La crisis de fertilizantes de 2022 reveló la profunda vulnerabilidad del sector agrícola y la seguridad alimentaria en el Perú.",
-          "Debido a la total dependencia de fertilizantes sintéticos importados (como la urea) y las interrupciones en la cadena de distribución global, el rendimiento agrícola nacional enfrentó caídas severas.",
-          "El Dr. Muro analiza esta crisis haciendo un llamado a inversiones estratégicas en producción de fertilizantes orgánicos y resiliencia agrícola."
+          "A abril de 2022, el déficit de fertilizantes fue de 180,000 toneladas de urea. Así entonces, el panorama de alimentación en el Perú, en 2022, tiene un índice de inflación acumulada a abril de 2022 de 3.15% y la FAO calcula que, en lo que queda del 2022, el precio de estos alimentos subirá entre 8% y 22% más en todo el mundo.",
+          "Es poco conocido que no fueron los escritos de Rousseau y los enciclopedistas los que gatillaron la Revolución Francesa (1789). 'Los años de estrés climático, inestabilidad financiera y conflicto político convergieron brutalmente en 1788 y 1789. Una severa sequía en la primavera de 1788 dejó los cultivos básicos paralizados y marchitos. El 13 de julio de ese año, una de las tormentas de granizo más severas de la historia registrada azotó Francia. La tormenta cortó una franja de destrucción que golpeó y destruyó campos y viñedos. La escasez de cereales hizo que los precios se dispararan, y las familias que antes gastaban el 50% de sus ingresos en alimentos ahora dedicaban más del 90% de su presupuesto familiar'.",
+          "Desde junio de 1783 y durante ocho meses, una fisura en el volcán Laki, Islandia, arrojó 120 millones de toneladas de dióxido de azufre a la atmósfera. Cosechas, ganado, etc., fueron perdidos lo que ocasionó que el futuro presidente de EE. UU. y embajador en Europa, John Adams escribiese sobre la situación en Francia: 'El país es un montón de cenizas. La hierba apenas se ve y todo tipo de grano es corto, delgado, pálido y débil mientras que el lino está bastante muerto... compadezco a esta gente de mi alma'.",
+          "Entonces fue la hambruna y una serie de acontecimientos concurrentes, lo que desató la Revolución Francesa en la que 16,594 franceses, rey y reina incluidos, fueron decapitados. Sirva este ejemplo histórico para tener en cuenta que una hambruna puede ser la catalizadora de 'efervescencias sociales', cuando menos.",
+          "Como consecuencia de la guerra Rusia-Ucrania, hay un aumento del precio del gas y una crisis energética internacional. También hubo un cierre temporal de algunas plantas de fertilizantes. Sumemos a ello la reducción de exportaciones de gas y fertilizantes en Estados Unidos y China y el incremento de fletes marítimos (multiplicados por cinco, cuando menos), lo que encarece todo lo que se exporta o importa.",
+          "Otro factor de la mayor importancia es la política cero COVID impuesta por el gobierno de China, que aún no logra controlar la variante Ómicron del SARS-CoV-2 según vemos. En este confinamiento en China se decidió prolongar indefinidamente el cierre total de la ciudad cuando los casos aumentaron a más de 13.000 al día a principios de abril. El 1 de abril, las autoridades de Shanghái bloquearon toda la ciudad para detener la propagación del virus y pidieron a sus más de 25 millones de residentes que se quedaran en casa, siendo que Shanghái es responsable de más del 3% del PBI de China, y de más del 10% del comercio total de China desde 2018. Adicionalmente, China tiene confinados a 400 millones de habitantes de 45 ciudades, Shanghái en primer lugar. Es Indudable que el comercio mundial se ha resentido porque toda la infraestructura portuaria, o buena parte de ella, está cerrada.",
+          "Según la misma fuente [BBC] las tasas de vacunación entre los mayores de 80 años -que se encuentran entre los más vulnerables- siguen siendo mucho más bajas que las de otros grupos de edad. Otro problema es que China ha dependido en gran medida de las vacunas producidas en el país, que han tenido problemas con la última variante. El estricto bloqueo de Shanghái para frenar un brote de COVID está por fin amainando. Pero China está lejos de alcanzar sus objetivos de cero virus. Se han registrado nuevos brotes en Pekín y Tianjin. El Presidente Xi Jinping está perjudicando la prosperidad de China, en parte por su insistencia en erradicar un virus inerradicable. Pero incluso mientras aumentan las tensiones en torno a sus políticas contra el virus, hay pocos indicios de que se produzcan desafíos reales al gobierno de Xi.",
+          "Esto ha ocasionado que haya escasez de productos e insumos de todo tipo, no siendo los fertilizantes la excepción, con lo que las cadenas de suministro están siendo amenazadas pues el aumento en el precio de este componente químico no solo se está notando en la agricultura: la urea también es clave para producir el fluido de escape diésel, una solución que se utiliza para reducir las emisiones en los automóviles que usan ese combustible [BBC, News Mundo, 9 de diciembre de 2021].",
+          "Por todo lo visto, no solo se pronostica inflación e incremento de pobreza sino también un posible desabastecimiento y encarecimiento alimentario con todo lo que eso conlleva. Las implicancias a la defensa nacional no son predecibles pero los efectos en cuanto al desarrollo nacional son, previsiblemente, desastrosos en cuanto a hambruna. Este aumento de precios en el Perú se enmarca en un contexto de inseguridad alimentaria, que se ha agudizado en los países de América Latina a raíz de la pandemia. Mariana Escobar, representante de la FAO en el Perú indicó que, a causa de la pandemia unos 15.5 millones de peruanos quedaron en esa situación. Es decir, no pueden acceder a tres comidas diarias y llevar una vida activa y saludable. La estimación de la FAO es que el hambre siga extendiéndose.",
+          "Adicionalmente, para agravar las cosas, según el Banco Mundial, el aumento de los precios del carbón térmico en China provocó un racionamiento del uso de electricidad en algunas provincias y obligó a las fábricas de fertilizantes a reducir la producción.",
+          "La hambruna es un serio problema nacional. Mucho más que cualquier otro puesto que la alimentación es una de las necesidades básicas y vitales de nuestra especie. No se pueden descartar manifestaciones y revueltas y, dada la pérdida del principio de autoridad en el país (v.g. Las Bambas, Apumayo, Cuajone), es posible que las manifestaciones o revueltas no puedan ser contenidas lo que generaría un incremento de la anomia o ausencia de ley y la degradación y carencia de normas sociales.",
+          "En lo inmediato, compra de fertilizantes en donde los hubiere. No es de descartar la compra de reactores de urea de manera urgente que, aun cuando su instalación y puesta en marcha demorará, asegurará la disponibilidad de este insumo para la agricultura. Ello porque el insumo de las plantas que fabrican urea es el gas natural que en el Perú se encuentra en diversas locaciones. Teniendo en cuenta que una planta de fabricación de urea cuesta (más de dos sets) cuesta US $10,000 con una salida por set de 8,000 kg/hora, habiendo de mayores y menores tamaños a disposición en el mercado, siendo el equipo referido equipo adecuado para fabricar bicarbonato de amonio, cloruro de amonio, sulfato de amonio, nitrato de amonio, fosfato de monoamonio, etc. No siendo el guano de las islas una opción viable dado que es finito y solo alcanzaría para el 1-5% del área agrícola cultivable, según expertos consultados.",
+          "Constitución Política del Perú: Artículo 1º.- La defensa de la persona humana y el respeto de su dignidad son el fin supremo de la sociedad y del Estado."
         ]
       }
     },
@@ -595,6 +650,8 @@ document.addEventListener('DOMContentLoaded', () => {
       book2_title: 'El Conflicto Perú - Ecuador: La Historia No Contada',
       book2_desc: 'Un análisis sin precedentes de la resolución de 1998 del conflicto territorial entre Perú y Ecuador, combinando la metodología del Proyecto de Negociación de Harvard.',
       books_cta: 'Consultar sobre Libros',
+      book1_cta: 'Comprar en Amazon',
+      book2_cta: 'Leer Libro',
 
       // Webinars
       webinars_label: 'Eventos Online',
@@ -693,6 +750,8 @@ document.addEventListener('DOMContentLoaded', () => {
       book2_title: 'The Peru - Ecuador Conflict: The Untold Story',
       book2_desc: 'An unprecedented analysis of the 1998 resolution of the territorial conflict between Peru and Ecuador, combining the Harvard Negotiation Project methodology with deep geopolitical insight. A unique perspective on shifting from positions to underlying interests.',
       books_cta: 'Inquire About Books',
+      book1_cta: 'Buy on Amazon',
+      book2_cta: 'Read Book',
 
       // Webinars
       webinars_label: 'Online Events',
@@ -815,6 +874,19 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
       }
 
+      let actionBtnHtml = '';
+      if (pub.pdfLink) {
+        const link = typeof pub.pdfLink === 'object' ? (currentLang === 'en' ? pub.pdfLink.en : pub.pdfLink.es) : pub.pdfLink;
+        const btnLabel = currentLang === 'en' ? 'Read Full Article' : 'Ver Artículo Completo';
+        actionBtnHtml = `
+          <div class="modal-action-row" style="margin-top: 2.5rem; display: flex; justify-content: center; width: 100%;">
+            <a href="${link}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="text-decoration: none;">
+              📄 ${btnLabel}
+            </a>
+          </div>
+        `;
+      }
+
       modalBody.innerHTML = `
         <div class="modal-header">
           <div class="modal-tag-row">
@@ -828,6 +900,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="modal-text">
           ${data.content.map(p => `<p>${p}</p>`).join('')}
         </div>
+        ${actionBtnHtml}
       `;
     } else if (activeWebinarData) {
       const { titleKey, descKey, videoId } = activeWebinarData;
@@ -856,41 +929,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const updateModalTranslations = () => {
     if (!modalBody || !modal || !modal.classList.contains('active')) return;
-
-    if (activeModalArticleId) {
-      const pub = publications.find(p => p.id === activeModalArticleId);
-      if (!pub) return;
-
-      const data = currentLang === 'en' ? pub.en : pub.es;
-      const readVal = currentLang === 'en' ? pub.readTime.en : pub.readTime.es;
-
-      const tagEl = modalBody.querySelector('.modal-tag');
-      const readTimeEl = modalBody.querySelector('.modal-read-time');
-      const titleEl = modalBody.querySelector('.modal-title');
-      const textEl = modalBody.querySelector('.modal-text');
-
-      if (tagEl) tagEl.textContent = data.tag;
-      if (readTimeEl) readTimeEl.textContent = `⏱️ ${readVal}`;
-      if (titleEl) titleEl.textContent = data.title;
-      if (textEl) {
-        textEl.innerHTML = data.content.map(p => `<p>${p}</p>`).join('');
-      }
-    } else if (activeWebinarData) {
-      const { titleKey, descKey } = activeWebinarData;
-      const title = translations[currentLang][titleKey];
-      const desc = translations[currentLang][descKey];
-      const tagLabel = currentLang === 'en' ? 'Online Event' : 'Evento Online';
-
-      const tagEl = modalBody.querySelector('.modal-tag');
-      const titleEl = modalBody.querySelector('.modal-title');
-      const textEl = modalBody.querySelector('.modal-text');
-
-      if (tagEl) tagEl.textContent = tagLabel;
-      if (titleEl) titleEl.textContent = title;
-      if (textEl) {
-        textEl.innerHTML = `<p>${desc}</p>`;
-      }
-    }
+    renderModalContent();
   };
 
   const openArticleModal = (id) => {
