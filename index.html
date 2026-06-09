@@ -141,8 +141,25 @@
   <section class="about" id="about">
     <div class="container about-grid">
       <div class="about-image reveal">
-        <div class="about-image-main">
-          <img src="images/about-professor.png" alt="Dr. Jorge Muro - Academic presentation">
+        <div class="about-carousel" id="aboutCarousel">
+          <div class="about-carousel-track">
+            <div class="about-carousel-slide active">
+              <img src="images/about-professor.png" alt="Dr. Jorge Muro - Academic presentation" loading="lazy">
+            </div>
+            <div class="about-carousel-slide">
+              <img src="images/about-group.png" alt="Dr. Jorge Muro - Professional meeting" loading="lazy">
+            </div>
+          </div>
+          <button class="about-carousel-btn about-carousel-prev" aria-label="Previous image">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+          <button class="about-carousel-btn about-carousel-next" aria-label="Next image">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+          <div class="about-carousel-dots">
+            <button class="about-carousel-dot active" data-index="0" aria-label="Slide 1"></button>
+            <button class="about-carousel-dot" data-index="1" aria-label="Slide 2"></button>
+          </div>
         </div>
         <div class="about-image-accent"></div>
       </div>
