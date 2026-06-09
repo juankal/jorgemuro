@@ -151,33 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ]
       }
     },
-    {
-      id: 'elegir-pareja',
-      category: 'strategy',
-      date: '2025',
-      readTime: { en: '1 min read', es: '1 min de lectura' },
-      image: 'images/elegir-pareja.png',
-      en: {
-        tag: 'Leadership',
-        title: 'How to Choose a Partner',
-        desc: 'Practical advice and reflections on emotional compatibility, communication, and values to make conscious decisions in personal relationships.',
-        content: [
-          "Choosing a life partner is one of the most critical decisions a person makes, yet it is rarely approached with analytical rigor.",
-          "Dr. Muro explores this decision through the lens of Optimal Stopping Theory (known as the Secretary Problem in mathematics). According to this framework, to maximize the probability of selecting the absolute best candidate, one should reject the first 37% of potential options and then select the next candidate that is better than all previous ones.",
-          "While human relationships involve emotional factors and shared values, applying scientific and negotiation criteria helps individuals move away from impulsive choices toward conscious and compatible decisions."
-        ]
-      },
-      es: {
-        tag: 'Liderazgo',
-        title: 'Cómo Elegir Pareja',
-        desc: 'Consejos prácticos y reflexiones sobre compatibilidad emocional, comunicación y valores para tomar decisiones conscientes en relaciones.',
-        content: [
-          "Elegir una pareja de vida es una de las decisiones más críticas, pero rara vez se aborda con rigor analítico.",
-          "El Dr. Muro explora esta elección a través de la Teoría de la Parada Óptima (conocida como el problema de la secretaria). Según este marco matemático, para maximizar la probabilidad de elegir la mejor opción, se debe rechazar el primer 37% de los candidatos y luego seleccionar al siguiente que sea mejor que los anteriores.",
-          "Aunque las relaciones humanas involucran factores emocionales, la aplicación de criterios científicos ayuda a alejarse de decisiones impulsivas y avanzar hacia relaciones compatibles."
-        ]
-      }
-    },
+
     {
       id: 'epistemology',
       category: 'physics',
