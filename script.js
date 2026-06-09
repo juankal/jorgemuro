@@ -681,22 +681,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  langToggle.addEventListener('click', () => {
-    currentLang = currentLang === 'en' ? 'es' : 'en';
+  const updateLanguageUI = () => {
     langToggle.textContent = currentLang === 'en' ? '🌐 EN | ES' : '🌐 ES | EN';
-    
+    document.documentElement.lang = currentLang;
     updateDOMTranslations();
     renderTabs();
     renderArticles();
-    updateModalTranslations();
+    if (typeof updateModalTranslations === 'function') {
+      updateModalTranslations();
+    }
+  };
+
+  langToggle.addEventListener('click', () => {
+    currentLang = currentLang === 'en' ? 'es' : 'en';
     
-    // Update HTML lang
-    document.documentElement.lang = currentLang;
+    // Update URL parameter without reloading the page
+    const newUrl = `${window.location.protocol}//${window.location.host}${window.location.pathname}?lang=${currentLang}${window.location.hash}`;
+    window.history.pushState({ path: newUrl }, '', newUrl);
+
+    updateLanguageUI();
   });
 
-  // Render publications initially
-  renderTabs();
-  renderArticles();
+  // Initialize from URL query param
+  const urlParams = new URLSearchParams(window.location.search);
+  const langParam = urlParams.get('lang');
+  if (langParam === 'es' || langParam === 'en') {
+    currentLang = langParam;
+  }
+  
+  updateLanguageUI();
 
   // ---- Article & Video Modal Logic ----
   const modal = document.getElementById('pubModal');
