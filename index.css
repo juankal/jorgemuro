@@ -524,39 +524,21 @@ p {
 }
 
 .hero-image-wrapper::before {
-  content: '';
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  height: 70%;
-  background: radial-gradient(ellipse, rgba(196, 167, 103, 0.12) 0%, transparent 70%);
-  z-index: 0;
-  pointer-events: none;
+  display: none;
 }
 
 .hero-image-wrapper::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 25%;
-  background: linear-gradient(to top, rgba(10, 22, 40, 0.95) 0%, transparent 100%);
-  z-index: 1;
-  pointer-events: none;
+  display: none;
 }
 
 .hero-image-wrapper img {
-  position: relative;
-  z-index: 0;
   display: block;
   width: 100%;
   height: auto;
   aspect-ratio: 3/4;
   object-fit: cover;
   object-position: center top;
+  mix-blend-mode: lighten;
 }
 
 .hero-badge {
