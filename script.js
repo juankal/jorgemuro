@@ -201,33 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     },
 
-    {
-      id: 'investment-models',
-      category: 'ai',
-      date: '2021',
-      readTime: { en: '1 min read', es: '1 min de lectura' },
-      image: 'images/investment-models.jpg',
-      en: {
-        tag: 'Math & Risk',
-        title: 'Investment Models & Monte Carlo Risk Measures',
-        desc: 'Applying Monte Carlo simulation to predict financial performance and analyze potential investment returns under uncertainty.',
-        content: [
-          "Quantifying risk in large financial portfolios is impossible without computationally intensive simulations.",
-          "By utilizing Monte Carlo simulations, investment managers generate thousands of random price paths based on historical asset volatilities and correlations. This allows the calculation of key risk metrics like Value at Risk (VaR) and Expected Shortfall.",
-          "Dr. Muro details how these stochastic models provide a realistic view of capital protection limits and expected returns in volatile market scenarios."
-        ]
-      },
-      es: {
-        tag: 'Matemática y Riesgo',
-        title: 'Modelos de Inversión y Medidas de Riesgo con Monte Carlo',
-        desc: 'Aplicación de la simulación Monte Carlo para predecir el rendimiento financiero y analizar retornos potenciales bajo incertidumbre.',
-        content: [
-          "Cuantificar el riesgo en carteras financieras es imposible sin simulaciones computacionales intensivas.",
-          "Mediante simulaciones de Monte Carlo, los administradores generan miles de trayectorias de precios basadas en volatilidades históricas. Esto permite calcular métricas clave como el Valor en Riesgo (VaR).",
-          "El Dr. Muro detalla cómo estos modelos estocásticos proporcionan una visión realista de los límites de protección del capital y los rendimientos esperados."
-        ]
-      }
-    },
+
     {
       id: 'quantum-advances',
       category: 'physics',
