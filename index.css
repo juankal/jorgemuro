@@ -518,26 +518,28 @@ p {
 
 .hero-image-wrapper {
   position: relative;
-  border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-xl);
-  background: var(--navy-600);
 }
 
 .hero-image-wrapper::before {
+  display: none;
+}
+
+.hero-image-wrapper::after {
   content: '';
   position: absolute;
-  inset: -2px;
-  border-radius: var(--radius-lg);
-  background: linear-gradient(135deg, var(--gold-500), transparent, var(--navy-400));
-  z-index: -1;
-  padding: 2px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30%;
+  background: linear-gradient(to top, rgba(10, 22, 40, 0.9) 0%, transparent 100%);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .hero-image-wrapper img {
   width: 100%;
   height: auto;
-  border-radius: var(--radius-lg);
   aspect-ratio: 3/4;
   object-fit: cover;
   object-position: center top;
