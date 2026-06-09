@@ -11,15 +11,26 @@ document.addEventListener('DOMContentLoaded', () => {
       date: '2025',
       readTime: { en: '1 min read', es: '1 min de lectura' },
       image: 'images/quantum-computing.png',
+      youtubeId: 'wt_99tXFWPM',
       en: {
         tag: 'Physics',
         title: 'Quantum Computing',
-        desc: 'Dr. Muro explores the intersection of quantum mechanics and computing, covering the foundations and practical applications transforming technology.'
+        desc: 'Dr. Muro explores the intersection of quantum mechanics and computing, covering the foundations and practical applications transforming technology.',
+        content: [
+          "Quantum computing represents a paradigm shift in computer science, transitioning from classical bits (0 or 1) to quantum bits or qubits. By utilizing the principles of quantum mechanics, specifically superposition and entanglement, quantum computers can process complex data structures at speeds unimaginable with classical supercomputers.",
+          "Superposition allows qubits to exist in multiple states simultaneously, meaning a quantum computer can evaluate millions of possibilities at once. Entanglement creates a correlation between qubits, so the state of one qubit instantaneously influences another, exponentially increasing processing power with every added qubit.",
+          "The practical applications of this technology are vast, ranging from molecular modeling for drug discovery to cryptography, financial risk analysis, and solving complex logistical optimizations. Dr. Muro explores these foundations to bridge the gap between theoretical physics and industrial implementation."
+        ]
       },
       es: {
         tag: 'Física',
         title: 'Computación Cuántica',
-        desc: 'El Dr. Muro explora la intersección de la mecánica cuántica y la computación, cubriendo los fundamentos y las aplicaciones prácticas.'
+        desc: 'El Dr. Muro explora la intersección de la mecánica cuántica y la computación, cubriendo los fundamentos y las aplicaciones prácticas.',
+        content: [
+          "La computación cuántica representa un cambio de paradigma en la informática, pasando de los bits clásicos (0 o 1) a los qubits. Al utilizar los principios de la mecánica cuántica, específicamente la superposición y el entrelazamiento, las computadoras cuánticas pueden procesar estructuras de datos complejas a velocidades inimaginables.",
+          "La superposición permite que los qubits existan en múltiples estados simultáneamente, lo que significa que una computadora cuántica puede evaluar millones de posibilidades a la vez. El entrelazamiento crea una correlación entre qubits, aumentando exponencialmente la capacidad de cálculo con cada qubit añadido.",
+          "Las aplicaciones prácticas de esta tecnología son vastas, abarcando desde el modelado molecular para el desarrollo de fármacos hasta la criptografía y la optimización logística. El Dr. Muro explora estas bases para conectar la física teórica con la aplicación industrial."
+        ]
       }
     },
     {
@@ -31,12 +42,22 @@ document.addEventListener('DOMContentLoaded', () => {
       en: {
         tag: 'AI & Work',
         title: 'AI & the Future of Work',
-        desc: 'Analysis of the radical transformation of the labor market by generative AI, exploring the structural crisis and the "broken talent ladder."'
+        desc: 'Analysis of the radical transformation of the labor market by generative AI, exploring the structural crisis and the "broken talent ladder."',
+        content: [
+          "The rapid advancement of generative artificial intelligence is transforming the global labor market. Beyond the common fear of job displacement, this transition presents a structural crisis for pyramidal training models in technology and consulting firms.",
+          "Traditionally, junior staff gain expertise by performing repetitive, entry-level tasks. However, as AI automates these junior-level tasks, the 'talent ladder' is broken, risking a future shortage of senior experts who possess the critical judgment needed to supervise AI outputs.",
+          "Human oversight, domain expertise, and technical criteria remain essential. Organizations must redesign their training programs to ensure knowledge transfer and intellectual growth in the age of automation."
+        ]
       },
       es: {
         tag: 'IA y Trabajo',
         title: 'IA y el Trabajo Actual y Futuro',
-        desc: 'Este artículo analiza la transformación radical del mercado laboral ante el avance de la inteligencia artificial generativa y la "escalera rota del talento".'
+        desc: 'Este artículo analiza la transformación radical del mercado laboral ante el avance de la inteligencia artificial generativa y la "escalera rota del talento".',
+        content: [
+          "El rápido avance de la inteligencia artificial generativa está transformando el mercado laboral. Más allá del temor común al desempleo, esta transición presenta una crisis estructural para los modelos piramidales de formación en empresas de tecnología y consultoría.",
+          "Tradicionalmente, los profesionales junior adquieren experiencia realizando tareas repetitivas. Al automatizarse estas tareas, la 'escalera del talento' se rompe, arriesgando una futura escasez de expertos senior capaces de supervisar los resultados de la IA.",
+          "El criterio humano y la supervisión técnica siguen siendo esenciales. Las organizaciones deben rediseñar sus programas de capacitación para garantizar la transferencia de conocimientos en la era de la automatización."
+        ]
       }
     },
     {
@@ -48,12 +69,22 @@ document.addEventListener('DOMContentLoaded', () => {
       en: {
         tag: 'Strategy',
         title: 'Strategic Decisions in Times of Change',
-        desc: 'Exploring agility, foresight, and innovation in organizational decision-making for sustained growth and competitive advantage.'
+        desc: 'Exploring agility, foresight, and innovation in organizational decision-making for sustained growth and competitive advantage.',
+        content: [
+          "Making strategic choices under pressure requires a combination of analytical frameworks and behavioral insights. In times of rapid market transformation, traditional static planning models fail to predict fluid scenarios.",
+          "Dr. Muro applies Harvard's negotiation methodology, focusing on identifying underlying interests rather than fixed positions. By combining this with game theory and scenario analysis, decision-makers can construct flexible pathways to absorb uncertainty.",
+          "Success lies in establishing high-performance collaborative teams, breaking organizational silos, and executing decisions with agility and foresight."
+        ]
       },
       es: {
         tag: 'Estrategia',
         title: 'Decisiones Estratégicas en Tiempos de Cambio',
-        desc: 'Explorando la agilidad, la previsión y la innovación en la toma de decisiones organizacionales para un crecimiento sostenido.'
+        desc: 'Explorando la agilidad, la previsión y la innovación en la toma de decisiones organizacionales para un crecimiento sostenido.',
+        content: [
+          "Tomar decisiones estratégicas bajo presión requiere una combinación de marcos analíticos y conocimientos del comportamiento. En tiempos de transformación del mercado, los modelos tradicionales de planificación estática fallan.",
+          "El Dr. Muro aplica la metodología de negociación de Harvard, enfocándose en identificar los intereses subyacentes en lugar de posiciones fijas. Al combinar esto con la teoría de juegos y el análisis de escenarios, se construyen caminos flexibles.",
+          "El éxito radica en establecer equipos colaborativos de alto rendimiento, romper los silos organizacionales y ejecutar las decisiones con agilidad y previsión."
+        ]
       }
     },
     {
@@ -65,12 +96,22 @@ document.addEventListener('DOMContentLoaded', () => {
       en: {
         tag: 'Physics / AI',
         title: 'Machine Learning & 2024 Nobel Prize in Physics',
-        desc: 'How machine learning is revolutionizing modern physics through innovative research, highlighting AI-driven approaches.'
+        desc: 'How machine learning is revolutionizing modern physics through innovative research, highlighting AI-driven approaches.',
+        content: [
+          "The awarding of the 2024 Nobel Prize in Physics to John Hopfield and Geoffrey Hinton marked a historic recognition of the deep ties between statistical physics and computer science.",
+          "Hopfield networks utilize the concept of spin systems (like the Ising model in physics) to create associative memory. Similarly, Boltzmann machines apply thermodynamic probability distributions to learn patterns in data. These physical models laid the foundation for modern deep learning neural networks.",
+          "This convergence of disciplines proves that understanding fundamental physics is essential for explaining how AI models learn, adapt, and scale."
+        ]
       },
       es: {
         tag: 'Física / IA',
         title: 'Machine Learning y Premio Nobel de Física 2024',
-        desc: 'Cómo el aprendizaje automático está revolucionando la física moderna a través de la investigación innovadora y los enfoques impulsados por IA.'
+        desc: 'Cómo el aprendizaje automático está revolucionando la física moderna a través de la investigación innovadora y los enfoques impulsados por IA.',
+        content: [
+          "La concesión del Premio Nobel de Física 2024 a John Hopfield y Geoffrey Hinton marcó un reconocimiento histórico de los lazos entre la física estadística y las ciencias de la computación.",
+          "Las redes de Hopfield utilizan conceptos de sistemas de espín (como el modelo de Ising) para crear memoria asociativa. Las máquinas de Boltzmann aplican distribuciones termodinámicas para aprender patrones. Estos modelos físicos sentaron las bases del aprendizaje profundo.",
+          "Esta convergencia de disciplinas demuestra que comprender la física fundamental es esencial para explicar cómo los modelos de IA aprenden, se adaptan y escalan."
+        ]
       }
     },
     {
@@ -82,12 +123,22 @@ document.addEventListener('DOMContentLoaded', () => {
       en: {
         tag: 'Math & Risk',
         title: 'Markov Chains & Monte Carlo Method',
-        desc: 'Discover how mathematical models predict weather or analyze stock markets using randomness to solve complex engineering and financial problems.'
+        desc: 'Discover how mathematical models predict weather or analyze stock markets using randomness to solve complex engineering and financial problems.',
+        content: [
+          "Markov Chains and Monte Carlo methods (often combined as MCMC) are powerful mathematical algorithms used to simulate complex probabilistic processes under uncertainty.",
+          "A Markov Chain represents a system that transitions between states based solely on the current state, ignoring past history. Monte Carlo simulation uses random sampling to calculate deterministic outcomes that are mathematically intractable.",
+          "Dr. Muro details how these tools solve high-dimensional integrations, predict climate variables, analyze financial volatility, and calculate nuclear reactor shielding properties."
+        ]
       },
       es: {
         tag: 'Matemática y Riesgo',
         title: 'Cadenas de Markov y Método Monte Carlo',
-        desc: 'Descubre cómo los modelos matemáticos predicen el clima o analizan la bolsa, usando el azar para resolver problemas complejos y tomar decisiones.'
+        desc: 'Descubre cómo los modelos matemáticos predicen el clima o analizan la bolsa, usando el azar para resolver problemas complejos y tomar decisiones.',
+        content: [
+          "Las cadenas de Markov y los métodos de Monte Carlo (a menudo combinados como MCMC) son algoritmos matemáticos potentes para simular procesos probabilísticos complejos bajo incertidumbre.",
+          "Una cadena de Markov representa un sistema que transita entre estados basándose únicamente en el estado actual. La simulación Monte Carlo utiliza muestreo aleatorio para resolver problemas que son intratables analíticamente.",
+          "El Dr. Muro detalla cómo estas herramientas resuelven integraciones de alta dimensión, predicen variables climáticas, analizan la volatilidad financiera y calculan blindajes de reactores nucleares."
+        ]
       }
     },
     {
@@ -99,12 +150,22 @@ document.addEventListener('DOMContentLoaded', () => {
       en: {
         tag: 'Geopolitics',
         title: 'The Day Qatar Burned',
-        desc: 'Analysis of the global energy crisis of March 2026, triggered by the attacks on Ras Laffan facilities and the Strait of Hormuz blockade.'
+        desc: 'Analysis of the global energy crisis of March 2026, triggered by the attacks on Ras Laffan facilities and the Strait of Hormuz blockade.',
+        content: [
+          "The global energy crisis of March 2026 exposed the fragility of global supply chains when maritime bottlenecks are compromised.",
+          "Following unexpected disruptions at Ras Laffan facilities in Qatar and the blockade of the Strait of Hormuz, maritime traffic of liquefied natural gas (LNG) dropped by 91%. This bottleneck instantly choked off 20% of the world's natural gas and petroleum supply, triggering energy shortages and price shocks in Europe and Asia.",
+          "Dr. Muro analyzes how national security and energy independence rely on redundant distribution networks, strategic stockpiling, and alternative energy infrastructures."
+        ]
       },
       es: {
         tag: 'Geopolítica',
         title: 'El Día que Qatar Ardió',
-        desc: 'Análisis de la crisis energética mundial de marzo de 2026, desencadenada por los ataques en Ras Laffan y el bloqueo del Estrecho de Ormuz.'
+        desc: 'Análisis de la crisis energética mundial de marzo de 2026, desencadenada por los ataques en Ras Laffan y el bloqueo del Estrecho de Ormuz.',
+        content: [
+          "La crisis energética global de marzo de 2026 expuso la fragilidad de las cadenas de suministro cuando se comprometen los cuellos de botella marítimos.",
+          "Tras interrupciones en Ras Laffan en Qatar y el bloqueo del Estrecho de Ormuz, el tráfico marítimo de gas natural licuado (GNL) cayó un 91%. Este cuello de botella ahogó instantáneamente el 20% del suministro mundial de gas y petróleo.",
+          "El Dr. Muro analiza cómo la seguridad nacional y la independencia energética dependen de redes de distribución redundantes y reservas estratégicas."
+        ]
       }
     },
     {
@@ -116,12 +177,22 @@ document.addEventListener('DOMContentLoaded', () => {
       en: {
         tag: 'Leadership',
         title: 'How to Choose a Partner',
-        desc: 'Practical advice and reflections on emotional compatibility, communication, and values to make conscious decisions in personal relationships.'
+        desc: 'Practical advice and reflections on emotional compatibility, communication, and values to make conscious decisions in personal relationships.',
+        content: [
+          "Choosing a life partner is one of the most critical decisions a person makes, yet it is rarely approached with analytical rigor.",
+          "Dr. Muro explores this decision through the lens of Optimal Stopping Theory (known as the Secretary Problem in mathematics). According to this framework, to maximize the probability of selecting the absolute best candidate, one should reject the first 37% of potential options and then select the next candidate that is better than all previous ones.",
+          "While human relationships involve emotional factors and shared values, applying scientific and negotiation criteria helps individuals move away from impulsive choices toward conscious and compatible decisions."
+        ]
       },
       es: {
         tag: 'Liderazgo',
         title: 'Cómo Elegir Pareja',
-        desc: 'Consejos prácticos y reflexiones sobre compatibilidad emocional, comunicación y valores para tomar decisiones conscientes en relaciones.'
+        desc: 'Consejos prácticos y reflexiones sobre compatibilidad emocional, comunicación y valores para tomar decisiones conscientes en relaciones.',
+        content: [
+          "Elegir una pareja de vida es una de las decisiones más críticas, pero rara vez se aborda con rigor analítico.",
+          "El Dr. Muro explora esta elección a través de la Teoría de la Parada Óptima (conocida como el problema de la secretaria). Según este marco matemático, para maximizar la probabilidad de elegir la mejor opción, se debe rechazar el primer 37% de los candidatos y luego seleccionar al siguiente que sea mejor que los anteriores.",
+          "Aunque las relaciones humanas involucran factores emocionales, la aplicación de criterios científicos ayuda a alejarse de decisiones impulsivas y avanzar hacia relaciones compatibles."
+        ]
       }
     },
     {
@@ -133,12 +204,22 @@ document.addEventListener('DOMContentLoaded', () => {
       en: {
         tag: 'Philosophy',
         title: 'Epistemology & National Development',
-        desc: 'Presentation for Inventor, Scientist, and Researcher Day at the College of Engineers of Peru, analyzing the role of scientific knowledge.'
+        desc: 'Presentation for Inventor, Scientist, and Researcher Day at the College of Engineers of Peru, analyzing the role of scientific knowledge.',
+        content: [
+          "True national development is not merely an economic metric; it is rooted in a country's scientific and epistemological foundation.",
+          "Epistemology—the philosophy of scientific knowledge—defines how a society validates truth, conducts research, and applies technology. Developing nations often import technology without building the cognitive infrastructure to understand, maintain, and innovate upon it.",
+          "Dr. Muro advocates for an educational and policy reform that fosters critical thinking, scientific method validation, and local technological autonomy as the primary drivers of sustainable economic growth."
+        ]
       },
       es: {
         tag: 'Filosofía',
         title: 'Epistemología y Desarrollo Nacional',
-        desc: 'Exposición por el Día del Inventor, Científico e Investigador en el Colegio de Ingenieros del Perú, analizando el rol del conocimiento científico.'
+        desc: 'Exposición por el Día del Inventor, Científico e Investigador en el Colegio de Ingenieros del Perú, analizando el rol del conocimiento científico.',
+        content: [
+          "El verdadero desarrollo nacional no es solo una métrica económica; está arraigado en la base científica y epistemológica de un país.",
+          "La epistemología — la filosofía del conocimiento científico — define cómo una sociedad valida la verdad e innova. Las naciones en desarrollo suelen importar tecnología sin construir la infraestructura cognitiva para entenderla.",
+          "El Dr. Muro aboga por una reforma educativa y política que fomente el pensamiento crítico, el método científico y la autonomía tecnológica local."
+        ]
       }
     },
     {
@@ -150,12 +231,22 @@ document.addEventListener('DOMContentLoaded', () => {
       en: {
         tag: 'Geopolitics',
         title: 'Fertilizer Crisis & Famine Risks in Peru',
-        desc: 'Analysis of agricultural vulnerability and international supply chain disruptions affecting national food security.'
+        desc: 'Analysis of agricultural vulnerability and international supply chain disruptions affecting national food security.',
+        content: [
+          "The fertilizer supply shocks of 2022 revealed the deep vulnerability of Peru's agricultural sector and national food security.",
+          "Due to complete reliance on imported synthetic fertilizers (such as urea) and disruptions in global distribution networks, local crop yields faced a catastrophic drop. The threat of localized famines became a real policy challenge.",
+          "Dr. Muro analyzes this crisis by calling for strategic investments in organic fertilizer production, chemical diversification, and local agricultural resilience models."
+        ]
       },
       es: {
         tag: 'Geopolítica',
         title: 'Crisis de Fertilizantes y Riesgo de Hambruna en Perú',
-        desc: 'Análisis de la vulnerabilidad agrícola nacional y las interrupciones en la cadena de suministro internacional que afectan la seguridad alimentaria.'
+        desc: 'Análisis de la vulnerabilidad agrícola nacional y las interrupciones en la cadena de suministro internacional que afectan la seguridad alimentaria.',
+        content: [
+          "La crisis de fertilizantes de 2022 reveló la profunda vulnerabilidad del sector agrícola y la seguridad alimentaria en el Perú.",
+          "Debido a la total dependencia de fertilizantes sintéticos importados (como la urea) y las interrupciones en la cadena de distribución global, el rendimiento agrícola nacional enfrentó caídas severas.",
+          "El Dr. Muro analiza esta crisis haciendo un llamado a inversiones estratégicas en producción de fertilizantes orgánicos y resiliencia agrícola."
+        ]
       }
     },
     {
@@ -167,12 +258,22 @@ document.addEventListener('DOMContentLoaded', () => {
       en: {
         tag: 'AI & Work',
         title: 'Artificial Intelligence in Business',
-        desc: 'Utilizing probability distributions (Normal, LogNormal, Triangular) in optimization models for supply chains and call options in mining.'
+        desc: 'Utilizing probability distributions (Normal, LogNormal, Triangular) in optimization models for supply chains and call options in mining.',
+        content: [
+          "Integrating artificial intelligence into business decision-making requires modeling supply chain uncertainties and demand variables.",
+          "Instead of using single-point average estimates, modern business optimization models utilize continuous probability distributions (such as Normal, LogNormal, and Triangular distributions) to capture a range of possible market conditions.",
+          "Dr. Muro shows how these probabilistic AI frameworks optimize procurement processes, calculate call options in mining operations, and manage logistics risks under volatile demand curves."
+        ]
       },
       es: {
         tag: 'IA y Trabajo',
         title: 'Inteligencia Artificial en los Negocios',
-        desc: 'Uso de distribuciones de probabilidad (Normal, LogNormal, Triangular) en modelos de optimización de cadena de suministro y opciones financieras en minería.'
+        desc: 'Uso de distribuciones de probabilidad (Normal, LogNormal, Triangular) en modelos de optimización de cadena de suministro y opciones financieras en minería.',
+        content: [
+          "La integración de la inteligencia artificial en la toma de decisiones comerciales requiere modelar las incertidumbres de la cadena de suministro.",
+          "En lugar de estimaciones promedio de un solo punto, los modelos de optimización utilizan distribuciones de probabilidad (como Normal, LogNormal y Triangular) para capturar el rango de condiciones del mercado.",
+          "El Dr. Muro muestra cómo estos marcos probabilísticos optimizan los procesos de adquisición y gestionan los riesgos logísticos bajo curvas de demanda volátiles."
+        ]
       }
     },
     {
@@ -184,12 +285,22 @@ document.addEventListener('DOMContentLoaded', () => {
       en: {
         tag: 'Math & Risk',
         title: 'Investment Models & Monte Carlo Risk Measures',
-        desc: 'Applying Monte Carlo simulation to predict financial performance and analyze potential investment returns under uncertainty.'
+        desc: 'Applying Monte Carlo simulation to predict financial performance and analyze potential investment returns under uncertainty.',
+        content: [
+          "Quantifying risk in large financial portfolios is impossible without computationally intensive simulations.",
+          "By utilizing Monte Carlo simulations, investment managers generate thousands of random price paths based on historical asset volatilities and correlations. This allows the calculation of key risk metrics like Value at Risk (VaR) and Expected Shortfall.",
+          "Dr. Muro details how these stochastic models provide a realistic view of capital protection limits and expected returns in volatile market scenarios."
+        ]
       },
       es: {
         tag: 'Matemática y Riesgo',
         title: 'Modelos de Inversión y Medidas de Riesgo con Monte Carlo',
-        desc: 'Aplicación de la simulación Monte Carlo para predecir el rendimiento financiero y analizar retornos potenciales bajo incertidumbre.'
+        desc: 'Aplicación de la simulación Monte Carlo para predecir el rendimiento financiero y analizar retornos potenciales bajo incertidumbre.',
+        content: [
+          "Cuantificar el riesgo en carteras financieras es imposible sin simulaciones computacionales intensivas.",
+          "Mediante simulaciones de Monte Carlo, los administradores generan miles de trayectorias de precios basadas en volatilidades históricas. Esto permite calcular métricas clave como el Valor en Riesgo (VaR).",
+          "El Dr. Muro detalla cómo estos modelos estocásticos proporcionan una visión realista de los límites de protección del capital y los rendimientos esperados."
+        ]
       }
     },
     {
@@ -198,15 +309,26 @@ document.addEventListener('DOMContentLoaded', () => {
       date: '2025',
       readTime: { en: '1 min read', es: '1 min de lectura' },
       image: 'images/quantum-advances.png',
+      youtubeId: 'wt_99tXFWPM',
       en: {
         tag: 'Physics',
         title: 'Quantum Mechanics: Scientific Advances',
-        desc: 'Exploring the latest updates in quantum mechanics and their disruptive impact on computing, energy, and communication.'
+        desc: 'Exploring the latest updates in quantum mechanics and their disruptive impact on computing, energy, and communication.',
+        content: [
+          "The subatomic world is governed by non-intuitive mechanics that have paved the way for the second quantum revolution.",
+          "Recent experimental advances in quantum coherence and error correction are bringing superconducting quantum processors closer to commercial viability. These systems operate at temperatures near absolute zero to maintain the fragile states of qubits.",
+          "Understanding these advances allows us to anticipate the massive disruption that quantum communication networks and quantum cryptography will bring to cybersecurity and data transmission."
+        ]
       },
       es: {
         tag: 'Física',
         title: 'Mecánica Cuántica: Avances Científicos',
-        desc: 'Explorando los últimos avances en mecánica cuántica y su impacto disruptivo en la computación, energía y telecomunicaciones.'
+        desc: 'Explorando los últimos avances en mecánica cuántica y su impacto disruptivo en la computación, energía y telecomunicaciones.',
+        content: [
+          "El mundo subatómico está gobernado por una mecánica no intuitiva que ha allanado el camino para la segunda revolución cuántica.",
+          "Los avances experimentales en coherencia cuántica y corrección de errores acercan los procesadores superconductores a la viabilidad comercial. Estos sistemas operan a temperaturas cercanas al cero absoluto para mantener los frágiles estados de los qubits.",
+          "Comprender estos avances permite anticipar la disrupción masiva que las redes de comunicación y la criptografía cuántica traerán a la ciberseguridad."
+        ]
       }
     }
   ];
@@ -253,7 +375,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const readVal = currentLang === 'en' ? pub.readTime.en : pub.readTime.es;
       
       return `
-        <div class="pub-card" style="animation-delay: ${index * 0.05}s">
+        <div class="pub-card" data-id="${pub.id}" style="animation-delay: ${index * 0.05}s">
           <div class="pub-card-image">
             <img src="${pub.image}" alt="${data.title}">
           </div>
@@ -647,6 +769,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateDOMTranslations();
     renderTabs();
     renderArticles();
+    updateModalTranslations();
     
     // Update HTML lang
     document.documentElement.lang = currentLang;
@@ -655,6 +778,198 @@ document.addEventListener('DOMContentLoaded', () => {
   // Render publications initially
   renderTabs();
   renderArticles();
+
+  // ---- Article & Video Modal Logic ----
+  const modal = document.getElementById('pubModal');
+  const modalOverlay = document.getElementById('pubModalOverlay');
+  const modalClose = document.getElementById('pubModalClose');
+  const modalBody = document.getElementById('pubModalBody');
+  
+  let activeModalArticleId = null;
+  let activeWebinarData = null;
+
+  const renderModalContent = () => {
+    if (!modalBody) return;
+
+    if (activeModalArticleId) {
+      const pub = publications.find(p => p.id === activeModalArticleId);
+      if (!pub) return;
+
+      const data = currentLang === 'en' ? pub.en : pub.es;
+      const readVal = currentLang === 'en' ? pub.readTime.en : pub.readTime.es;
+      
+      let mediaHtml = '';
+      if (pub.youtubeId) {
+        mediaHtml = `
+          <div class="modal-video-wrapper">
+            <iframe src="https://www.youtube.com/embed/${pub.youtubeId}?autoplay=1&rel=0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+          </div>
+        `;
+      } else {
+        mediaHtml = `
+          <div class="modal-image">
+            <img src="${pub.image}" alt="${data.title}">
+          </div>
+        `;
+      }
+
+      modalBody.innerHTML = `
+        <div class="modal-header">
+          <div class="modal-tag-row">
+            <span class="modal-tag">${data.tag}</span>
+            <span class="modal-date">📅 ${pub.date}</span>
+            <span class="modal-read-time">⏱️ ${readVal}</span>
+          </div>
+          <h2 class="modal-title">${data.title}</h2>
+        </div>
+        ${mediaHtml}
+        <div class="modal-text">
+          ${data.content.map(p => `<p>${p}</p>`).join('')}
+        </div>
+      `;
+    } else if (activeWebinarData) {
+      const { titleKey, descKey, videoId } = activeWebinarData;
+      const title = translations[currentLang][titleKey];
+      const desc = translations[currentLang][descKey];
+      const tagLabel = currentLang === 'en' ? 'Online Event' : 'Evento Online';
+
+      modalBody.innerHTML = `
+        <div class="modal-header">
+          <div class="modal-tag-row">
+            <span class="modal-tag">${tagLabel}</span>
+          </div>
+          <h2 class="modal-title">${title}</h2>
+        </div>
+        <div class="modal-video-wrapper">
+          <iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen></iframe>
+        </div>
+        <div class="modal-text">
+          <p>${desc}</p>
+        </div>
+      `;
+    }
+  };
+
+  const updateModalTranslations = () => {
+    if (!modalBody || !modal || !modal.classList.contains('active')) return;
+
+    if (activeModalArticleId) {
+      const pub = publications.find(p => p.id === activeModalArticleId);
+      if (!pub) return;
+
+      const data = currentLang === 'en' ? pub.en : pub.es;
+      const readVal = currentLang === 'en' ? pub.readTime.en : pub.readTime.es;
+
+      const tagEl = modalBody.querySelector('.modal-tag');
+      const readTimeEl = modalBody.querySelector('.modal-read-time');
+      const titleEl = modalBody.querySelector('.modal-title');
+      const textEl = modalBody.querySelector('.modal-text');
+
+      if (tagEl) tagEl.textContent = data.tag;
+      if (readTimeEl) readTimeEl.textContent = `⏱️ ${readVal}`;
+      if (titleEl) titleEl.textContent = data.title;
+      if (textEl) {
+        textEl.innerHTML = data.content.map(p => `<p>${p}</p>`).join('');
+      }
+    } else if (activeWebinarData) {
+      const { titleKey, descKey } = activeWebinarData;
+      const title = translations[currentLang][titleKey];
+      const desc = translations[currentLang][descKey];
+      const tagLabel = currentLang === 'en' ? 'Online Event' : 'Evento Online';
+
+      const tagEl = modalBody.querySelector('.modal-tag');
+      const titleEl = modalBody.querySelector('.modal-title');
+      const textEl = modalBody.querySelector('.modal-text');
+
+      if (tagEl) tagEl.textContent = tagLabel;
+      if (titleEl) titleEl.textContent = title;
+      if (textEl) {
+        textEl.innerHTML = `<p>${desc}</p>`;
+      }
+    }
+  };
+
+  const openArticleModal = (id) => {
+    activeModalArticleId = id;
+    activeWebinarData = null;
+
+    renderModalContent();
+    
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const openWebinarModal = (titleKey, descKey, videoId) => {
+    activeModalArticleId = null;
+    activeWebinarData = { titleKey, descKey, videoId };
+
+    renderModalContent();
+
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeModal = () => {
+    modal.classList.remove('active');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    
+    // Stop any playing video by clearing the iframe src
+    const iframe = modalBody ? modalBody.querySelector('iframe') : null;
+    if (iframe) {
+      iframe.src = '';
+    }
+    
+    activeModalArticleId = null;
+    activeWebinarData = null;
+  };
+
+  // Attach modal listeners
+  if (modalClose) modalClose.addEventListener('click', closeModal);
+  if (modalOverlay) modalOverlay.addEventListener('click', closeModal);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+      closeModal();
+    }
+  });
+
+  // Event delegation for publication grid
+  const gridContainer = document.getElementById('pubGrid');
+  if (gridContainer) {
+    gridContainer.addEventListener('click', (e) => {
+      const card = e.target.closest('.pub-card');
+      if (card) {
+        const id = card.getAttribute('data-id');
+        if (id) openArticleModal(id);
+      }
+    });
+  }
+
+  // Event delegation for webinars grid
+  const webinarsGrid = document.querySelector('.webinars-grid');
+  if (webinarsGrid) {
+    webinarsGrid.addEventListener('click', (e) => {
+      const card = e.target.closest('.webinar-card');
+      if (card) {
+        const cards = Array.from(webinarsGrid.querySelectorAll('.webinar-card'));
+        const index = cards.indexOf(card);
+        if (index === 0) {
+          openWebinarModal('web1_title', 'web1_desc', 'wt_99tXFWPM');
+        } else if (index === 1) {
+          openWebinarModal('web2_title', 'web2_desc', 'wt_99tXFWPM');
+        } else if (index === 2) {
+          openWebinarModal('web3_title', 'web3_desc', 'wt_99tXFWPM');
+        }
+      }
+    });
+  }
 
   // ---- Active nav link on scroll ----
   const sections = document.querySelectorAll('section[id]');
