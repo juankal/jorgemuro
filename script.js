@@ -326,47 +326,46 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ---- About Carousel ----
-  const aboutCarousel = document.getElementById('aboutCarousel');
-  if (aboutCarousel) {
-    const slides = aboutCarousel.querySelectorAll('.about-carousel-slide');
-    const dots = aboutCarousel.querySelectorAll('.about-carousel-dot');
-    const prevBtn = aboutCarousel.querySelector('.about-carousel-prev');
-    const nextBtn = aboutCarousel.querySelector('.about-carousel-next');
-    let currentSlide = 0;
-    let autoPlayInterval;
+  (function() {
+    var carousel = document.getElementById('aboutCarousel');
+    if (!carousel) return;
 
-    function goToSlide(index) {
-      slides[currentSlide].classList.remove('active');
-      dots[currentSlide].classList.remove('active');
-      currentSlide = (index + slides.length) % slides.length;
-      slides[currentSlide].classList.add('active');
-      dots[currentSlide].classList.add('active');
+    var slides = carousel.querySelectorAll('.about-carousel-slide');
+    var dots = carousel.querySelectorAll('.about-carousel-dot');
+    var prevBtn = carousel.querySelector('.about-carousel-prev');
+    var nextBtn = carousel.querySelector('.about-carousel-next');
+    var current = 0;
+    var total = slides.length;
+    var timer = null;
+
+    function show(idx) {
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = ((idx % total) + total) % total;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
     }
 
-    function startAutoPlay() {
-      autoPlayInterval = setInterval(() => goToSlide(currentSlide + 1), 8000);
+    function next() { show(current + 1); }
+    function prev() { show(current - 1); }
+
+    function startTimer() {
+      if (timer) clearInterval(timer);
+      timer = setInterval(next, 8000);
     }
 
-    function resetAutoPlay() {
-      clearInterval(autoPlayInterval);
-      startAutoPlay();
-    }
+    if (prevBtn) prevBtn.addEventListener('click', function() { prev(); startTimer(); });
+    if (nextBtn) nextBtn.addEventListener('click', function() { next(); startTimer(); });
 
-    prevBtn.addEventListener('click', () => { goToSlide(currentSlide - 1); resetAutoPlay(); });
-    nextBtn.addEventListener('click', () => { goToSlide(currentSlide + 1); resetAutoPlay(); });
-
-    dots.forEach(dot => {
-      dot.addEventListener('click', () => {
-        goToSlide(parseInt(dot.dataset.index));
-        resetAutoPlay();
+    for (var i = 0; i < dots.length; i++) {
+      dots[i].addEventListener('click', function() {
+        show(parseInt(this.getAttribute('data-index')));
+        startTimer();
       });
-    });
+    }
 
-    aboutCarousel.addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
-    aboutCarousel.addEventListener('mouseleave', startAutoPlay);
-
-    startAutoPlay();
-  }
+    startTimer();
+  })();
 
   // ---- Hero particles ----
   const particlesContainer = document.getElementById('heroParticles');
