@@ -516,7 +516,7 @@ document.addEventListener('DOMContentLoaded', () => {
       footer_resources: 'Recursos',
       footer_topics: 'Temas',
       footer_rights: '© 2026 Jorge Muro. Todos los derechos reservados. Lima, Perú',
-      footer_design: 'Diseñado con ✨ precisión',
+      footer_design: 'Diseñado por Juankal',
       whatsapp_title: 'Chatear por WhatsApp'
     },
     en: {
@@ -604,7 +604,7 @@ document.addEventListener('DOMContentLoaded', () => {
       footer_resources: 'Resources',
       footer_topics: 'Topics',
       footer_rights: '© 2026 Jorge Muro. All rights reserved. Lima, Peru',
-      footer_design: 'Designed with ✨ precision',
+      footer_design: 'Designed by Juankal',
       whatsapp_title: 'Chat on WhatsApp'
     }
   };
