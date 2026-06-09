@@ -63,33 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     },
 
-    {
-      id: 'machine-learning',
-      category: 'physics',
-      date: '2025',
-      readTime: { en: '1 min read', es: '1 min de lectura' },
-      image: 'images/machine-learning.png',
-      en: {
-        tag: 'Physics / AI',
-        title: 'Machine Learning & 2024 Nobel Prize in Physics',
-        desc: 'How machine learning is revolutionizing modern physics through innovative research, highlighting AI-driven approaches.',
-        content: [
-          "The awarding of the 2024 Nobel Prize in Physics to John Hopfield and Geoffrey Hinton marked a historic recognition of the deep ties between statistical physics and computer science.",
-          "Hopfield networks utilize the concept of spin systems (like the Ising model in physics) to create associative memory. Similarly, Boltzmann machines apply thermodynamic probability distributions to learn patterns in data. These physical models laid the foundation for modern deep learning neural networks.",
-          "This convergence of disciplines proves that understanding fundamental physics is essential for explaining how AI models learn, adapt, and scale."
-        ]
-      },
-      es: {
-        tag: 'Física / IA',
-        title: 'Machine Learning y Premio Nobel de Física 2024',
-        desc: 'Cómo el aprendizaje automático está revolucionando la física moderna a través de la investigación innovadora y los enfoques impulsados por IA.',
-        content: [
-          "La concesión del Premio Nobel de Física 2024 a John Hopfield y Geoffrey Hinton marcó un reconocimiento histórico de los lazos entre la física estadística y las ciencias de la computación.",
-          "Las redes de Hopfield utilizan conceptos de sistemas de espín (como el modelo de Ising) para crear memoria asociativa. Las máquinas de Boltzmann aplican distribuciones termodinámicas para aprender patrones. Estos modelos físicos sentaron las bases del aprendizaje profundo.",
-          "Esta convergencia de disciplinas demuestra que comprender la física fundamental es esencial para explicar cómo los modelos de IA aprenden, se adaptan y escalan."
-        ]
-      }
-    },
+
     {
       id: 'markov-montecarlo',
       category: 'physics',
