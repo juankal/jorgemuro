@@ -152,33 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     },
 
-    {
-      id: 'epistemology',
-      category: 'physics',
-      date: '2025',
-      readTime: { en: '1 min read', es: '1 min de lectura' },
-      image: 'images/epistemology.png',
-      en: {
-        tag: 'Philosophy',
-        title: 'Epistemology & National Development',
-        desc: 'Presentation for Inventor, Scientist, and Researcher Day at the College of Engineers of Peru, analyzing the role of scientific knowledge.',
-        content: [
-          "True national development is not merely an economic metric; it is rooted in a country's scientific and epistemological foundation.",
-          "Epistemology—the philosophy of scientific knowledge—defines how a society validates truth, conducts research, and applies technology. Developing nations often import technology without building the cognitive infrastructure to understand, maintain, and innovate upon it.",
-          "Dr. Muro advocates for an educational and policy reform that fosters critical thinking, scientific method validation, and local technological autonomy as the primary drivers of sustainable economic growth."
-        ]
-      },
-      es: {
-        tag: 'Filosofía',
-        title: 'Epistemología y Desarrollo Nacional',
-        desc: 'Exposición por el Día del Inventor, Científico e Investigador en el Colegio de Ingenieros del Perú, analizando el rol del conocimiento científico.',
-        content: [
-          "El verdadero desarrollo nacional no es solo una métrica económica; está arraigado en la base científica y epistemológica de un país.",
-          "La epistemología — la filosofía del conocimiento científico — define cómo una sociedad valida la verdad e innova. Las naciones en desarrollo suelen importar tecnología sin construir la infraestructura cognitiva para entenderla.",
-          "El Dr. Muro aboga por una reforma educativa y política que fomente el pensamiento crítico, el método científico y la autonomía tecnológica local."
-        ]
-      }
-    },
+
     {
       id: 'fertilizantes',
       category: 'strategy',
@@ -226,33 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ]
       }
     },
-    {
-      id: 'ai-business',
-      category: 'ai',
-      date: '2021',
-      readTime: { en: '1 min read', es: '1 min de lectura' },
-      image: 'images/ai-business.jpg',
-      en: {
-        tag: 'AI & Work',
-        title: 'Artificial Intelligence in Business',
-        desc: 'Utilizing probability distributions (Normal, LogNormal, Triangular) in optimization models for supply chains and call options in mining.',
-        content: [
-          "Integrating artificial intelligence into business decision-making requires modeling supply chain uncertainties and demand variables.",
-          "Instead of using single-point average estimates, modern business optimization models utilize continuous probability distributions (such as Normal, LogNormal, and Triangular distributions) to capture a range of possible market conditions.",
-          "Dr. Muro shows how these probabilistic AI frameworks optimize procurement processes, calculate call options in mining operations, and manage logistics risks under volatile demand curves."
-        ]
-      },
-      es: {
-        tag: 'IA y Trabajo',
-        title: 'Inteligencia Artificial en los Negocios',
-        desc: 'Uso de distribuciones de probabilidad (Normal, LogNormal, Triangular) en modelos de optimización de cadena de suministro y opciones financieras en minería.',
-        content: [
-          "La integración de la inteligencia artificial en la toma de decisiones comerciales requiere modelar las incertidumbres de la cadena de suministro.",
-          "En lugar de estimaciones promedio de un solo punto, los modelos de optimización utilizan distribuciones de probabilidad (como Normal, LogNormal y Triangular) para capturar el rango de condiciones del mercado.",
-          "El Dr. Muro muestra cómo estos marcos probabilísticos optimizan los procesos de adquisición y gestionan los riesgos logísticos bajo curvas de demanda volátiles."
-        ]
-      }
-    },
+
     {
       id: 'investment-models',
       category: 'ai',
