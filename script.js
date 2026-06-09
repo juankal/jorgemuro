@@ -437,7 +437,6 @@ document.addEventListener('DOMContentLoaded', () => {
       nav_expertise: 'Especialidades',
       nav_publications: 'Publicaciones',
       nav_books: 'Libros',
-      nav_webinars: 'Webinars',
       nav_contact: 'Contacto',
       nav_articles: 'Artículos',
       nav_models: 'Modelos',
@@ -497,17 +496,6 @@ document.addEventListener('DOMContentLoaded', () => {
       book1_cta: 'Comprar en Amazon',
       book2_cta: 'Leer Libro',
 
-      // Webinars
-      webinars_label: 'Eventos Online',
-      webinars_title: 'Webinars y Conferencias',
-      webinars_desc: 'Únase a las conferencias del Dr. Muro sobre mecánica cuántica, IA, liderazgo y toma de decisiones estratégicas.',
-      web1_title: 'Mecánica Cuántica: Avances en Ciencia y Tecnología',
-      web1_desc: 'Explore los últimos avances en mecánica cuántica y su impacto en computación, energía y comunicaciones.',
-      web2_title: 'Proyectos con Métodos Monte Carlo',
-      web2_desc: 'Aplicaciones prácticas del método Monte Carlo en toma de decisiones y pronóstico de riesgos para gestión de proyectos.',
-      web3_title: 'Inteligencia Artificial en Negocios',
-      web3_desc: 'Uso de distribuciones de probabilidad para modelos de optimización en cadena de suministro y escenarios de inversión minera.',
-
       // Contact
       contact_label: 'Contacto',
       contact_title: 'Trabajemos Juntos',
@@ -537,7 +525,6 @@ document.addEventListener('DOMContentLoaded', () => {
       nav_expertise: 'Expertise',
       nav_publications: 'Publications',
       nav_books: 'Books',
-      nav_webinars: 'Webinars',
       nav_contact: 'Contact',
       nav_articles: 'Articles',
       nav_models: 'Models',
@@ -596,17 +583,6 @@ document.addEventListener('DOMContentLoaded', () => {
       books_cta: 'Inquire About Books',
       book1_cta: 'Buy on Amazon',
       book2_cta: 'Read Book',
-
-      // Webinars
-      webinars_label: 'Online Events',
-      webinars_title: 'Webinars & Conferences',
-      webinars_desc: 'Join Dr. Muro\'s lectures on quantum mechanics, AI, leadership, and strategic decision-making.',
-      web1_title: 'Quantum Mechanics: Advances in Science & Technology',
-      web1_desc: 'Explore the latest advances in quantum mechanics and their impact on computing, energy, and communications.',
-      web2_title: 'Projects with Monte Carlo Methods',
-      web2_desc: 'Practical applications of the Monte Carlo method in decision-making and risk forecasting for project management.',
-      web3_title: 'Artificial Intelligence in Business',
-      web3_desc: 'Using probability distributions for optimization models in supply chain and mining investment scenarios.',
 
       // Contact
       contact_label: 'Get in Touch',
@@ -689,7 +665,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalBody = document.getElementById('pubModalBody');
   
   let activeModalArticleId = null;
-  let activeWebinarData = null;
 
   const renderModalContent = () => {
     if (!modalBody) return;
@@ -746,28 +721,6 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         ${actionBtnHtml}
       `;
-    } else if (activeWebinarData) {
-      const { titleKey, descKey, videoId } = activeWebinarData;
-      const title = translations[currentLang][titleKey];
-      const desc = translations[currentLang][descKey];
-      const tagLabel = currentLang === 'en' ? 'Online Event' : 'Evento Online';
-
-      modalBody.innerHTML = `
-        <div class="modal-header">
-          <div class="modal-tag-row">
-            <span class="modal-tag">${tagLabel}</span>
-          </div>
-          <h2 class="modal-title">${title}</h2>
-        </div>
-        <div class="modal-video-wrapper">
-          <iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                  allowfullscreen></iframe>
-        </div>
-        <div class="modal-text">
-          <p>${desc}</p>
-        </div>
-      `;
     }
   };
 
@@ -778,21 +731,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const openArticleModal = (id) => {
     activeModalArticleId = id;
-    activeWebinarData = null;
 
     renderModalContent();
     
-    modal.classList.add('active');
-    modal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-  };
-
-  const openWebinarModal = (titleKey, descKey, videoId) => {
-    activeModalArticleId = null;
-    activeWebinarData = { titleKey, descKey, videoId };
-
-    renderModalContent();
-
     modal.classList.add('active');
     modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
@@ -810,7 +751,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     activeModalArticleId = null;
-    activeWebinarData = null;
   };
 
   // Attach modal listeners
@@ -835,24 +775,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Event delegation for webinars grid
-  const webinarsGrid = document.querySelector('.webinars-grid');
-  if (webinarsGrid) {
-    webinarsGrid.addEventListener('click', (e) => {
-      const card = e.target.closest('.webinar-card');
-      if (card) {
-        const cards = Array.from(webinarsGrid.querySelectorAll('.webinar-card'));
-        const index = cards.indexOf(card);
-        if (index === 0) {
-          openWebinarModal('web1_title', 'web1_desc', 'wt_99tXFWPM');
-        } else if (index === 1) {
-          openWebinarModal('web2_title', 'web2_desc', 'wt_99tXFWPM');
-        } else if (index === 2) {
-          openWebinarModal('web3_title', 'web3_desc', 'wt_99tXFWPM');
-        }
-      }
-    });
-  }
+
 
   // ---- Active nav link on scroll ----
   const sections = document.querySelectorAll('section[id]');
