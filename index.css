@@ -1040,65 +1040,61 @@ p {
   color: var(--white);
 }
 
-.books-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(3rem, 6vw, 6rem);
-  align-items: center;
+.books-header {
+  margin-bottom: 2.5rem;
 }
 
-.books-image {
+.book-row {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: start;
+  margin-bottom: 2.5rem;
+  padding: 2rem;
   border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.book-row:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(196, 167, 103, 0.15);
+}
+
+.book-row-cover {
+  border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
-  display: flex;
-  flex-direction: column;
-  gap: 0;
 }
 
-.books-image img {
+.book-row-cover img {
+  display: block;
   width: 100%;
-  border-radius: var(--radius-lg);
+  height: auto;
   object-fit: cover;
-  box-shadow: var(--shadow-md);
   transition: transform 0.5s var(--ease-out);
 }
 
-.books-image img:hover {
-  transform: scale(1.03);
+.book-row-cover:hover img {
+  transform: scale(1.04);
 }
 
-.book-cover-main {
-  aspect-ratio: auto;
+.book-row-info {
+  padding-top: 0.25rem;
 }
 
-.book-cover-secondary {
-  aspect-ratio: auto;
-}
-
-.book-item {
-  padding: 24px;
-  border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.03);
-  border-left: 4px solid var(--gold-500);
-  margin-bottom: 20px;
-  transition: all 0.3s var(--ease-out);
-}
-
-.book-item:hover {
-  background: rgba(255, 255, 255, 0.06);
-  transform: translateX(8px);
-}
-
-.book-item h4 {
-  margin-bottom: 8px;
+.book-row-info h4 {
+  margin-bottom: 12px;
   color: var(--gold-400);
+  font-size: 1.3rem;
 }
 
-.book-item p {
-  font-size: 0.9rem;
+.book-row-info p {
+  font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.7);
-  line-height: 1.6;
+  line-height: 1.7;
+  margin-bottom: 0;
 }
 
 /* ---- Contact Section ---- */
@@ -1395,7 +1391,8 @@ p {
   .about-grid { grid-template-columns: 1fr; }
   .expertise-grid { grid-template-columns: repeat(2, 1fr); }
   .pub-grid { grid-template-columns: 1fr; }
-  .books-grid { grid-template-columns: 1fr; }
+  .book-row { grid-template-columns: 1fr; }
+  .book-row-cover { max-width: 280px; }
   .webinars-grid { grid-template-columns: repeat(2, 1fr); }
   .contact-grid { grid-template-columns: 1fr; }
   
