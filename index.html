@@ -461,7 +461,8 @@
       </div>
       
       <div class="contact-form reveal reveal-delay-2">
-        <form id="contactForm">
+        <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify>
+          <input type="hidden" name="form-name" value="contact">
           <div class="form-row">
             <div class="form-group">
               <label for="name" data-i18n="form_name">Full Name</label>

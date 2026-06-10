@@ -441,33 +441,53 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ---- Contact form ----
+  // ---- Contact form (Netlify Forms) ----
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
       
-      // Get form data
       const formData = new FormData(contactForm);
       const data = Object.fromEntries(formData);
       
       // Simple validation
       if (!data.name || !data.email) {
-        alert('Please fill in all required fields.');
+        const msg = currentLang === 'es' ? 'Por favor complete todos los campos obligatorios.' : 'Please fill in all required fields.';
+        alert(msg);
         return;
       }
       
-      // Show success message
       const btn = contactForm.querySelector('button[type="submit"]');
       const originalText = btn.textContent;
-      btn.textContent = '✓ Message Sent!';
-      btn.style.background = 'linear-gradient(135deg, #2ec4b6, #1a9e93)';
+      btn.textContent = currentLang === 'es' ? 'Enviando...' : 'Sending...';
+      btn.disabled = true;
       
-      setTimeout(() => {
-        btn.textContent = originalText;
-        btn.style.background = '';
-        contactForm.reset();
-      }, 3000);
+      // Submit to Netlify Forms
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString()
+      })
+      .then(response => {
+        if (response.ok) {
+          btn.textContent = currentLang === 'es' ? '✓ ¡Mensaje Enviado!' : '✓ Message Sent!';
+          btn.style.background = 'linear-gradient(135deg, #2ec4b6, #1a9e93)';
+          contactForm.reset();
+        } else {
+          throw new Error('Form submission failed');
+        }
+      })
+      .catch(() => {
+        btn.textContent = currentLang === 'es' ? '✕ Error al enviar' : '✕ Send Failed';
+        btn.style.background = 'linear-gradient(135deg, #e63946, #c1121f)';
+      })
+      .finally(() => {
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 3000);
+      });
     });
   }
 
