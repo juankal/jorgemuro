@@ -752,7 +752,7 @@ document.addEventListener('DOMContentLoaded', () => {
     currentLang = langParam;
   }
   
-  updateLanguageUI();
+  // Initialization moved to the end of DOMContentLoaded to prevent TDZ ReferenceError
 
   // ---- Article & Video Modal Logic ----
   const modal = document.getElementById('pubModal');
@@ -903,4 +903,7 @@ document.addEventListener('DOMContentLoaded', () => {
       hero.style.transform = `translateY(${scrolled * 0.3}px)`;
     }
   });
+
+  // Initialize UI language after all variables & components are declared
+  updateLanguageUI();
 });
