@@ -1597,3 +1597,8 @@ p {
   border: none;
 }
 
+/* Honeypot Spam Protection */
+.hidden-honeypot {
+  display: none !important;
+}
+
