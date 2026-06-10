@@ -1602,3 +1602,36 @@ p {
   display: none !important;
 }
 
+/* Accessibility Skip Link */
+.skip-to-content {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gold-500);
+  color: var(--navy-900);
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 0 0 8px 8px;
+  z-index: 10000;
+  transition: top 0.3s ease;
+  text-decoration: none;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* Keyboard Focus States */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--gold-400);
+  outline-offset: 3px;
+}
+
+/* Multilingual Article Rules */
+html[lang="es"] .lang-en { display: none !important; }
+html[lang="en"] .lang-es { display: none !important; }
+

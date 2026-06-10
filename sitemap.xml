@@ -6,8 +6,71 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.jorgemuro.net/?lang=en"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.jorgemuro.net/?lang=es"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jorgemuro.net/"/>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.jorgemuro.net/articulos/quantum-computing.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jorgemuro.net/articulos/quantum-computing.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.jorgemuro.net/articulos/quantum-computing.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jorgemuro.net/articulos/quantum-computing.html?lang=es"/>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.jorgemuro.net/articulos/quantum-advances.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jorgemuro.net/articulos/quantum-advances.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.jorgemuro.net/articulos/quantum-advances.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jorgemuro.net/articulos/quantum-advances.html?lang=es"/>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.jorgemuro.net/articulos/ia-trabajo.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jorgemuro.net/articulos/ia-trabajo.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.jorgemuro.net/articulos/ia-trabajo.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jorgemuro.net/articulos/ia-trabajo.html?lang=es"/>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.jorgemuro.net/articulos/markov-montecarlo.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jorgemuro.net/articulos/markov-montecarlo.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.jorgemuro.net/articulos/markov-montecarlo.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jorgemuro.net/articulos/markov-montecarlo.html?lang=es"/>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.jorgemuro.net/articulos/qatar.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jorgemuro.net/articulos/qatar.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.jorgemuro.net/articulos/qatar.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jorgemuro.net/articulos/qatar.html?lang=es"/>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.jorgemuro.net/articulos/models.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jorgemuro.net/articulos/models.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.jorgemuro.net/articulos/models.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jorgemuro.net/articulos/models.html?lang=es"/>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.jorgemuro.net/articulos/fertilizantes.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jorgemuro.net/articulos/fertilizantes.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.jorgemuro.net/articulos/fertilizantes.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jorgemuro.net/articulos/fertilizantes.html?lang=es"/>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
