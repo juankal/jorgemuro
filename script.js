@@ -551,6 +551,10 @@ document.addEventListener('DOMContentLoaded', () => {
       form_subject: 'Asunto',
       form_message: 'Mensaje',
       form_submit: 'Enviar Mensaje',
+      form_name_placeholder: 'Juan Pérez',
+      form_email_placeholder: 'juan@ejemplo.com',
+      form_subject_placeholder: '¿En qué puede ayudarle el Dr. Muro?',
+      form_message_placeholder: 'Cuéntenos sobre su proyecto o consulta...',
 
       // Footer
       footer_about: 'Doctor en Física de la Universidad Nacional de La Plata, Argentina. Graduado en Negociación y Liderazgo de la Universidad de Harvard. Investigador científico y gerente fundador en energía nuclear.',
@@ -641,6 +645,10 @@ document.addEventListener('DOMContentLoaded', () => {
       form_subject: 'Subject',
       form_message: 'Message',
       form_submit: 'Send Message',
+      form_name_placeholder: 'John Doe',
+      form_email_placeholder: 'john@example.com',
+      form_subject_placeholder: 'How can Dr. Muro help you?',
+      form_message_placeholder: 'Tell us about your project or inquiry...',
 
       // Footer
       footer_about: 'Doctor in Physics from the National University of La Plata, Argentina. Graduate in Negotiation & Leadership from Harvard University. Scientific researcher and founding manager in nuclear energy.',
