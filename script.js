@@ -556,6 +556,7 @@ document.addEventListener('DOMContentLoaded', () => {
       book2_desc: 'Un análisis sin precedentes de la resolución de 1998 del conflicto territorial entre Perú y Ecuador, combinando la metodología del Proyecto de Negociación de Harvard.',
       books_cta: 'Consultar sobre Libros',
       book1_cta: 'Comprar en Amazon',
+      book1_link: 'https://www.amazon.com/-/es/Jorge-Eduardo-Muro-Arbul%C3%BA-ebook/dp/B0BWFTJJ7G/ref=sr_1_1?sr=8-1',
       book2_cta: 'Leer Libro',
 
       // Contact
@@ -650,6 +651,7 @@ document.addEventListener('DOMContentLoaded', () => {
       book2_desc: 'An unprecedented analysis of the 1998 resolution of the territorial conflict between Peru and Ecuador, combining the Harvard Negotiation Project methodology with deep geopolitical insight. A unique perspective on shifting from positions to underlying interests.',
       books_cta: 'Inquire About Books',
       book1_cta: 'Buy on Amazon',
+      book1_link: 'https://www.amazon.com/dp/B0BWFTJJ7G',
       book2_cta: 'Read Book',
 
       // Contact
@@ -720,6 +722,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const key = el.getAttribute('data-i18n-aria');
       if (translations[currentLang][key]) {
         el.setAttribute('aria-label', translations[currentLang][key]);
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-href]').forEach(el => {
+      const key = el.getAttribute('data-i18n-href');
+      if (translations[currentLang][key]) {
+        el.setAttribute('href', translations[currentLang][key]);
       }
     });
   };
