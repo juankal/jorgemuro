@@ -1,32 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jorge Muro: Doctor in Physics &amp; Leadership Expert</title>
-  <meta name="description" content="Discover Jorge Muro, a distinguished doctor in physics from the National University of La Plata. With expertise in negotiation and leadership from Harvard University, he has a rich background as a scientific researcher and founding manager in nuclear energy.">
-  <meta name="keywords" content="Jorge Muro, doctor in physics, leadership from Harvard, nuclear energy, quantum mechanics, negotiation">
+  <title>Dr. Jorge Muro | Físico y Experto en Liderazgo y Negociación | Harvard</title>
+  <meta name="description" content="Conoce al Dr. Jorge Muro Arbulú, físico de la Universidad Nacional de La Plata y graduado de Harvard en Negociación y Liderazgo. Especialista en energía nuclear, mecánica cuántica, simulaciones Monte Carlo e inteligencia artificial. Consultor, investigador y autor.">
+  <meta name="keywords" content="Jorge Muro, Jorge Muro Arbulú, doctor en física, liderazgo Harvard, energía nuclear, mecánica cuántica, negociación, Monte Carlo, inteligencia artificial, consultoría, UNLP, IPEN, SIMA Perú, decisiones bajo incertidumbre, geopolítica">
   
   <!-- Open Graph -->
-  <meta property="og:title" content="Jorge Muro: Doctor in Physics & Leadership Expert">
-  <meta property="og:description" content="Distinguished doctor in physics from the National University of La Plata. Expertise in negotiation and leadership from Harvard University.">
+  <meta property="og:title" content="Dr. Jorge Muro | Físico y Experto en Liderazgo de Harvard">
+  <meta property="og:description" content="Físico de la Universidad Nacional de La Plata, graduado de Harvard en Negociación y Liderazgo. Especialista en energía nuclear, mecánica cuántica, Monte Carlo e IA.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.jorgemuro.net">
   <meta property="og:image" content="https://www.jorgemuro.net/images/professor.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="es_PE">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:site_name" content="Dr. Jorge Muro">
   
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Jorge Muro: Doctor in Physics & Leadership Expert">
-  <meta name="twitter:description" content="Distinguished doctor in physics from the National University of La Plata. Harvard University graduate in Negotiation and Leadership.">
+  <meta name="twitter:title" content="Dr. Jorge Muro | Físico y Experto en Liderazgo de Harvard">
+  <meta name="twitter:description" content="Físico de la UNLP, graduado de Harvard. Especialista en energía nuclear, mecánica cuántica y consultoría estratégica.">
   <meta name="twitter:image" content="https://www.jorgemuro.net/images/professor.png">
   
   <!-- Canonical & Multilingual -->
   <link rel="canonical" href="https://www.jorgemuro.net">
-  <link rel="alternate" hreflang="en" href="https://www.jorgemuro.net/?lang=en">
   <link rel="alternate" hreflang="es" href="https://www.jorgemuro.net/?lang=es">
-  <link rel="alternate" hreflang="x-default" href="https://www.jorgemuro.net/">
+  <link rel="alternate" hreflang="en" href="https://www.jorgemuro.net/?lang=en">
+  <link rel="alternate" hreflang="x-default" href="https://www.jorgemuro.net/?lang=es">
   
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0a1628">
@@ -36,8 +39,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
   
+  <!-- Preload LCP images -->
+  <link rel="preload" as="image" href="images/professor.png">
+  <link rel="preload" as="image" href="images/nuclear-bg.jpg">
+  
   <!-- Styles -->
   <link rel="stylesheet" href="index.css">
+  
+  <!-- Sitemap -->
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
   
   <!-- Deploy: Linked with Netlify & GitHub CI/CD -->
   
@@ -45,35 +55,83 @@
   <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
   <link rel="apple-touch-icon" href="images/logo.png">
   
-  <!-- Schema.org -->
+  <!-- Schema.org: Person -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Jorge Muro",
-    "jobTitle": "Doctor in Physics & Leadership Expert",
+    "name": "Jorge Muro Arbulú",
+    "alternateName": "Dr. Jorge Muro",
+    "jobTitle": "Doctor en Física y Experto en Liderazgo",
+    "description": "Físico de la Universidad Nacional de La Plata, graduado de Harvard en Negociación y Liderazgo. Investigador en energía nuclear, mecánica cuántica e inteligencia artificial.",
+    "image": "https://www.jorgemuro.net/images/professor.png",
+    "email": "contact@jorgemuro.net",
     "alumniOf": [
       {
         "@type": "CollegeOrUniversity",
-        "name": "National University of La Plata"
+        "name": "Universidad Nacional de La Plata",
+        "sameAs": "https://unlp.edu.ar"
       },
       {
         "@type": "CollegeOrUniversity",
-        "name": "Harvard University"
+        "name": "Harvard University",
+        "sameAs": "https://www.harvard.edu"
       }
     ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "SIMA Perú"
+    },
     "url": "https://www.jorgemuro.net",
-    "knowsAbout": ["Physics", "Nuclear Energy", "Quantum Mechanics", "Negotiation", "Leadership", "Monte Carlo Method"]
+    "knowsAbout": ["Física", "Energía Nuclear", "Mecánica Cuántica", "Negociación", "Liderazgo", "Método Monte Carlo", "Inteligencia Artificial", "Geopolítica"],
+    "nationality": {
+      "@type": "Country",
+      "name": "Perú"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lima",
+      "addressCountry": "PE"
+    }
+  }
+  </script>
+  <!-- Schema.org: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Dr. Jorge Muro",
+    "url": "https://www.jorgemuro.net",
+    "inLanguage": ["es", "en"],
+    "description": "Sitio web oficial del Dr. Jorge Muro Arbulú, físico, investigador y experto en liderazgo."
+  }
+  </script>
+  <!-- Schema.org: Book -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "Toma de Decisiones bajo Incertidumbre",
+    "author": {
+      "@type": "Person",
+      "name": "Jorge Muro Arbulú"
+    },
+    "url": "https://www.amazon.com/-/es/Jorge-Eduardo-Muro-Arbul%C3%BA-ebook/dp/B0BWFTJJ7G/",
+    "bookFormat": "https://schema.org/EBook",
+    "inLanguage": "es",
+    "description": "Guía completa para aplicar métodos de Monte Carlo, distribuciones de probabilidad y modelos estadísticos para la toma de decisiones estratégicas."
   }
   </script>
 </head>
 <body>
+  <!-- Skip to content -->
+  <a href="#hero" class="skip-to-content" id="skipToContent">Saltar al contenido</a>
 
   <!-- ====== NAVIGATION ====== -->
-  <nav class="navbar" id="navbar">
+  <nav class="navbar" id="navbar" aria-label="Navegación principal">
     <div class="nav-inner">
       <a href="#" class="nav-logo">
-        <img src="images/logo.png" alt="" class="nav-logo-icon-img">
+        <img src="images/logo.png" alt="Logo Dr. Jorge Muro" class="nav-logo-icon-img" width="32" height="32">
         <img src="images/logo.svg" alt="Jorge Muro" class="nav-logo-svg">
       </a>
       
@@ -101,7 +159,7 @@
   <!-- ====== HERO SECTION ====== -->
   <section class="hero" id="hero">
     <div class="hero-bg">
-      <img src="images/nuclear-bg.jpg" alt="Nuclear energy background" loading="eager">
+      <img src="images/nuclear-bg.jpg" alt="Fondo de energía nuclear - Dr. Jorge Muro" loading="eager" width="1920" height="1080">
     </div>
     
     <div class="hero-particles" id="heroParticles"></div>
@@ -138,7 +196,7 @@
       
       <div class="hero-image">
         <div class="hero-image-wrapper">
-          <img src="images/professor.png" alt="Dr. Jorge Muro Arbulú - Physicist and Leadership Expert" loading="eager">
+          <img src="images/professor.png" alt="Dr. Jorge Muro Arbulú - Físico y Experto en Liderazgo" loading="eager" width="420" height="560">
         </div>
         <div class="hero-badge">
           <div class="hero-badge-icon">🎓</div>
@@ -148,7 +206,7 @@
     </div>
     
     <div class="scroll-indicator">
-      <span>Scroll</span>
+      <span data-i18n="scroll_text">Scroll</span>
       <div class="arrow"></div>
     </div>
   </section>
@@ -160,10 +218,10 @@
         <div class="about-carousel" id="aboutCarousel">
           <div class="about-carousel-track">
             <div class="about-carousel-slide active">
-              <img src="images/about-professor.png" alt="Dr. Jorge Muro - Academic presentation" loading="lazy">
+              <img src="images/about-professor.png" alt="Dr. Jorge Muro - Presentación académica" loading="lazy" width="600" height="600">
             </div>
             <div class="about-carousel-slide">
-              <img src="images/about-group.png" alt="Dr. Jorge Muro - Professional meeting" loading="lazy">
+              <img src="images/about-group.png" alt="Dr. Jorge Muro - Reunión profesional" loading="lazy" width="600" height="600">
             </div>
           </div>
           <button class="about-carousel-btn about-carousel-prev" aria-label="Previous image">
@@ -343,10 +401,10 @@
 
       <div class="book-row reveal">
         <div class="book-row-cover">
-          <img src="images/book-decision.jpg" alt="Decision Making Under Uncertainty - Book by Dr. Jorge Muro">
+          <img src="images/book-decision.jpg" alt="Toma de Decisiones bajo Incertidumbre - Libro del Dr. Jorge Muro" width="280" height="400" loading="lazy">
         </div>
         <div class="book-row-info">
-          <h4 data-i18n="book1_title">Decision Making Under Uncertainty</h4>
+          <h3 data-i18n="book1_title" class="book-title">Decision Making Under Uncertainty</h3>
           <p data-i18n="book1_desc">A comprehensive guide to applying Monte Carlo methods, probability distributions, and statistical models for strategic decision-making in complex, uncertain environments. Essential reading for managers, engineers, and researchers.</p>
           <a href="https://www.amazon.com/-/es/Jorge-Eduardo-Muro-Arbul%C3%BA-ebook/dp/B0BWFTJJ7G/ref=sr_1_1?sr=8-1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="margin-top: 0.75rem; text-decoration: none;" data-i18n="book1_cta">Buy on Amazon</a>
         </div>
@@ -354,10 +412,10 @@
 
       <div class="book-row reveal">
         <div class="book-row-cover">
-          <img src="images/book-peru-ecuador.jpg" alt="The Peru-Ecuador Conflict - Book by Dr. Jorge Muro">
+          <img src="images/book-peru-ecuador.jpg" alt="El Conflicto Perú-Ecuador: La Historia No Contada - Libro del Dr. Jorge Muro" width="280" height="400" loading="lazy">
         </div>
         <div class="book-row-info">
-          <h4 data-i18n="book2_title">The Peru - Ecuador Conflict: The Untold Story</h4>
+          <h3 data-i18n="book2_title" class="book-title">The Peru - Ecuador Conflict: The Untold Story</h3>
           <p data-i18n="book2_desc">An unprecedented analysis of the 1998 resolution of the territorial conflict between Peru and Ecuador, combining the Harvard Negotiation Project methodology with deep geopolitical insight. A unique perspective on shifting from positions to underlying interests.</p>
           <a href="https://drive.google.com/file/d/1EKI-QwxDQAWWpobm5hc5Rbs2_VDDXOyX/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="margin-top: 0.75rem; text-decoration: none;" data-i18n="book2_cta">Read Book</a>
         </div>
@@ -389,7 +447,7 @@
           <div class="contact-detail-icon">📧</div>
           <div class="contact-detail-text">
             <h4 data-i18n="contact_email_label">Email</h4>
-            <p>contact@jorgemuro.net</p>
+            <p><a href="mailto:contact@jorgemuro.net" style="color: inherit; text-decoration: none;">contact@jorgemuro.net</a></p>
           </div>
         </div>
         
@@ -440,9 +498,9 @@
           </div>
           <p data-i18n="footer_about">Doctor in Physics from the National University of La Plata, Argentina. Graduate in Negotiation &amp; Leadership from Harvard University. Scientific researcher and founding manager in nuclear energy.</p>
           <div class="footer-social">
-            <a href="#" title="LinkedIn" aria-label="LinkedIn">in</a>
-            <a href="#" title="YouTube" aria-label="YouTube">▶</a>
-            <a href="#" title="Twitter" aria-label="Twitter">𝕏</a>
+            <a href="https://www.linkedin.com/in/jorgemuro" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">in</a>
+            <a href="https://www.youtube.com/@jorgemuro" title="YouTube" aria-label="YouTube" target="_blank" rel="noopener noreferrer">▶</a>
+            <a href="https://x.com/jorgemuro" title="Twitter / X" aria-label="Twitter / X" target="_blank" rel="noopener noreferrer">𝕏</a>
           </div>
         </div>
         

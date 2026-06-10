@@ -560,7 +560,8 @@ document.addEventListener('DOMContentLoaded', () => {
       footer_rights: '© 2026 Jorge Muro. Todos los derechos reservados. Lima, Perú',
       footer_design: 'Diseñado por Juankal',
       meta_title: 'Dr. Jorge Muro | Físico y Experto en Liderazgo y Negociación',
-      meta_description: 'Descubre al Dr. Jorge Muro, físico de la UNLP y graduado de Harvard. Especialista en energía nuclear, mecánica cuántica, simulaciones Monte Carlo e IA.'
+      meta_description: 'Descubre al Dr. Jorge Muro, físico de la UNLP y graduado de Harvard. Especialista en energía nuclear, mecánica cuántica, simulaciones Monte Carlo e IA.',
+      scroll_text: 'Desplazar'
     },
     en: {
       // Navigation
@@ -649,11 +650,12 @@ document.addEventListener('DOMContentLoaded', () => {
       footer_rights: '© 2026 Jorge Muro. All rights reserved. Lima, Peru',
       footer_design: 'Designed by Juankal',
       meta_title: 'Dr. Jorge Muro | Physicist & Leadership/Negotiation Expert',
-      meta_description: 'Explore Dr. Jorge Muro, physicist from UNLP and Harvard graduate. Expert in nuclear energy, quantum mechanics, Monte Carlo simulation, and AI business.'
+      meta_description: 'Explore Dr. Jorge Muro, physicist from UNLP and Harvard graduate. Expert in nuclear energy, quantum mechanics, Monte Carlo simulation, and AI business.',
+      scroll_text: 'Scroll'
     }
   };
 
-  let currentLang = 'en';
+  let currentLang = 'es';
   const langToggle = document.getElementById('langToggle');
   
   const updateDOMTranslations = () => {

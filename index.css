@@ -93,6 +93,35 @@ a {
   transition: color 0.3s var(--ease-out);
 }
 
+/* Skip to content - Accessibility */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  background: var(--gold-500);
+  color: var(--navy-900);
+  padding: 12px 24px;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+  z-index: 10000;
+  transition: top 0.3s;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* Focus visible for keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--gold-500);
+  outline-offset: 2px;
+}
+
 ul, ol { list-style: none; }
 
 /* ---- Typography ---- */
@@ -1084,7 +1113,7 @@ p {
   padding-top: 0.25rem;
 }
 
-.book-row-info h4 {
+.book-row-info h3.book-title {
   margin-bottom: 12px;
   color: var(--gold-400);
   font-size: 1.3rem;
