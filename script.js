@@ -306,20 +306,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }).join('');
   };
 
-  // ---- Navbar scroll effect ----
-  const navbar = document.getElementById('navbar');
-  let lastScroll = 0;
-  
-  window.addEventListener('scroll', () => {
-    const currentScroll = window.scrollY;
-    if (currentScroll > 50) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-    lastScroll = currentScroll;
-  });
-
   // ---- Hamburger menu ----
   const hamburger = document.getElementById('hamburger');
   const navLinks = document.getElementById('navLinks');
@@ -920,14 +906,43 @@ document.addEventListener('DOMContentLoaded', () => {
   }, observerOptions);
   sections.forEach(section => observer.observe(section));
 
-  // ---- Parallax effect on hero ----
-  window.addEventListener('scroll', () => {
-    const scrolled = window.scrollY;
-    const hero = document.querySelector('.hero-bg img');
-    if (hero && scrolled < window.innerHeight) {
-      hero.style.transform = `translateY(${scrolled * 0.3}px)`;
-    }
-  });
+  // ---- Optimized Scroll Event Handler (Navbar + Hero Parallax) ----
+  const navbar = document.getElementById('navbar');
+  const heroImg = document.querySelector('.hero-bg img');
+  let ticking = false;
+  let lastScrollY = 0;
+  let windowHeight = window.innerHeight;
+
+  if (navbar || heroImg) {
+    window.addEventListener('resize', () => {
+      windowHeight = window.innerHeight;
+    }, { passive: true });
+
+    window.addEventListener('scroll', () => {
+      lastScrollY = window.scrollY;
+
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          // 1. Navbar scroll effect
+          if (navbar) {
+            if (lastScrollY > 50) {
+              navbar.classList.add('scrolled');
+            } else {
+              navbar.classList.remove('scrolled');
+            }
+          }
+
+          // 2. Parallax effect on hero
+          if (heroImg && lastScrollY < windowHeight) {
+            heroImg.style.transform = `translateY(${lastScrollY * 0.3}px)`;
+          }
+
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+  }
 
   // Initialize UI language after all variables & components are declared
   updateLanguageUI();
