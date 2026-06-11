@@ -44,7 +44,8 @@
   <link rel="preload" as="image" href="images/nuclear-bg.webp" fetchpriority="high">
   
   <!-- Styles -->
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="critical.css">
+  <link rel="stylesheet" href="index.css" media="print" onload="this.media='all'">
   
   <!-- Sitemap -->
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
@@ -132,7 +133,7 @@
     <div class="nav-inner">
       <a href="#" class="nav-logo">
         <img src="images/logo.webp" alt="Logo Dr. Jorge Muro" class="nav-logo-icon-img" width="32" height="32">
-        <img src="images/logo.svg" alt="Jorge Muro" class="nav-logo-svg">
+        <img src="images/logo.svg" alt="Jorge Muro" class="nav-logo-svg" width="160" height="28">
       </a>
       
       <div class="nav-links" id="navLinks">
@@ -493,7 +494,7 @@
       <div class="footer-grid">
         <div class="footer-about">
           <div class="nav-logo">
-            <img src="images/logo.svg" alt="Jorge Muro" class="nav-logo-svg">
+            <img src="images/logo.svg" alt="Jorge Muro" class="nav-logo-svg" width="160" height="28">
           </div>
           <p data-i18n="footer_about">Doctor in Physics from the National University of La Plata, Argentina. Graduate in Negotiation &amp; Leadership from Harvard University. Scientific researcher and founding manager in nuclear energy.</p>
           <div class="footer-social">
@@ -558,6 +559,6 @@
   </div>
 
   <!-- ====== JAVASCRIPT ====== -->
-  <script src="script.js" defer></script>
+  <script src="script.min.js" defer></script>
 </body>
 </html>

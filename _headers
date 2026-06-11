@@ -11,5 +11,11 @@
 /index.css
   Cache-Control: public, max-age=31536000, immutable
 
+/critical.css
+  Cache-Control: public, max-age=31536000, immutable
+
 /script.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/script.min.js
   Cache-Control: public, max-age=31536000, immutable
