@@ -1,4 +1,4 @@
-﻿/* ============================================
+/* ============================================
    Jorge Muro - Landing Page JavaScript
    ============================================ */
 
@@ -896,27 +896,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-  // ---- Active nav link on scroll ----
+  // ---- Active nav link on scroll (optimized via IntersectionObserver) ----
   const sections = document.querySelectorAll('section[id]');
-  
-  window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY + 100;
-    
-    sections.forEach(section => {
-      const top = section.offsetTop;
-      const height = section.offsetHeight;
-      const id = section.getAttribute('id');
-      const link = navLinks.querySelector(`a[href="#${id}"]`);
-      
-      if (link) {
-        if (scrollY >= top && scrollY < top + height) {
-          link.style.color = 'var(--gold-400)';
-        } else {
-          link.style.color = '';
-        }
+  const navLinksItems = navLinks.querySelectorAll('a[href^="#"]');
+  const observerOptions = {
+    root: null,
+    rootMargin: '-30% 0px -70% 0px',
+    threshold: 0
+  };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        navLinksItems.forEach(link => {
+          if (link.getAttribute('href') === `#${id}`) {
+            link.style.color = 'var(--gold-400)';
+          } else {
+            link.style.color = '';
+          }
+        });
       }
     });
-  });
+  }, observerOptions);
+  sections.forEach(section => observer.observe(section));
 
   // ---- Parallax effect on hero ----
   window.addEventListener('scroll', () => {
