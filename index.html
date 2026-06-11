@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SJXJT6BQH3"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'G-SJXJT6BQH3');
@@ -14,12 +15,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dr. Jorge Muro | Físico y Experto en Liderazgo y Negociación | Harvard</title>
-  <meta name="description" content="Conoce al Dr. Jorge Muro Arbulú, físico de la Universidad Nacional de La Plata y graduado de Harvard en Negociación y Liderazgo. Especialista en energía nuclear, mecánica cuántica, simulaciones Monte Carlo e inteligencia artificial. Consultor, investigador y autor.">
-  <meta name="keywords" content="Jorge Muro, Jorge Muro Arbulú, doctor en física, liderazgo Harvard, energía nuclear, mecánica cuántica, negociación, Monte Carlo, inteligencia artificial, consultoría, UNLP, IPEN, SIMA Perú, decisiones bajo incertidumbre, geopolítica">
-  
+  <meta name="description"
+    content="Conoce al Dr. Jorge Muro Arbulú, físico de la Universidad Nacional de La Plata y graduado de Harvard en Negociación y Liderazgo. Especialista en energía nuclear, mecánica cuántica, simulaciones Monte Carlo e inteligencia artificial. Consultor, investigador y autor.">
+  <meta name="keywords"
+    content="Jorge Muro, Jorge Muro Arbulú, doctor en física, liderazgo Harvard, energía nuclear, mecánica cuántica, negociación, Monte Carlo, inteligencia artificial, consultoría, UNLP, IPEN, SIMA Perú, decisiones bajo incertidumbre, geopolítica">
+
   <!-- Open Graph -->
   <meta property="og:title" content="Dr. Jorge Muro | Físico y Experto en Liderazgo de Harvard">
-  <meta property="og:description" content="Físico de la Universidad Nacional de La Plata, graduado de Harvard en Negociación y Liderazgo. Especialista en energía nuclear, mecánica cuántica, Monte Carlo e IA.">
+  <meta property="og:description"
+    content="Físico de la Universidad Nacional de La Plata, graduado de Harvard en Negociación y Liderazgo. Especialista en energía nuclear, mecánica cuántica, Monte Carlo e IA.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.jorgemuro.net">
   <meta property="og:image" content="https://www.jorgemuro.net/images/professor.png">
@@ -28,676 +32,734 @@
   <meta property="og:locale" content="es_PE">
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:site_name" content="Dr. Jorge Muro">
-  
+
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Dr. Jorge Muro | Físico y Experto en Liderazgo de Harvard">
-  <meta name="twitter:description" content="Físico de la UNLP, graduado de Harvard. Especialista en energía nuclear, mecánica cuántica y consultoría estratégica.">
+  <meta name="twitter:description"
+    content="Físico de la UNLP, graduado de Harvard. Especialista en energía nuclear, mecánica cuántica y consultoría estratégica.">
   <meta name="twitter:image" content="https://www.jorgemuro.net/images/professor.png">
-  
+
   <!-- Canonical & Multilingual -->
   <link rel="canonical" href="https://www.jorgemuro.net/">
   <link rel="alternate" hreflang="es" href="https://www.jorgemuro.net/?lang=es">
   <link rel="alternate" hreflang="en" href="https://www.jorgemuro.net/?lang=en">
   <link rel="alternate" hreflang="x-default" href="https://www.jorgemuro.net/?lang=es">
-  
+
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0a1628">
-  
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700&display=swap"
+    rel="stylesheet" media="print" onload="this.media='all'">
+
   <!-- Preload LCP images -->
   <link rel="preload" as="image" href="images/professor.webp" fetchpriority="high">
   <link rel="preload" as="image" href="images/nuclear-bg.webp" fetchpriority="high">
-  
+
   <!-- Styles -->
   <style>
-/* ============================================
+    /* ============================================
    Jorge Muro - Modern Academic Landing Page
    Design System & Core Styles
    ============================================ */
 
-/* ---- CSS Custom Properties ---- */
-:root {
-  /* Color Palette - Navy / Gold / Cream */
-  --navy-900: #0a1628;
-  --navy-800: #0f2140;
-  --navy-700: #1a3158;
-  --navy-600: #1d3557;
-  --navy-500: #264d73;
-  --navy-400: #457b9d;
-  --navy-300: #6b9dbd;
-  
-  --gold-500: #c9a84c;
-  --gold-400: #d4b86a;
-  --gold-300: #e0c988;
-  --gold-200: #f0dfa8;
-  
-  --cream-100: #faf8f5;
-  --cream-200: #f5f0e8;
-  --cream-300: #ede5d5;
-  
-  --white: #ffffff;
-  --text-dark: #1a1a2e;
-  --text-body: #3d3d5c;
-  --text-muted: #6b6b8a;
-  --text-light: #a3a3c2;
-  
-  --accent-red: #e63946;
-  --accent-teal: #2ec4b6;
-  
-  /* Typography */
-  --font-heading: 'Outfit', sans-serif;
-  --font-body: 'Inter', sans-serif;
-  
-  /* Spacing */
-  --section-pad: clamp(4rem, 8vw, 8rem);
-  --container-max: 1200px;
-  
-  /* Transitions */
-  --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
-  
-  /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(10, 22, 40, 0.08);
-  --shadow-md: 0 8px 24px rgba(10, 22, 40, 0.12);
-  --shadow-lg: 0 16px 48px rgba(10, 22, 40, 0.16);
-  --shadow-xl: 0 24px 64px rgba(10, 22, 40, 0.2);
-  --shadow-glow: 0 0 40px rgba(201, 168, 76, 0.15);
-  
-  /* Border Radius */
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
-  --radius-xl: 32px;
-}
-
-/* ---- Reset & Base ---- */
-*, *::before, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 80px;
-  font-size: 16px;
-}
-
-body {
-  font-family: var(--font-body);
-  color: var(--text-body);
-  background: var(--cream-100);
-  line-height: 1.7;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-  transition: color 0.3s var(--ease-out);
-}
-
-/* Skip to content - Accessibility */
-.skip-to-content {
-  position: absolute;
-  top: -100%;
-  left: 16px;
-  background: var(--gold-500);
-  color: var(--navy-900);
-  padding: 12px 24px;
-  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
-  font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 0.9rem;
-  z-index: 10000;
-  transition: top 0.3s;
-}
-
-.skip-to-content:focus {
-  top: 0;
-}
-
-/* Focus visible for keyboard navigation */
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-textarea:focus-visible {
-  outline: 2px solid var(--gold-500);
-  outline-offset: 2px;
-}
-
-ul, ol { list-style: none; }
-
-/* ---- Typography ---- */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-  font-weight: 600;
-  line-height: 1.2;
-  color: var(--text-dark);
-}
-
-h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
-h2 { font-size: clamp(2rem, 4vw, 3rem); }
-h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
-h4 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
-
-p {
-  font-size: clamp(1rem, 1.1vw, 1.125rem);
-  line-height: 1.8;
-}
-
-.text-gradient {
-  background: linear-gradient(135deg, var(--gold-500), var(--gold-300));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.section-label {
-  font-family: var(--font-heading);
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  color: var(--gold-500);
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 1rem;
-}
-
-.section-label::before {
-  content: '';
-  display: inline-block;
-  width: 32px;
-  height: 2px;
-  background: var(--gold-500);
-}
-
-/* ---- Container ---- */
-.container {
-  max-width: var(--container-max);
-  margin: 0 auto;
-  padding: 0 clamp(1.5rem, 4vw, 3rem);
-}
-
-/* ---- Buttons ---- */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 14px 32px;
-  font-family: var(--font-heading);
-  font-size: 0.95rem;
-  font-weight: 600;
-  border-radius: 50px;
-  border: none;
-  cursor: pointer;
-  transition: all 0.4s var(--ease-out);
-  position: relative;
-  overflow: hidden;
-}
-
-.btn::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
-  opacity: 0;
-  transition: opacity 0.4s;
-}
-
-.btn:hover::after { opacity: 1; }
-
-.btn-primary {
-  background: linear-gradient(135deg, var(--gold-500), var(--gold-400));
-  color: var(--navy-900);
-  box-shadow: 0 4px 16px rgba(201, 168, 76, 0.3);
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(201, 168, 76, 0.4);
-}
-
-.btn-secondary {
-  background: transparent;
-  color: var(--white);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-}
-
-.btn-secondary:hover {
-  border-color: var(--gold-400);
-  color: var(--gold-400);
-  transform: translateY(-2px);
-}
-
-.btn-outline {
-  background: transparent;
-  color: var(--navy-600);
-  border: 2px solid var(--navy-600);
-}
-
-.btn-outline:hover {
-  background: var(--navy-600);
-  color: var(--white);
-  transform: translateY(-2px);
-}
-
-.btn-sm {
-  padding: 8px 20px;
-  font-size: 0.85rem;
-}
-
-/* ---- Navigation ---- */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  padding: 16px 0;
-  transition: all 0.4s var(--ease-out);
-  background: transparent;
-}
-
-.navbar.scrolled {
-  background: rgba(10, 22, 40, 0.95);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  padding: 10px 0;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-}
-
-.nav-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: var(--container-max);
-  margin: 0 auto;
-  padding: 0 clamp(1.5rem, 4vw, 3rem);
-}
-
-.nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.nav-logo-svg {
-  height: 28px;
-  width: auto;
-  filter: brightness(0) invert(1);
-  transition: opacity 0.3s;
-}
-
-.nav-logo-icon-img {
-  height: 32px;
-  width: auto;
-  filter: brightness(0) invert(1);
-  transition: opacity 0.3s;
-}
-
-.nav-logo-svg:hover {
-  opacity: 0.85;
-}
-
-.nav-logo-icon {
-  width: 44px;
-  height: 44px;
-  background: linear-gradient(135deg, var(--gold-500), var(--gold-300));
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: var(--navy-900);
-}
-
-.nav-logo-text {
-  font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 1.15rem;
-  color: var(--white);
-  letter-spacing: 0.5px;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 36px;
-}
-
-.nav-links a {
-  font-family: var(--font-body);
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.8);
-  position: relative;
-  padding: 4px 0;
-}
-
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--gold-500);
-  transition: width 0.3s var(--ease-out);
-}
-
-.nav-links a:hover { color: var(--white); }
-.nav-links a:hover::after { width: 100%; }
-
-.nav-lang {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 16px;
-  border-radius: 50px;
-  border: 1px solid rgba(255,255,255,0.2);
-  font-size: 0.85rem;
-  color: rgba(255,255,255,0.7);
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.nav-lang:hover {
-  border-color: var(--gold-400);
-  color: var(--gold-400);
-}
-
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  z-index: 1001;
-  padding: 4px;
-}
-
-.hamburger span {
-  width: 28px;
-  height: 2px;
-  background: var(--white);
-  transition: all 0.3s var(--ease-out);
-  border-radius: 2px;
-}
-
-.hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-.hamburger.active span:nth-child(2) { opacity: 0; }
-.hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
-
-/* ---- Hero Section ---- */
-.hero {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  background: var(--navy-900);
-  overflow: hidden;
-}
-
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-}
-
-.hero-bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.3;
-}
-
-.hero-bg::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg, 
-    rgba(10, 22, 40, 0.95) 0%, 
-    rgba(10, 22, 40, 0.7) 50%,
-    rgba(26, 49, 88, 0.8) 100%
-  );
-}
-
-/* Animated particles */
-.hero-particles {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  overflow: hidden;
-}
-
-.particle {
-  position: absolute;
-  width: 3px;
-  height: 3px;
-  background: var(--gold-500);
-  border-radius: 50%;
-  opacity: 0;
-  animation: float-particle 8s infinite;
-}
-
-@keyframes float-particle {
-  0% { opacity: 0; transform: translateY(100vh) scale(0); }
-  10% { opacity: 0.6; }
-  90% { opacity: 0.6; }
-  100% { opacity: 0; transform: translateY(-100px) scale(1); }
-}
-
-.hero-content {
-  position: relative;
-  z-index: 3;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(2rem, 5vw, 5rem);
-  align-items: center;
-  padding-top: 100px;
-  padding-bottom: 60px;
-}
-
-.hero-text {
-  animation: fadeSlideUp 1s var(--ease-out) 0.3s both;
-}
-
-.hero-subtitle {
-  font-family: var(--font-heading);
-  font-size: 0.9rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  color: var(--gold-500);
-  margin-bottom: 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.hero-subtitle::before {
-  content: '';
-  width: 40px;
-  height: 2px;
-  background: var(--gold-500);
-}
-
-.hero-title {
-  color: var(--white);
-  font-size: clamp(2.8rem, 5.5vw, 4.5rem);
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
-  font-weight: 600;
-}
-
-.hero-title .highlight {
-  background: linear-gradient(135deg, var(--gold-500), var(--gold-300));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.hero-description {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 1.15rem;
-  line-height: 1.8;
-  margin-bottom: 2rem;
-  max-width: 520px;
-}
-
-.hero-ctas {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.hero-stats {
-  display: flex;
-  gap: 40px;
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255,255,255,0.1);
-}
-
-.hero-stat-number {
-  font-family: var(--font-heading);
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: var(--gold-500);
-  line-height: 1;
-}
-
-.hero-stat-label {
-  font-size: 0.85rem;
-  color: rgba(255,255,255,0.5);
-  margin-top: 4px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.hero-image {
-  position: relative;
-  animation: fadeSlideUp 1s var(--ease-out) 0.6s both;
-  max-width: 420px;
-  margin-left: auto;
-}
-
-.hero-image-wrapper {
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-image-wrapper::before {
-  display: none;
-}
-
-.hero-image-wrapper::after {
-  display: none;
-}
-
-.hero-image-wrapper img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 3/4;
-  object-fit: cover;
-  object-position: center top;
-  mix-blend-mode: lighten;
-}
-
-.hero-badge {
-  position: absolute;
-  bottom: -20px;
-  right: -20px;
-  background: linear-gradient(135deg, var(--gold-500), var(--gold-400));
-  color: var(--navy-900);
-  padding: 16px 24px;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-lg);
-  text-align: center;
-  animation: fadeSlideUp 1s var(--ease-out) 1s both;
-}
-
-.hero-badge-icon {
-  font-size: 1.5rem;
-  margin-bottom: 4px;
-}
-
-.hero-badge-text {
-  font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 0.85rem;
-  line-height: 1.3;
-}
-
-/* Scroll indicator */
-.scroll-indicator {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  color: rgba(255,255,255,0.4);
-  font-size: 0.75rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  animation: bounce 2s infinite;
-}
-
-.scroll-indicator .arrow {
-  width: 24px;
-  height: 24px;
-  border-right: 2px solid rgba(255,255,255,0.4);
-  border-bottom: 2px solid rgba(255,255,255,0.4);
-  transform: rotate(45deg);
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-  40% { transform: translateX(-50%) translateY(-10px); }
-  60% { transform: translateX(-50%) translateY(-5px); }
-}
-
-/* ---- About Section ---- */
-
+    /* ---- CSS Custom Properties ---- */
+    :root {
+      /* Color Palette - Navy / Gold / Cream */
+      --navy-900: #0a1628;
+      --navy-800: #0f2140;
+      --navy-700: #1a3158;
+      --navy-600: #1d3557;
+      --navy-500: #264d73;
+      --navy-400: #457b9d;
+      --navy-300: #6b9dbd;
+
+      --gold-500: #c9a84c;
+      --gold-400: #d4b86a;
+      --gold-300: #e0c988;
+      --gold-200: #f0dfa8;
+
+      --cream-100: #faf8f5;
+      --cream-200: #f5f0e8;
+      --cream-300: #ede5d5;
+
+      --white: #ffffff;
+      --text-dark: #1a1a2e;
+      --text-body: #3d3d5c;
+      --text-muted: #6b6b8a;
+      --text-light: #a3a3c2;
+
+      --accent-red: #e63946;
+      --accent-teal: #2ec4b6;
+
+      /* Typography */
+      --font-heading: 'Outfit', sans-serif;
+      --font-body: 'Inter', sans-serif;
+
+      /* Spacing */
+      --section-pad: clamp(4rem, 8vw, 8rem);
+      --container-max: 1200px;
+
+      /* Transitions */
+      --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+      /* Shadows */
+      --shadow-sm: 0 2px 8px rgba(10, 22, 40, 0.08);
+      --shadow-md: 0 8px 24px rgba(10, 22, 40, 0.12);
+      --shadow-lg: 0 16px 48px rgba(10, 22, 40, 0.16);
+      --shadow-xl: 0 24px 64px rgba(10, 22, 40, 0.2);
+      --shadow-glow: 0 0 40px rgba(201, 168, 76, 0.15);
+
+      /* Border Radius */
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --radius-xl: 32px;
+    }
+
+    /* ---- Reset & Base ---- */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text-body);
+      background: var(--cream-100);
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.3s var(--ease-out);
+    }
+
+    /* Skip to content - Accessibility */
+    .skip-to-content {
+      position: absolute;
+      top: -100%;
+      left: 16px;
+      background: var(--gold-500);
+      color: var(--navy-900);
+      padding: 12px 24px;
+      border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.9rem;
+      z-index: 10000;
+      transition: top 0.3s;
+    }
+
+    .skip-to-content:focus {
+      top: 0;
+    }
+
+    /* Focus visible for keyboard navigation */
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: 2px solid var(--gold-500);
+      outline-offset: 2px;
+    }
+
+    ul,
+    ol {
+      list-style: none;
+    }
+
+    /* ---- Typography ---- */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--text-dark);
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+    }
+
+    h3 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+    }
+
+    h4 {
+      font-size: clamp(1.2rem, 2vw, 1.5rem);
+    }
+
+    p {
+      font-size: clamp(1rem, 1.1vw, 1.125rem);
+      line-height: 1.8;
+    }
+
+    .text-gradient {
+      background: linear-gradient(135deg, var(--gold-500), var(--gold-300));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .section-label {
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--gold-500);
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1rem;
+    }
+
+    .section-label::before {
+      content: '';
+      display: inline-block;
+      width: 32px;
+      height: 2px;
+      background: var(--gold-500);
+    }
+
+    /* ---- Container ---- */
+    .container {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 clamp(1.5rem, 4vw, 3rem);
+    }
+
+    /* ---- Buttons ---- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.4s var(--ease-out);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+
+    .btn:hover::after {
+      opacity: 1;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold-500), var(--gold-400));
+      color: var(--navy-900);
+      box-shadow: 0 4px 16px rgba(201, 168, 76, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(201, 168, 76, 0.4);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--gold-400);
+      color: var(--gold-400);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--navy-600);
+      border: 2px solid var(--navy-600);
+    }
+
+    .btn-outline:hover {
+      background: var(--navy-600);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .btn-sm {
+      padding: 8px 20px;
+      font-size: 0.85rem;
+    }
+
+    /* ---- Navigation ---- */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 16px 0;
+      transition: all 0.4s var(--ease-out);
+      background: transparent;
+    }
+
+    .navbar.scrolled {
+      background: rgba(10, 22, 40, 0.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding: 10px 0;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 clamp(1.5rem, 4vw, 3rem);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-logo-svg {
+      height: 28px;
+      width: auto;
+      filter: brightness(0) invert(1);
+      transition: opacity 0.3s;
+    }
+
+    .nav-logo-icon-img {
+      height: 32px;
+      width: auto;
+      filter: brightness(0) invert(1);
+      transition: opacity 0.3s;
+    }
+
+    .nav-logo-svg:hover {
+      opacity: 0.85;
+    }
+
+    .nav-logo-icon {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--gold-500), var(--gold-300));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--navy-900);
+    }
+
+    .nav-logo-text {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 1.15rem;
+      color: var(--white);
+      letter-spacing: 0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+    }
+
+    .nav-links a {
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.8);
+      position: relative;
+      padding: 4px 0;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gold-500);
+      transition: width 0.3s var(--ease-out);
+    }
+
+    .nav-links a:hover {
+      color: var(--white);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-lang {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 50px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.7);
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .nav-lang:hover {
+      border-color: var(--gold-400);
+      color: var(--gold-400);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      z-index: 1001;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      width: 28px;
+      height: 2px;
+      background: var(--white);
+      transition: all 0.3s var(--ease-out);
+      border-radius: 2px;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* ---- Hero Section ---- */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: var(--navy-900);
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.3;
+    }
+
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg,
+          rgba(10, 22, 40, 0.95) 0%,
+          rgba(10, 22, 40, 0.7) 50%,
+          rgba(26, 49, 88, 0.8) 100%);
+    }
+
+    /* Animated particles */
+    .hero-particles {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      overflow: hidden;
+    }
+
+    .particle {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background: var(--gold-500);
+      border-radius: 50%;
+      opacity: 0;
+      animation: float-particle 8s infinite;
+    }
+
+    @keyframes float-particle {
+      0% {
+        opacity: 0;
+        transform: translateY(100vh) scale(0);
+      }
+
+      10% {
+        opacity: 0.6;
+      }
+
+      90% {
+        opacity: 0.6;
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateY(-100px) scale(1);
+      }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2rem, 5vw, 5rem);
+      align-items: center;
+      padding-top: 100px;
+      padding-bottom: 60px;
+    }
+
+    .hero-text {
+      animation: fadeSlideUp 1s var(--ease-out) 0.3s both;
+    }
+
+    .hero-subtitle {
+      font-family: var(--font-heading);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: var(--gold-500);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .hero-subtitle::before {
+      content: '';
+      width: 40px;
+      height: 2px;
+      background: var(--gold-500);
+    }
+
+    .hero-title {
+      color: var(--white);
+      font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    .hero-title .highlight {
+      background: linear-gradient(135deg, var(--gold-500), var(--gold-300));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-description {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 1.15rem;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      max-width: 520px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .hero-stat-number {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: var(--gold-500);
+      line-height: 1;
+    }
+
+    .hero-stat-label {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.5);
+      margin-top: 4px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hero-image {
+      position: relative;
+      animation: fadeSlideUp 1s var(--ease-out) 0.6s both;
+      max-width: 420px;
+      margin-left: auto;
+    }
+
+    .hero-image-wrapper {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-image-wrapper::before {
+      display: none;
+    }
+
+    .hero-image-wrapper::after {
+      display: none;
+    }
+
+    .hero-image-wrapper img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: center top;
+      mix-blend-mode: lighten;
+    }
+
+    .hero-badge {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      background: linear-gradient(135deg, var(--gold-500), var(--gold-400));
+      color: var(--navy-900);
+      padding: 16px 24px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-lg);
+      text-align: center;
+      animation: fadeSlideUp 1s var(--ease-out) 1s both;
+    }
+
+    .hero-badge-icon {
+      font-size: 1.5rem;
+      margin-bottom: 4px;
+    }
+
+    .hero-badge-text {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.85rem;
+      line-height: 1.3;
+    }
+
+    /* Scroll indicator */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      animation: bounce 2s infinite;
+    }
+
+    .scroll-indicator .arrow {
+      width: 24px;
+      height: 24px;
+      border-right: 2px solid rgba(255, 255, 255, 0.4);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+      transform: rotate(45deg);
+    }
+
+    @keyframes bounce {
+
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+        transform: translateX(-50%) translateY(0);
+      }
+
+      40% {
+        transform: translateX(-50%) translateY(-10px);
+      }
+
+      60% {
+        transform: translateX(-50%) translateY(-5px);
+      }
+    }
+
+    /* ---- About Section ---- */
   </style>
   <link rel="stylesheet" href="index.css" media="print" onload="this.media='all'">
-  
+
   <!-- Sitemap -->
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
-  
+
   <!-- Deploy: Linked with Netlify & GitHub CI/CD -->
-  
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
   <link rel="apple-touch-icon" href="images/logo.png">
-  
+
   <!-- Schema.org: Person -->
   <script type="application/ld+json">
   {
@@ -766,6 +828,7 @@ p {
   }
   </script>
 </head>
+
 <body>
   <!-- Skip to content -->
   <a href="#hero" class="skip-to-content" id="skipToContent">Saltar al contenido</a>
@@ -777,7 +840,7 @@ p {
         <img src="images/logo.webp" alt="Logo Dr. Jorge Muro" class="nav-logo-icon-img" width="32" height="32">
         <img src="images/logo.svg" alt="Jorge Muro" class="nav-logo-svg" width="160" height="28">
       </a>
-      
+
       <div class="nav-links" id="navLinks">
         <a href="#about" data-i18n="nav_about">Sobre Mí</a>
         <a href="#expertise" data-i18n="nav_expertise">Especialidades</a>
@@ -788,7 +851,7 @@ p {
           🌐 ES | EN
         </div>
       </div>
-      
+
       <div class="hamburger" id="hamburger">
         <span></span>
         <span></span>
@@ -799,334 +862,433 @@ p {
 
   <main>
 
-  <!-- ====== HERO SECTION ====== -->
-  <section class="hero" id="hero">
-    <div class="hero-bg">
-      <img src="images/nuclear-bg.webp" alt="Fondo de energía nuclear - Dr. Jorge Muro" loading="eager" fetchpriority="high" width="1366" height="912">
-    </div>
-    
-    <div class="hero-particles" id="heroParticles"></div>
-    
-    <div class="container hero-content">
-      <div class="hero-text">
-        <div class="hero-subtitle" data-i18n="hero_subtitle">Doctor en Física</div>
-        <h1 class="hero-title">
-          Dr. Jorge <span class="highlight">Muro</span> Arbulú
-        </h1>
-        <p class="hero-description" data-i18n="hero_desc">
-          Distinguido físico de la Universidad Nacional de La Plata, Argentina. Graduado en Negociación y Liderazgo de la Universidad de Harvard. Investigador científico y gerente fundador en proyectos de energía nuclear.
-        </p>
-        <div class="hero-ctas">
-          <a href="#contact" class="btn btn-primary" data-i18n="hero_cta_contact">Contacto</a>
-          <a href="#publications" class="btn btn-secondary" data-i18n="hero_cta_pub">Ver Publicaciones</a>
-        </div>
-        
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <div class="hero-stat-number counter" data-target="30">0</div>
-            <div class="hero-stat-label" data-i18n="stat_experience">Años de Experiencia</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-number counter" data-target="15">0</div>
-            <div class="hero-stat-label" data-i18n="stat_publications">Publicaciones</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-number counter" data-target="50">0</div>
-            <div class="hero-stat-label" data-i18n="stat_conferences">Conferencias</div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="hero-image">
-        <div class="hero-image-wrapper">
-          <img src="images/professor.webp" alt="Dr. Jorge Muro Arbulú - Físico y Experto en Liderazgo" loading="eager" fetchpriority="high" width="351" height="497">
-        </div>
-        <div class="hero-badge">
-          <div class="hero-badge-icon">🎓</div>
-          <div class="hero-badge-text" data-i18n="hero_badge">Universidad de<br>Harvard</div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="scroll-indicator">
-      <span data-i18n="scroll_text">Desplazar</span>
-      <div class="arrow"></div>
-    </div>
-  </section>
-
-  <!-- ====== ABOUT SECTION ====== -->
-  <section class="about" id="about">
-    <div class="container about-grid">
-      <div class="about-image reveal">
-        <div class="about-carousel" id="aboutCarousel">
-          <div class="about-carousel-track">
-            <div class="about-carousel-slide active">
-              <img src="images/about-professor.webp" alt="Dr. Jorge Muro - Presentación académica" loading="lazy" decoding="async" width="600" height="600">
-            </div>
-            <div class="about-carousel-slide">
-              <img src="images/about-group.webp" alt="Dr. Jorge Muro - Reunión profesional" loading="lazy" decoding="async" width="600" height="600">
-            </div>
-          </div>
-          <button class="about-carousel-btn about-carousel-prev" aria-label="Previous image">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-          </button>
-          <button class="about-carousel-btn about-carousel-next" aria-label="Next image">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          </button>
-          <div class="about-carousel-dots">
-            <button class="about-carousel-dot active" data-index="0" aria-label="Slide 1"></button>
-            <button class="about-carousel-dot" data-index="1" aria-label="Slide 2"></button>
-          </div>
-        </div>
-        <div class="about-image-accent"></div>
-      </div>
-      
-      <div class="about-text reveal reveal-delay-2">
-        <div class="section-label" data-i18n="about_label">About</div>
-        <h2 data-i18n="about_title">Bridging Science, Strategy &amp; Leadership</h2>
-        <p data-i18n="about_p1">
-          Dr. Jorge Muro Arbulú is a distinguished physicist from the National University of La Plata, Argentina, with a graduate degree in Negotiation and Leadership from Harvard University. His unique combination of scientific rigor and strategic leadership has shaped his career across nuclear energy, artificial intelligence, and international business consulting.
-        </p>
-        <p data-i18n="about_p2">
-          As a scientific researcher at the Peruvian Institute of Nuclear Energy and founding manager of the Nuclear Projects Office at the Industrial Service of the Navy (SIMA Peru), Dr. Muro brings unparalleled expertise to every endeavor.
-        </p>
-        
-        <div class="credentials">
-          <div class="credential">
-            <div class="credential-icon">🎓</div>
-            <div class="credential-text">
-              <h3 data-i18n="cred_phd_title">Ph.D. in Physics</h3>
-              <p data-i18n="cred_phd_desc">National University of La Plata, Argentina</p>
-            </div>
-          </div>
-          <div class="credential">
-            <div class="credential-icon">🏛️</div>
-            <div class="credential-text">
-              <h3 data-i18n="cred_harv_title">Negotiation &amp; Leadership</h3>
-              <p data-i18n="cred_harv_desc">Harvard University, USA</p>
-            </div>
-          </div>
-          <div class="credential">
-            <div class="credential-icon">⚛️</div>
-            <div class="credential-text">
-              <h3 data-i18n="cred_nuclear_title">Nuclear Energy Research</h3>
-              <p data-i18n="cred_nuclear_desc">Peruvian Institute of Nuclear Energy (IPEN)</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== EXPERTISE SECTION ====== -->
-  <section class="expertise" id="expertise">
-    <div class="container">
-      <div class="section-header reveal">
-        <div class="section-label" data-i18n="expertise_label">Expertise</div>
-        <h2 data-i18n="expertise_title">Areas of Specialization</h2>
-        <p class="section-desc" data-i18n="expertise_desc">Combining theoretical physics, data science, and strategic leadership to solve complex real-world challenges.</p>
-      </div>
-      
-      <div class="expertise-grid">
-        <div class="expertise-card reveal reveal-delay-1">
-          <div class="expertise-icon">⚛️</div>
-          <h3 data-i18n="exp1_title">Quantum Mechanics</h3>
-          <p data-i18n="exp1_desc">Research in quantum mechanics and its practical applications in computing, energy, and communications. Exploring the latest advances revolutionizing science and technology.</p>
-        </div>
-        
-        <div class="expertise-card reveal reveal-delay-2">
-          <div class="expertise-icon">☢️</div>
-          <h3 data-i18n="exp2_title">Nuclear Energy</h3>
-          <p data-i18n="exp2_desc">Founding manager of the Nuclear Projects Office at SIMA Peru. Extensive experience in nuclear energy research, project management, and international advisory services.</p>
-        </div>
-        
-        <div class="expertise-card reveal reveal-delay-3">
-          <div class="expertise-icon">🤖</div>
-          <h3 data-i18n="exp3_title">Artificial Intelligence</h3>
-          <p data-i18n="exp3_desc">Application of AI, machine learning, and probability distributions in business optimization models. Analysis of AI's impact on the future of work and knowledge management.</p>
-        </div>
-        
-        <div class="expertise-card reveal reveal-delay-1">
-          <div class="expertise-icon">📊</div>
-          <h3 data-i18n="exp4_title">Monte Carlo Methods</h3>
-          <p data-i18n="exp4_desc">Expert in Monte Carlo simulation for financial models, risk forecasting, investment analysis, and decision-making under uncertainty. Using computational algorithms for strategic outcomes.</p>
-        </div>
-        
-        <div class="expertise-card reveal reveal-delay-2">
-          <div class="expertise-icon">🤝</div>
-          <h3 data-i18n="exp5_title">Negotiation &amp; Leadership</h3>
-          <p data-i18n="exp5_desc">Harvard-trained negotiation and leadership expert. Advisor to international companies on complex negotiations, conflict resolution, and strategic decision-making in times of change.</p>
-        </div>
-        
-        <div class="expertise-card reveal reveal-delay-3">
-          <div class="expertise-icon">🔬</div>
-          <h3 data-i18n="exp6_title">Scientific Research</h3>
-          <p data-i18n="exp6_desc">Extensive background as a scientific researcher applying physics principles to solve real-world problems. Published author on epistemology, national development, and applied science.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== PUBLICATIONS SECTION ====== -->
-  <section class="publications" id="publications">
-    <div class="container">
-      <div class="section-header reveal">
-        <div class="section-label" data-i18n="pub_label">Research &amp; Articles</div>
-        <h2 data-i18n="pub_title">Latest Publications</h2>
-      </div>
-      
-      <div class="pub-tabs" id="pubTabs">
-        <!-- Renders dynamically in JS -->
-      </div>
-      <div class="pub-grid" id="pubGrid">
-        <!-- Renders dynamically in JS -->
-        <noscript>
-          <div class="pub-card-noscript-container" style="grid-column: span 2; display: flex; flex-direction: column; gap: 20px; width: 100%;">
-            <div class="pub-card" style="display: flex; gap: 24px; padding: 24px; border-radius: var(--radius-md); background: var(--white); border: 1px solid rgba(0,0,0,0.05);">
-              <div class="pub-card-content">
-                <span class="pub-card-tag" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #8c6c1f; margin-bottom: 6px; display: block;">Physics</span>
-                <h3 class="pub-card-title" style="font-family: var(--font-heading); font-weight: 600; font-size: 1.1rem; color: var(--text-dark); margin-bottom: 6px; line-height: 1.3;">Quantum Computing</h3>
-                <p class="pub-card-desc" style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">Dr. Muro explores the intersection of quantum mechanics and computing, covering the foundations and practical applications transforming technology.</p>
-                <a href="articulos/quantum-computing.html" style="font-size: 0.85rem; color: #8c6c1f; font-weight: 600; margin-top: 10px; display: inline-block; text-decoration: none;">📄 Ver artículo en la web</a>
-              </div>
-            </div>
-            <div class="pub-card" style="display: flex; gap: 24px; padding: 24px; border-radius: var(--radius-md); background: var(--white); border: 1px solid rgba(0,0,0,0.05);">
-              <div class="pub-card-content">
-                <span class="pub-card-tag" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #8c6c1f; margin-bottom: 6px; display: block;">AI & Work</span>
-                <h3 class="pub-card-title" style="font-family: var(--font-heading); font-weight: 600; font-size: 1.1rem; color: var(--text-dark); margin-bottom: 6px; line-height: 1.3;">AI & the Future of Work</h3>
-                <p class="pub-card-desc" style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">Analysis of the radical transformation of the labor market by generative AI, exploring the structural crisis and the "broken talent ladder".</p>
-                <a href="articulos/ia-trabajo.html" style="font-size: 0.85rem; color: #8c6c1f; font-weight: 600; margin-top: 10px; display: inline-block; text-decoration: none;">📄 Ver artículo en la web</a>
-              </div>
-            </div>
-            <div class="pub-card" style="display: flex; gap: 24px; padding: 24px; border-radius: var(--radius-md); background: var(--white); border: 1px solid rgba(0,0,0,0.05);">
-              <div class="pub-card-content">
-                <span class="pub-card-tag" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #8c6c1f; margin-bottom: 6px; display: block;">Math & Risk</span>
-                <h3 class="pub-card-title" style="font-family: var(--font-heading); font-weight: 600; font-size: 1.1rem; color: var(--text-dark); margin-bottom: 6px; line-height: 1.3;">Markov Chains & Monte Carlo Method</h3>
-                <p class="pub-card-desc" style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">Discover how mathematical models predict weather or analyze stock markets using randomness to solve complex engineering and financial problems.</p>
-                <a href="articulos/markov-montecarlo.html" style="font-size: 0.85rem; color: #8c6c1f; font-weight: 600; margin-top: 10px; display: inline-block; text-decoration: none;">📄 Ver artículo en la web</a>
-              </div>
-            </div>
-            <div class="pub-card" style="display: flex; gap: 24px; padding: 24px; border-radius: var(--radius-md); background: var(--white); border: 1px solid rgba(0,0,0,0.05);">
-              <div class="pub-card-content">
-                <span class="pub-card-tag" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #8c6c1f; margin-bottom: 6px; display: block;">Geopolitics</span>
-                <h3 class="pub-card-title" style="font-family: var(--font-heading); font-weight: 600; font-size: 1.1rem; color: var(--text-dark); margin-bottom: 6px; line-height: 1.3;">The Day Qatar Burned</h3>
-                <p class="pub-card-desc" style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">Analysis of the global energy crisis of March 2026, triggered by the attacks on Ras Laffan facilities and the Strait of Hormuz blockade.</p>
-                <a href="articulos/qatar.html" style="font-size: 0.85rem; color: #8c6c1f; font-weight: 600; margin-top: 10px; display: inline-block; text-decoration: none;">📄 Ver artículo en la web</a>
-              </div>
-            </div>
-            <div class="pub-card" style="display: flex; gap: 24px; padding: 24px; border-radius: var(--radius-md); background: var(--white); border: 1px solid rgba(0,0,0,0.05);">
-              <div class="pub-card-content">
-                <span class="pub-card-tag" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #8c6c1f; margin-bottom: 6px; display: block;">Models</span>
-                <h3 class="pub-card-title" style="font-family: var(--font-heading); font-weight: 600; font-size: 1.1rem; color: var(--text-dark); margin-bottom: 6px; line-height: 1.3;">Models & Automation</h3>
-                <p class="pub-card-desc" style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">Dr. Muro presents a collection of mathematical models, AI automation algorithms, and business process optimization frameworks.</p>
-                <a href="articulos/models.html" style="font-size: 0.85rem; color: #8c6c1f; font-weight: 600; margin-top: 10px; display: inline-block; text-decoration: none;">📄 Ver artículo en la web</a>
-              </div>
-            </div>
-            <div class="pub-card" style="display: flex; gap: 24px; padding: 24px; border-radius: var(--radius-md); background: var(--white); border: 1px solid rgba(0,0,0,0.05);">
-              <div class="pub-card-content">
-                <span class="pub-card-tag" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #8c6c1f; margin-bottom: 6px; display: block;">Geopolitics</span>
-                <h3 class="pub-card-title" style="font-family: var(--font-heading); font-weight: 600; font-size: 1.1rem; color: var(--text-dark); margin-bottom: 6px; line-height: 1.3;">Fertilizer Crisis & Famine Risks in Peru</h3>
-                <p class="pub-card-desc" style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">Analysis of agricultural vulnerability and international supply chain disruptions affecting national food security.</p>
-                <a href="articulos/fertilizantes.html" style="font-size: 0.85rem; color: #8c6c1f; font-weight: 600; margin-top: 10px; display: inline-block; text-decoration: none;">📄 Ver artículo en la web</a>
-              </div>
-            </div>
-          </div>
-        </noscript>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== BOOKS SECTION ====== -->
-  <section class="books" id="books">
-    <div class="container">
-      <div class="books-header reveal">
-        <div class="section-label" data-i18n="books_label">Published Works</div>
-        <h2 data-i18n="books_title">Books &amp; Publications</h2>
+    <!-- ====== HERO SECTION ====== -->
+    <section class="hero" id="hero">
+      <div class="hero-bg">
+        <img src="images/nuclear-bg.webp" alt="Fondo de energía nuclear - Dr. Jorge Muro" loading="eager"
+          fetchpriority="high" width="1366" height="912">
       </div>
 
-      <div class="book-row reveal">
-        <div class="book-row-cover">
-          <img src="images/book-decision-1x.webp" srcset="images/book-decision-1x.webp 1x, images/book-decision.webp 2x" alt="Toma de Decisiones bajo Incertidumbre - Libro del Dr. Jorge Muro" width="280" height="400" loading="lazy" decoding="async">
-        </div>
-        <div class="book-row-info">
-          <h3 data-i18n="book1_title" class="book-title">Decision Making Under Uncertainty</h3>
-          <p data-i18n="book1_desc">A comprehensive guide to applying Monte Carlo methods, probability distributions, and statistical models for strategic decision-making in complex, uncertain environments. Essential reading for managers, engineers, and researchers.</p>
-          <a href="https://www.amazon.com/-/es/Jorge-Eduardo-Muro-Arbul%C3%BA-ebook/dp/B0BWFTJJ7G/ref=sr_1_1?sr=8-1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="margin-top: 0.75rem; text-decoration: none;" data-i18n="book1_cta" data-i18n-href="book1_link">Buy on Amazon</a>
-        </div>
-      </div>
+      <div class="hero-particles" id="heroParticles"></div>
 
-      <div class="book-row reveal">
-        <div class="book-row-cover">
-          <img src="images/book-peru-ecuador-1x.webp" srcset="images/book-peru-ecuador-1x.webp 1x, images/book-peru-ecuador.webp 2x" alt="El Conflicto Perú-Ecuador: La Historia No Contada - Libro del Dr. Jorge Muro" width="280" height="400" loading="lazy" decoding="async">
-        </div>
-        <div class="book-row-info">
-          <h3 data-i18n="book2_title" class="book-title">The Peru - Ecuador Conflict: The Untold Story</h3>
-          <p data-i18n="book2_desc">An unprecedented analysis of the 1998 resolution of the territorial conflict between Peru and Ecuador, combining the Harvard Negotiation Project methodology with deep geopolitical insight. A unique perspective on shifting from positions to underlying interests.</p>
-          <a href="https://drive.google.com/file/d/1EKI-QwxDQAWWpobm5hc5Rbs2_VDDXOyX/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="margin-top: 0.75rem; text-decoration: none;" data-i18n="book2_cta">Read Book</a>
-        </div>
-      </div>
-
-      <div class="books-cta reveal" style="text-align: center; margin-top: 2.5rem;">
-        <a href="#contact" class="btn btn-secondary" data-i18n="books_cta">Inquire About Books</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== CONTACT SECTION ====== -->
-  <section class="contact" id="contact">
-    <div class="container contact-grid">
-      <div class="contact-info reveal">
-        <div class="section-label" data-i18n="contact_label">Get in Touch</div>
-        <h2 data-i18n="contact_title">Let's Work Together</h2>
-        <p data-i18n="contact_desc">Reach out for consulting, speaking engagements, research collaborations, or business advisory services.</p>
-        
-        <div class="contact-detail">
-          <div class="contact-detail-icon">📍</div>
-          <div class="contact-detail-text">
-            <h3 data-i18n="contact_loc">Location</h3>
-            <p data-i18n="contact_loc_value">Lima, Peru</p>
-          </div>
-        </div>
-
-        
-        <div class="contact-detail">
-          <div class="contact-detail-icon">🌐</div>
-          <div class="contact-detail-text">
-            <h3 data-i18n="contact_web">Website</h3>
-            <p>www.jorgemuro.net</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="contact-form reveal reveal-delay-2">
-        <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="contact">
-          <p class="hidden-honeypot">
-            <label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+      <div class="container hero-content">
+        <div class="hero-text">
+          <div class="hero-subtitle" data-i18n="hero_subtitle">Doctor en Física</div>
+          <h1 class="hero-title">
+            Dr. Jorge <span class="highlight">Muro</span> Arbulú
+          </h1>
+          <p class="hero-description" data-i18n="hero_desc">
+            Distinguido físico de la Universidad Nacional de La Plata, Argentina. Graduado en Negociación y Liderazgo de
+            la Universidad de Harvard. Investigador científico y gerente fundador en proyectos de energía nuclear.
           </p>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name" data-i18n="form_name">Full Name</label>
-              <input type="text" id="name" name="name" placeholder="John Doe" data-i18n="form_name_placeholder" required>
+          <div class="hero-ctas">
+            <a href="#contact" class="btn btn-primary" data-i18n="hero_cta_contact">Contacto</a>
+            <a href="#publications" class="btn btn-secondary" data-i18n="hero_cta_pub">Ver Publicaciones</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <div class="hero-stat-number counter" data-target="30">0</div>
+              <div class="hero-stat-label" data-i18n="stat_experience">Años de Experiencia</div>
             </div>
-            <div class="form-group">
-              <label for="email" data-i18n="form_email">Email Address</label>
-              <input type="email" id="email" name="email" placeholder="john@example.com" data-i18n="form_email_placeholder" required>
+            <div class="hero-stat">
+              <div class="hero-stat-number counter" data-target="15">0</div>
+              <div class="hero-stat-label" data-i18n="stat_publications">Publicaciones</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-number counter" data-target="50">0</div>
+              <div class="hero-stat-label" data-i18n="stat_conferences">Conferencias</div>
             </div>
           </div>
-          <div class="form-group">
-            <label for="subject" data-i18n="form_subject">Subject</label>
-            <input type="text" id="subject" name="subject" placeholder="How can Dr. Muro help you?" data-i18n="form_subject_placeholder">
+        </div>
+
+        <div class="hero-image">
+          <div class="hero-image-wrapper">
+            <img src="images/professor.webp" alt="Dr. Jorge Muro Arbulú - Físico y Experto en Liderazgo" loading="eager"
+              fetchpriority="high" width="351" height="497">
           </div>
-          <div class="form-group">
-            <label for="message" data-i18n="form_message">Message</label>
-            <textarea id="message" name="message" placeholder="Tell us about your project or inquiry..." data-i18n="form_message_placeholder" rows="5"></textarea>
+          <div class="hero-badge">
+            <div class="hero-badge-icon">🎓</div>
+            <div class="hero-badge-text" data-i18n="hero_badge">Universidad de<br>Harvard</div>
           </div>
-          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;" data-i18n="form_submit">Send Message</button>
-        </form>
+        </div>
       </div>
-    </div>
-  </section>
+
+      <div class="scroll-indicator">
+        <span data-i18n="scroll_text">Desplazar</span>
+        <div class="arrow"></div>
+      </div>
+    </section>
+
+    <!-- ====== ABOUT SECTION ====== -->
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div class="about-image reveal">
+          <div class="about-carousel" id="aboutCarousel">
+            <div class="about-carousel-track">
+              <div class="about-carousel-slide active">
+                <img src="images/about-professor.webp" alt="Dr. Jorge Muro - Presentación académica" loading="lazy"
+                  decoding="async" width="600" height="600">
+              </div>
+              <div class="about-carousel-slide">
+                <img src="images/about-group.webp" alt="Dr. Jorge Muro - Reunión profesional" loading="lazy"
+                  decoding="async" width="600" height="600">
+              </div>
+            </div>
+            <button class="about-carousel-btn about-carousel-prev" aria-label="Previous image">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button class="about-carousel-btn about-carousel-next" aria-label="Next image">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+            <div class="about-carousel-dots">
+              <button class="about-carousel-dot active" data-index="0" aria-label="Slide 1"></button>
+              <button class="about-carousel-dot" data-index="1" aria-label="Slide 2"></button>
+            </div>
+          </div>
+          <div class="about-image-accent"></div>
+        </div>
+
+        <div class="about-text reveal reveal-delay-2">
+          <div class="section-label" data-i18n="about_label">About</div>
+          <h2 data-i18n="about_title">Bridging Science, Strategy &amp; Leadership</h2>
+          <p data-i18n="about_p1">
+            Dr. Jorge Muro Arbulú is a distinguished physicist from the National University of La Plata, Argentina, with
+            a graduate degree in Negotiation and Leadership from Harvard University. His unique combination of
+            scientific rigor and strategic leadership has shaped his career across nuclear energy, artificial
+            intelligence, and international business consulting.
+          </p>
+          <p data-i18n="about_p2">
+            As a scientific researcher at the Peruvian Institute of Nuclear Energy and founding manager of the Nuclear
+            Projects Office at the Industrial Service of the Navy (SIMA Peru), Dr. Muro brings unparalleled expertise to
+            every endeavor.
+          </p>
+
+          <div class="credentials">
+            <div class="credential">
+              <div class="credential-icon">🎓</div>
+              <div class="credential-text">
+                <h3 data-i18n="cred_phd_title">Ph.D. in Physics</h3>
+                <p data-i18n="cred_phd_desc">National University of La Plata, Argentina</p>
+              </div>
+            </div>
+            <div class="credential">
+              <div class="credential-icon">🏛️</div>
+              <div class="credential-text">
+                <h3 data-i18n="cred_harv_title">Negotiation &amp; Leadership</h3>
+                <p data-i18n="cred_harv_desc">Harvard University, USA</p>
+              </div>
+            </div>
+            <div class="credential">
+              <div class="credential-icon">⚛️</div>
+              <div class="credential-text">
+                <h3 data-i18n="cred_nuclear_title">Nuclear Energy Research</h3>
+                <p data-i18n="cred_nuclear_desc">Peruvian Institute of Nuclear Energy (IPEN)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== EXPERTISE SECTION ====== -->
+    <section class="expertise" id="expertise">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label" data-i18n="expertise_label">Expertise</div>
+          <h2 data-i18n="expertise_title">Areas of Specialization</h2>
+          <p class="section-desc" data-i18n="expertise_desc">Combining theoretical physics, data science, and strategic
+            leadership to solve complex real-world challenges.</p>
+        </div>
+
+        <div class="expertise-grid">
+          <div class="expertise-card reveal reveal-delay-1">
+            <div class="expertise-icon">⚛️</div>
+            <h3 data-i18n="exp1_title">Quantum Mechanics</h3>
+            <p data-i18n="exp1_desc">Research in quantum mechanics and its practical applications in computing, energy,
+              and communications. Exploring the latest advances revolutionizing science and technology.</p>
+          </div>
+
+          <div class="expertise-card reveal reveal-delay-2">
+            <div class="expertise-icon">☢️</div>
+            <h3 data-i18n="exp2_title">Nuclear Energy</h3>
+            <p data-i18n="exp2_desc">Founding manager of the Nuclear Projects Office at SIMA Peru. Extensive experience
+              in nuclear energy research, project management, and international advisory services.</p>
+          </div>
+
+          <div class="expertise-card reveal reveal-delay-3">
+            <div class="expertise-icon">🤖</div>
+            <h3 data-i18n="exp3_title">Artificial Intelligence</h3>
+            <p data-i18n="exp3_desc">Application of AI, machine learning, and probability distributions in business
+              optimization models. Analysis of AI's impact on the future of work and knowledge management.</p>
+          </div>
+
+          <div class="expertise-card reveal reveal-delay-1">
+            <div class="expertise-icon">📊</div>
+            <h3 data-i18n="exp4_title">Monte Carlo Methods</h3>
+            <p data-i18n="exp4_desc">Expert in Monte Carlo simulation for financial models, risk forecasting, investment
+              analysis, and decision-making under uncertainty. Using computational algorithms for strategic outcomes.
+            </p>
+          </div>
+
+          <div class="expertise-card reveal reveal-delay-2">
+            <div class="expertise-icon">🤝</div>
+            <h3 data-i18n="exp5_title">Negotiation &amp; Leadership</h3>
+            <p data-i18n="exp5_desc">Harvard-trained negotiation and leadership expert. Advisor to international
+              companies on complex negotiations, conflict resolution, and strategic decision-making in times of change.
+            </p>
+          </div>
+
+          <div class="expertise-card reveal reveal-delay-3">
+            <div class="expertise-icon">🔬</div>
+            <h3 data-i18n="exp6_title">Scientific Research</h3>
+            <p data-i18n="exp6_desc">Extensive background as a scientific researcher applying physics principles to
+              solve real-world problems. Published author on epistemology, national development, and applied science.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== PUBLICATIONS SECTION ====== -->
+    <section class="publications" id="publications">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label" data-i18n="pub_label">Research &amp; Articles</div>
+          <h2 data-i18n="pub_title">Latest Publications</h2>
+        </div>
+
+        <div class="pub-tabs" id="pubTabs">
+          <!-- Renders dynamically in JS -->
+        </div>
+        <div class="pub-grid" id="pubGrid">
+          <!-- Renders dynamically in JS -->
+          <noscript>
+            <div class="pub-card-noscript-container"
+              style="grid-column: span 2; display: flex; flex-direction: column; gap: 20px; width: 100%;">
+              <div class="pub-card"
+                style="display: flex; gap: 24px; padding: 24px; border-radius: var(--radius-md); background: var(--white); border: 1px solid rgba(0,0,0,0.05);">
+                <div class="pub-card-content">
+                  <span class="pub-card-tag"
+                    style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #8c6c1f; margin-bottom: 6px; display: block;">Physics</span>
+                  <h3 class="pub-card-title"
+                    style="font-family: var(--font-heading); font-weight: 600; font-size: 1.1rem; color: var(--text-dark); margin-bottom: 6px; line-height: 1.3;">
+                    Quantum Computing</h3>
+                  <p class="pub-card-desc" style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">Dr.
+                    Muro explores the intersection of quantum mechanics and computing, covering the foundations and
+                    practical applications transforming technology.</p>
+                  <a href="articulos/quantum-computing.html"
+                    style="font-size: 0.85rem; color: #8c6c1f; font-weight: 600; margin-top: 10px; display: inline-block; text-decoration: none;">📄
+                    Ver artículo en la web</a>
+                </div>
+              </div>
+              <div class="pub-card"
+                style="display: flex; gap: 24px; padding: 24px; border-radius: var(--radius-md); background: var(--white); border: 1px solid rgba(0,0,0,0.05);">
+                <div class="pub-card-content">
+                  <span class="pub-card-tag"
+                    style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #8c6c1f; margin-bottom: 6px; display: block;">AI
+                    & Work</span>
+                  <h3 class="pub-card-title"
+                    style="font-family: var(--font-heading); font-weight: 600; font-size: 1.1rem; color: var(--text-dark); margin-bottom: 6px; line-height: 1.3;">
+                    AI & the Future of Work</h3>
+                  <p class="pub-card-desc" style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                    Analysis of the radical transformation of the labor market by generative AI, exploring the
+                    structural crisis and the "broken talent ladder".</p>
+                  <a href="articulos/ia-trabajo.html"
+                    style="font-size: 0.85rem; color: #8c6c1f; font-weight: 600; margin-top: 10px; display: inline-block; text-decoration: none;">📄
+                    Ver artículo en la web</a>
+                </div>
+              </div>
+              <div class="pub-card"
+                style="display: flex; gap: 24px; padding: 24px; border-radius: var(--radius-md); background: var(--white); border: 1px solid rgba(0,0,0,0.05);">
+                <div class="pub-card-content">
+                  <span class="pub-card-tag"
+                    style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #8c6c1f; margin-bottom: 6px; display: block;">Math
+                    & Risk</span>
+                  <h3 class="pub-card-title"
+                    style="font-family: var(--font-heading); font-weight: 600; font-size: 1.1rem; color: var(--text-dark); margin-bottom: 6px; line-height: 1.3;">
+                    Markov Chains & Monte Carlo Method</h3>
+                  <p class="pub-card-desc" style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                    Discover how mathematical models predict weather or analyze stock markets using randomness to solve
+                    complex engineering and financial problems.</p>
+                  <a href="articulos/markov-montecarlo.html"
+                    style="font-size: 0.85rem; color: #8c6c1f; font-weight: 600; margin-top: 10px; display: inline-block; text-decoration: none;">📄
+                    Ver artículo en la web</a>
+                </div>
+              </div>
+              <div class="pub-card"
+                style="display: flex; gap: 24px; padding: 24px; border-radius: var(--radius-md); background: var(--white); border: 1px solid rgba(0,0,0,0.05);">
+                <div class="pub-card-content">
+                  <span class="pub-card-tag"
+                    style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #8c6c1f; margin-bottom: 6px; display: block;">Geopolitics</span>
+                  <h3 class="pub-card-title"
+                    style="font-family: var(--font-heading); font-weight: 600; font-size: 1.1rem; color: var(--text-dark); margin-bottom: 6px; line-height: 1.3;">
+                    The Day Qatar Burned</h3>
+                  <p class="pub-card-desc" style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                    Analysis of the global energy crisis of March 2026, triggered by the attacks on Ras Laffan
+                    facilities and the Strait of Hormuz blockade.</p>
+                  <a href="articulos/qatar.html"
+                    style="font-size: 0.85rem; color: #8c6c1f; font-weight: 600; margin-top: 10px; display: inline-block; text-decoration: none;">📄
+                    Ver artículo en la web</a>
+                </div>
+              </div>
+              <div class="pub-card"
+                style="display: flex; gap: 24px; padding: 24px; border-radius: var(--radius-md); background: var(--white); border: 1px solid rgba(0,0,0,0.05);">
+                <div class="pub-card-content">
+                  <span class="pub-card-tag"
+                    style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #8c6c1f; margin-bottom: 6px; display: block;">Models</span>
+                  <h3 class="pub-card-title"
+                    style="font-family: var(--font-heading); font-weight: 600; font-size: 1.1rem; color: var(--text-dark); margin-bottom: 6px; line-height: 1.3;">
+                    Models & Automation</h3>
+                  <p class="pub-card-desc" style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">Dr.
+                    Muro presents a collection of mathematical models, AI automation algorithms, and business process
+                    optimization frameworks.</p>
+                  <a href="articulos/models.html"
+                    style="font-size: 0.85rem; color: #8c6c1f; font-weight: 600; margin-top: 10px; display: inline-block; text-decoration: none;">📄
+                    Ver artículo en la web</a>
+                </div>
+              </div>
+              <div class="pub-card"
+                style="display: flex; gap: 24px; padding: 24px; border-radius: var(--radius-md); background: var(--white); border: 1px solid rgba(0,0,0,0.05);">
+                <div class="pub-card-content">
+                  <span class="pub-card-tag"
+                    style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #8c6c1f; margin-bottom: 6px; display: block;">Geopolitics</span>
+                  <h3 class="pub-card-title"
+                    style="font-family: var(--font-heading); font-weight: 600; font-size: 1.1rem; color: var(--text-dark); margin-bottom: 6px; line-height: 1.3;">
+                    Fertilizer Crisis & Famine Risks in Peru</h3>
+                  <p class="pub-card-desc" style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+                    Analysis of agricultural vulnerability and international supply chain disruptions affecting national
+                    food security.</p>
+                  <a href="articulos/fertilizantes.html"
+                    style="font-size: 0.85rem; color: #8c6c1f; font-weight: 600; margin-top: 10px; display: inline-block; text-decoration: none;">📄
+                    Ver artículo en la web</a>
+                </div>
+              </div>
+            </div>
+          </noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== BOOKS SECTION ====== -->
+    <section class="books" id="books">
+      <div class="container">
+        <div class="books-header reveal">
+          <div class="section-label" data-i18n="books_label">Published Works</div>
+          <h2 data-i18n="books_title">Books &amp; Publications</h2>
+        </div>
+
+        <div class="book-row reveal">
+          <div class="book-row-cover">
+            <img src="images/book-decision-1x.webp"
+              srcset="images/book-decision-1x.webp 1x, images/book-decision.webp 2x"
+              alt="Toma de Decisiones bajo Incertidumbre - Libro del Dr. Jorge Muro" width="280" height="400"
+              loading="lazy" decoding="async">
+          </div>
+          <div class="book-row-info">
+            <h3 data-i18n="book1_title" class="book-title">Decision Making Under Uncertainty</h3>
+            <p data-i18n="book1_desc">A comprehensive guide to applying Monte Carlo methods, probability distributions,
+              and statistical models for strategic decision-making in complex, uncertain environments. Essential reading
+              for managers, engineers, and researchers.</p>
+            <a href="https://www.amazon.com/-/es/Jorge-Eduardo-Muro-Arbul%C3%BA-ebook/dp/B0BWFTJJ7G/ref=sr_1_1?sr=8-1"
+              target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm"
+              style="margin-top: 0.75rem; text-decoration: none;" data-i18n="book1_cta" data-i18n-href="book1_link">Buy
+              on Amazon</a>
+          </div>
+        </div>
+
+        <div class="book-row reveal">
+          <div class="book-row-cover">
+            <img src="images/book-peru-ecuador-1x.webp"
+              srcset="images/book-peru-ecuador-1x.webp 1x, images/book-peru-ecuador.webp 2x"
+              alt="El Conflicto Perú-Ecuador: La Historia No Contada - Libro del Dr. Jorge Muro" width="280"
+              height="400" loading="lazy" decoding="async">
+          </div>
+          <div class="book-row-info">
+            <h3 data-i18n="book2_title" class="book-title">The Peru - Ecuador Conflict: The Untold Story</h3>
+            <p data-i18n="book2_desc">An unprecedented analysis of the 1998 resolution of the territorial conflict
+              between Peru and Ecuador, combining the Harvard Negotiation Project methodology with deep geopolitical
+              insight. A unique perspective on shifting from positions to underlying interests.</p>
+            <a href="https://drive.google.com/file/d/1EKI-QwxDQAWWpobm5hc5Rbs2_VDDXOyX/view?usp=drive_link"
+              target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm"
+              style="margin-top: 0.75rem; text-decoration: none;" data-i18n="book2_cta">Read Book</a>
+          </div>
+        </div>
+
+        <div class="books-cta reveal" style="text-align: center; margin-top: 2.5rem;">
+          <a href="#contact" class="btn btn-secondary" data-i18n="books_cta">Inquire About Books</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== CONTACT SECTION ====== -->
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-info reveal">
+          <div class="section-label" data-i18n="contact_label">Get in Touch</div>
+          <h2 data-i18n="contact_title">Let's Work Together</h2>
+          <p data-i18n="contact_desc">Reach out for consulting, speaking engagements, research collaborations, or
+            business advisory services.</p>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📍</div>
+            <div class="contact-detail-text">
+              <h3 data-i18n="contact_loc">Location</h3>
+              <p data-i18n="contact_loc_value">Lima, Peru</p>
+            </div>
+          </div>
+
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">🌐</div>
+            <div class="contact-detail-text">
+              <h3 data-i18n="contact_web">Website</h3>
+              <p>www.jorgemuro.net</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form reveal reveal-delay-2">
+          <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact">
+            <p class="hidden-honeypot">
+              <label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1"
+                  autocomplete="off"></label>
+            </p>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name" data-i18n="form_name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" data-i18n="form_name_placeholder"
+                  required>
+              </div>
+              <div class="form-group">
+                <label for="email" data-i18n="form_email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com"
+                  data-i18n="form_email_placeholder" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject" data-i18n="form_subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="How can Dr. Muro help you?"
+                data-i18n="form_subject_placeholder">
+            </div>
+            <div class="form-group">
+              <label for="message" data-i18n="form_message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell us about your project or inquiry..."
+                data-i18n="form_message_placeholder" rows="5"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;"
+              data-i18n="form_submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
 
   </main>
 
@@ -1138,14 +1300,19 @@ p {
           <div class="nav-logo">
             <img src="images/logo.svg" alt="Jorge Muro" class="nav-logo-svg" width="160" height="28">
           </div>
-          <p data-i18n="footer_about">Doctor in Physics from the National University of La Plata, Argentina. Graduate in Negotiation &amp; Leadership from Harvard University. Scientific researcher and founding manager in nuclear energy.</p>
+          <p data-i18n="footer_about">Doctor in Physics from the National University of La Plata, Argentina. Graduate in
+            Negotiation &amp; Leadership from Harvard University. Scientific researcher and founding manager in nuclear
+            energy.</p>
           <div class="footer-social">
-            <a href="https://www.facebook.com/DrJorgeMuro/" title="Facebook" aria-label="Facebook" target="_blank" rel="noopener noreferrer">f</a>
-            <a href="https://www.linkedin.com/in/jorgemuroarbulu/" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">in</a>
-            <a href="https://x.com/decisionmaking" title="X (Twitter)" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer">𝕏</a>
+            <a href="https://www.facebook.com/DrJorgeMuro/" title="Facebook" aria-label="Facebook" target="_blank"
+              rel="noopener noreferrer">f</a>
+            <a href="https://www.linkedin.com/in/jorgemuroarbulu/" title="LinkedIn" aria-label="LinkedIn"
+              target="_blank" rel="noopener noreferrer">in</a>
+            <a href="https://x.com/decisionmaking" title="X (Twitter)" aria-label="X (Twitter)" target="_blank"
+              rel="noopener noreferrer">𝕏</a>
           </div>
         </div>
-        
+
         <div>
           <h4 data-i18n="footer_nav">Navigation</h4>
           <div class="footer-links">
@@ -1155,7 +1322,7 @@ p {
             <a href="#books" data-i18n="nav_books">Books</a>
           </div>
         </div>
-        
+
         <div>
           <h4 data-i18n="footer_resources">Resources</h4>
           <div class="footer-links">
@@ -1164,7 +1331,7 @@ p {
             <a href="#publications" data-i18n="nav_models">Models</a>
           </div>
         </div>
-        
+
         <div>
           <h4 data-i18n="footer_topics">Topics</h4>
           <div class="footer-links">
@@ -1175,13 +1342,17 @@ p {
           </div>
         </div>
       </div>
-      
+
       <div class="footer-bottom">
         <p data-i18n="footer_rights">© 2026 Jorge Muro. All rights reserved. Lima, Peru</p>
         <div class="footer-credit">
           <p data-i18n="footer_design">Designed by Juankal</p>
-          <a href="https://wa.me/51949061019" target="_blank" rel="noopener noreferrer" class="footer-whatsapp" title="Contactar a Juankal por WhatsApp" aria-label="WhatsApp Juankal">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <a href="https://wa.me/51949061019" target="_blank" rel="noopener noreferrer" class="footer-whatsapp"
+            title="Contactar a Juankal por WhatsApp" aria-label="WhatsApp Juankal">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
           </a>
         </div>
       </div>
@@ -1203,4 +1374,5 @@ p {
   <!-- ====== JAVASCRIPT ====== -->
   <script src="script.min.js" defer></script>
 </body>
+
 </html>
