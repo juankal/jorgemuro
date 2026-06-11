@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'physics',
       date: '2025',
       readTime: { en: '1 min read', es: '1 min de lectura' },
-      image: 'images/quantum-computing.png',
+      image: 'images/quantum-computing.webp',
       youtubeId: 'wt_99tXFWPM',
       en: {
         tag: 'Physics',
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'ai',
       date: '2026',
       readTime: { en: '3 min read', es: '3 min de lectura' },
-      image: 'images/ia-trabajo.png',
+      image: 'images/ia-trabajo.webp',
       pdfLink: 'https://drive.google.com/file/d/1iPWRU-EyuyIV_O37vQ4g8BbWz5j4Jlc9/view?usp=sharing',
       en: {
         tag: 'AI & Work',
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'physics',
       date: '2026',
       readTime: { en: '1 min read', es: '1 min de lectura' },
-      image: 'images/markov-montecarlo.png',
+      image: 'images/markov-montecarlo.webp',
       pdfLink: 'https://drive.google.com/file/d/1YBjvFmIByX7sXqmBOni_PRlRjWSfOyUb/view?usp=sharing',
       en: {
         tag: 'Math & Risk',
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'strategy',
       date: '2026',
       readTime: { en: '1 min read', es: '1 min de lectura' },
-      image: 'images/qatar.jpg',
+      image: 'images/qatar.webp',
       pdfLink: 'https://drive.google.com/file/d/1Bmqz-c6ItMFxyRNSP4NSkIImEivtTfN6/view?usp=sharing',
       en: {
         tag: 'Geopolitics',
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'physics',
       date: '2024',
       readTime: { en: '1 min read', es: '1 min de lectura' },
-      image: 'images/models.jpg',
+      image: 'images/models.webp',
       pdfLink: {
         en: 'https://drive.google.com/file/d/1i9b9wVyYNdidtEKSR1k1QEOOUlNxDQ1m/view?usp=sharing',
         es: 'https://drive.google.com/file/d/1gk3ZRkhni5mu59GlVgFwLoUTQL3SaP1l/view?usp=sharing'
@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'strategy',
       date: '2022',
       readTime: { en: '8 min read', es: '8 min de lectura' },
-      image: 'images/fertilizantes.png',
+      image: 'images/fertilizantes.webp',
       en: {
         tag: 'Geopolitics',
         title: 'Fertilizer Crisis & Famine Risks in Peru',
@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'physics',
       date: '2025',
       readTime: { en: '1 min read', es: '1 min de lectura' },
-      image: 'images/quantum-advances.png',
+      image: 'images/quantum-advances.webp',
       youtubeId: 'wt_99tXFWPM',
       en: {
         tag: 'Physics',
@@ -276,7 +276,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return `
         <div class="pub-card" data-id="${pub.id}" style="animation-delay: ${index * 0.05}s">
           <div class="pub-card-image">
-            <img src="${pub.image}" alt="${data.title}">
+            <img src="${pub.image}" alt="${data.title}" width="140" height="120" loading="lazy">
           </div>
           <div class="pub-card-content">
             <span class="pub-card-tag">${data.tag}</span>

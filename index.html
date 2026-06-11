@@ -37,11 +37,11 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   
   <!-- Preload LCP images -->
-  <link rel="preload" as="image" href="images/professor.png">
-  <link rel="preload" as="image" href="images/nuclear-bg.jpg">
+  <link rel="preload" as="image" href="images/professor.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="images/nuclear-bg.webp" fetchpriority="high">
   
   <!-- Styles -->
   <link rel="stylesheet" href="index.css">
@@ -131,7 +131,7 @@
   <nav class="navbar" id="navbar" aria-label="Navegación principal">
     <div class="nav-inner">
       <a href="#" class="nav-logo">
-        <img src="images/logo.png" alt="Logo Dr. Jorge Muro" class="nav-logo-icon-img" width="32" height="32">
+        <img src="images/logo.webp" alt="Logo Dr. Jorge Muro" class="nav-logo-icon-img" width="32" height="32">
         <img src="images/logo.svg" alt="Jorge Muro" class="nav-logo-svg">
       </a>
       
@@ -159,7 +159,7 @@
   <!-- ====== HERO SECTION ====== -->
   <section class="hero" id="hero">
     <div class="hero-bg">
-      <img src="images/nuclear-bg.jpg" alt="Fondo de energía nuclear - Dr. Jorge Muro" loading="eager" width="1920" height="1080">
+      <img src="images/nuclear-bg.webp" alt="Fondo de energía nuclear - Dr. Jorge Muro" loading="eager" fetchpriority="high" width="1366" height="912">
     </div>
     
     <div class="hero-particles" id="heroParticles"></div>
@@ -196,7 +196,7 @@
       
       <div class="hero-image">
         <div class="hero-image-wrapper">
-          <img src="images/professor.png" alt="Dr. Jorge Muro Arbulú - Físico y Experto en Liderazgo" loading="eager" width="420" height="560">
+          <img src="images/professor.webp" alt="Dr. Jorge Muro Arbulú - Físico y Experto en Liderazgo" loading="eager" fetchpriority="high" width="351" height="497">
         </div>
         <div class="hero-badge">
           <div class="hero-badge-icon">🎓</div>
@@ -218,10 +218,10 @@
         <div class="about-carousel" id="aboutCarousel">
           <div class="about-carousel-track">
             <div class="about-carousel-slide active">
-              <img src="images/about-professor.png" alt="Dr. Jorge Muro - Presentación académica" loading="lazy" decoding="async" width="600" height="600">
+              <img src="images/about-professor.webp" alt="Dr. Jorge Muro - Presentación académica" loading="lazy" decoding="async" width="600" height="600">
             </div>
             <div class="about-carousel-slide">
-              <img src="images/about-group.png" alt="Dr. Jorge Muro - Reunión profesional" loading="lazy" decoding="async" width="600" height="600">
+              <img src="images/about-group.webp" alt="Dr. Jorge Muro - Reunión profesional" loading="lazy" decoding="async" width="600" height="600">
             </div>
           </div>
           <button class="about-carousel-btn about-carousel-prev" aria-label="Previous image">
@@ -252,21 +252,21 @@
           <div class="credential">
             <div class="credential-icon">🎓</div>
             <div class="credential-text">
-              <h4 data-i18n="cred_phd_title">Ph.D. in Physics</h4>
+              <h3 data-i18n="cred_phd_title">Ph.D. in Physics</h3>
               <p data-i18n="cred_phd_desc">National University of La Plata, Argentina</p>
             </div>
           </div>
           <div class="credential">
             <div class="credential-icon">🏛️</div>
             <div class="credential-text">
-              <h4 data-i18n="cred_harv_title">Negotiation &amp; Leadership</h4>
+              <h3 data-i18n="cred_harv_title">Negotiation &amp; Leadership</h3>
               <p data-i18n="cred_harv_desc">Harvard University, USA</p>
             </div>
           </div>
           <div class="credential">
             <div class="credential-icon">⚛️</div>
             <div class="credential-text">
-              <h4 data-i18n="cred_nuclear_title">Nuclear Energy Research</h4>
+              <h3 data-i18n="cred_nuclear_title">Nuclear Energy Research</h3>
               <p data-i18n="cred_nuclear_desc">Peruvian Institute of Nuclear Energy (IPEN)</p>
             </div>
           </div>
@@ -403,7 +403,7 @@
 
       <div class="book-row reveal">
         <div class="book-row-cover">
-          <img src="images/book-decision.jpg" alt="Toma de Decisiones bajo Incertidumbre - Libro del Dr. Jorge Muro" width="280" height="400" loading="lazy" decoding="async">
+          <img src="images/book-decision.webp" alt="Toma de Decisiones bajo Incertidumbre - Libro del Dr. Jorge Muro" width="280" height="400" loading="lazy" decoding="async">
         </div>
         <div class="book-row-info">
           <h3 data-i18n="book1_title" class="book-title">Decision Making Under Uncertainty</h3>
@@ -414,7 +414,7 @@
 
       <div class="book-row reveal">
         <div class="book-row-cover">
-          <img src="images/book-peru-ecuador.jpg" alt="El Conflicto Perú-Ecuador: La Historia No Contada - Libro del Dr. Jorge Muro" width="280" height="400" loading="lazy" decoding="async">
+          <img src="images/book-peru-ecuador.webp" alt="El Conflicto Perú-Ecuador: La Historia No Contada - Libro del Dr. Jorge Muro" width="280" height="400" loading="lazy" decoding="async">
         </div>
         <div class="book-row-info">
           <h3 data-i18n="book2_title" class="book-title">The Peru - Ecuador Conflict: The Untold Story</h3>
@@ -440,7 +440,7 @@
         <div class="contact-detail">
           <div class="contact-detail-icon">📍</div>
           <div class="contact-detail-text">
-            <h4 data-i18n="contact_loc">Location</h4>
+            <h3 data-i18n="contact_loc">Location</h3>
             <p data-i18n="contact_loc_value">Lima, Peru</p>
           </div>
         </div>
@@ -449,7 +449,7 @@
         <div class="contact-detail">
           <div class="contact-detail-icon">🌐</div>
           <div class="contact-detail-text">
-            <h4 data-i18n="contact_web">Website</h4>
+            <h3 data-i18n="contact_web">Website</h3>
             <p>www.jorgemuro.net</p>
           </div>
         </div>
