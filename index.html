@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -44,7 +44,639 @@
   <link rel="preload" as="image" href="images/nuclear-bg.webp" fetchpriority="high">
   
   <!-- Styles -->
-  <link rel="stylesheet" href="critical.css">
+  <style>
+/* ============================================
+   Jorge Muro - Modern Academic Landing Page
+   Design System & Core Styles
+   ============================================ */
+
+/* ---- CSS Custom Properties ---- */
+:root {
+  /* Color Palette - Navy / Gold / Cream */
+  --navy-900: #0a1628;
+  --navy-800: #0f2140;
+  --navy-700: #1a3158;
+  --navy-600: #1d3557;
+  --navy-500: #264d73;
+  --navy-400: #457b9d;
+  --navy-300: #6b9dbd;
+  
+  --gold-500: #c9a84c;
+  --gold-400: #d4b86a;
+  --gold-300: #e0c988;
+  --gold-200: #f0dfa8;
+  
+  --cream-100: #faf8f5;
+  --cream-200: #f5f0e8;
+  --cream-300: #ede5d5;
+  
+  --white: #ffffff;
+  --text-dark: #1a1a2e;
+  --text-body: #3d3d5c;
+  --text-muted: #6b6b8a;
+  --text-light: #a3a3c2;
+  
+  --accent-red: #e63946;
+  --accent-teal: #2ec4b6;
+  
+  /* Typography */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  
+  /* Spacing */
+  --section-pad: clamp(4rem, 8vw, 8rem);
+  --container-max: 1200px;
+  
+  /* Transitions */
+  --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(10, 22, 40, 0.08);
+  --shadow-md: 0 8px 24px rgba(10, 22, 40, 0.12);
+  --shadow-lg: 0 16px 48px rgba(10, 22, 40, 0.16);
+  --shadow-xl: 0 24px 64px rgba(10, 22, 40, 0.2);
+  --shadow-glow: 0 0 40px rgba(201, 168, 76, 0.15);
+  
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+}
+
+/* ---- Reset & Base ---- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-body);
+  background: var(--cream-100);
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s var(--ease-out);
+}
+
+/* Skip to content - Accessibility */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  background: var(--gold-500);
+  color: var(--navy-900);
+  padding: 12px 24px;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+  z-index: 10000;
+  transition: top 0.3s;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* Focus visible for keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--gold-500);
+  outline-offset: 2px;
+}
+
+ul, ol { list-style: none; }
+
+/* ---- Typography ---- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-dark);
+}
+
+h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+h2 { font-size: clamp(2rem, 4vw, 3rem); }
+h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+h4 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
+
+p {
+  font-size: clamp(1rem, 1.1vw, 1.125rem);
+  line-height: 1.8;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--gold-500), var(--gold-300));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-label {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--gold-500);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+.section-label::before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 2px;
+  background: var(--gold-500);
+}
+
+/* ---- Container ---- */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 4vw, 3rem);
+}
+
+/* ---- Buttons ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s var(--ease-out);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.btn:hover::after { opacity: 1; }
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold-500), var(--gold-400));
+  color: var(--navy-900);
+  box-shadow: 0 4px 16px rgba(201, 168, 76, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(201, 168, 76, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary:hover {
+  border-color: var(--gold-400);
+  color: var(--gold-400);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--navy-600);
+  border: 2px solid var(--navy-600);
+}
+
+.btn-outline:hover {
+  background: var(--navy-600);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.btn-sm {
+  padding: 8px 20px;
+  font-size: 0.85rem;
+}
+
+/* ---- Navigation ---- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 16px 0;
+  transition: all 0.4s var(--ease-out);
+  background: transparent;
+}
+
+.navbar.scrolled {
+  background: rgba(10, 22, 40, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 10px 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 4vw, 3rem);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-logo-svg {
+  height: 28px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  transition: opacity 0.3s;
+}
+
+.nav-logo-icon-img {
+  height: 32px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  transition: opacity 0.3s;
+}
+
+.nav-logo-svg:hover {
+  opacity: 0.85;
+}
+
+.nav-logo-icon {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, var(--gold-500), var(--gold-300));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--navy-900);
+}
+
+.nav-logo-text {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--white);
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.nav-links a {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  position: relative;
+  padding: 4px 0;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold-500);
+  transition: width 0.3s var(--ease-out);
+}
+
+.nav-links a:hover { color: var(--white); }
+.nav-links a:hover::after { width: 100%; }
+
+.nav-lang {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 50px;
+  border: 1px solid rgba(255,255,255,0.2);
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.7);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.nav-lang:hover {
+  border-color: var(--gold-400);
+  color: var(--gold-400);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 4px;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 2px;
+  background: var(--white);
+  transition: all 0.3s var(--ease-out);
+  border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ---- Hero Section ---- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: var(--navy-900);
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+}
+
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg, 
+    rgba(10, 22, 40, 0.95) 0%, 
+    rgba(10, 22, 40, 0.7) 50%,
+    rgba(26, 49, 88, 0.8) 100%
+  );
+}
+
+/* Animated particles */
+.hero-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: var(--gold-500);
+  border-radius: 50%;
+  opacity: 0;
+  animation: float-particle 8s infinite;
+}
+
+@keyframes float-particle {
+  0% { opacity: 0; transform: translateY(100vh) scale(0); }
+  10% { opacity: 0.6; }
+  90% { opacity: 0.6; }
+  100% { opacity: 0; transform: translateY(-100px) scale(1); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+
+.hero-text {
+  animation: fadeSlideUp 1s var(--ease-out) 0.3s both;
+}
+
+.hero-subtitle {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--gold-500);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-subtitle::before {
+  content: '';
+  width: 40px;
+  height: 2px;
+  background: var(--gold-500);
+}
+
+.hero-title {
+  color: var(--white);
+  font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.hero-title .highlight {
+  background: linear-gradient(135deg, var(--gold-500), var(--gold-300));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-description {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  max-width: 520px;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.hero-stat-number {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--gold-500);
+  line-height: 1;
+}
+
+.hero-stat-label {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-image {
+  position: relative;
+  animation: fadeSlideUp 1s var(--ease-out) 0.6s both;
+  max-width: 420px;
+  margin-left: auto;
+}
+
+.hero-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image-wrapper::before {
+  display: none;
+}
+
+.hero-image-wrapper::after {
+  display: none;
+}
+
+.hero-image-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  object-position: center top;
+  mix-blend-mode: lighten;
+}
+
+.hero-badge {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background: linear-gradient(135deg, var(--gold-500), var(--gold-400));
+  color: var(--navy-900);
+  padding: 16px 24px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+  animation: fadeSlideUp 1s var(--ease-out) 1s both;
+}
+
+.hero-badge-icon {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
+.hero-badge-text {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.85rem;
+  line-height: 1.3;
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.4);
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: bounce 2s infinite;
+}
+
+.scroll-indicator .arrow {
+  width: 24px;
+  height: 24px;
+  border-right: 2px solid rgba(255,255,255,0.4);
+  border-bottom: 2px solid rgba(255,255,255,0.4);
+  transform: rotate(45deg);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+  40% { transform: translateX(-50%) translateY(-10px); }
+  60% { transform: translateX(-50%) translateY(-5px); }
+}
+
+/* ---- About Section ---- */
+
+  </style>
   <link rel="stylesheet" href="index.css" media="print" onload="this.media='all'">
   
   <!-- Sitemap -->
@@ -342,50 +974,50 @@
           <div class="pub-card-noscript-container" style="grid-column: span 2; display: flex; flex-direction: column; gap: 20px; width: 100%;">
             <div class="pub-card" style="display: flex; gap: 24px; padding: 24px; border-radius: var(--radius-md); background: var(--white); border: 1px solid rgba(0,0,0,0.05);">
               <div class="pub-card-content">
-                <span class="pub-card-tag" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--gold-500); margin-bottom: 6px; display: block;">Physics</span>
+                <span class="pub-card-tag" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #8c6c1f; margin-bottom: 6px; display: block;">Physics</span>
                 <h3 class="pub-card-title" style="font-family: var(--font-heading); font-weight: 600; font-size: 1.1rem; color: var(--text-dark); margin-bottom: 6px; line-height: 1.3;">Quantum Computing</h3>
                 <p class="pub-card-desc" style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">Dr. Muro explores the intersection of quantum mechanics and computing, covering the foundations and practical applications transforming technology.</p>
-                <a href="articulos/quantum-computing.html" style="font-size: 0.85rem; color: var(--gold-500); font-weight: 600; margin-top: 10px; display: inline-block; text-decoration: none;">📄 Ver artículo en la web</a>
+                <a href="articulos/quantum-computing.html" style="font-size: 0.85rem; color: #8c6c1f; font-weight: 600; margin-top: 10px; display: inline-block; text-decoration: none;">📄 Ver artículo en la web</a>
               </div>
             </div>
             <div class="pub-card" style="display: flex; gap: 24px; padding: 24px; border-radius: var(--radius-md); background: var(--white); border: 1px solid rgba(0,0,0,0.05);">
               <div class="pub-card-content">
-                <span class="pub-card-tag" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--gold-500); margin-bottom: 6px; display: block;">AI & Work</span>
+                <span class="pub-card-tag" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #8c6c1f; margin-bottom: 6px; display: block;">AI & Work</span>
                 <h3 class="pub-card-title" style="font-family: var(--font-heading); font-weight: 600; font-size: 1.1rem; color: var(--text-dark); margin-bottom: 6px; line-height: 1.3;">AI & the Future of Work</h3>
                 <p class="pub-card-desc" style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">Analysis of the radical transformation of the labor market by generative AI, exploring the structural crisis and the "broken talent ladder".</p>
-                <a href="articulos/ia-trabajo.html" style="font-size: 0.85rem; color: var(--gold-500); font-weight: 600; margin-top: 10px; display: inline-block; text-decoration: none;">📄 Ver artículo en la web</a>
+                <a href="articulos/ia-trabajo.html" style="font-size: 0.85rem; color: #8c6c1f; font-weight: 600; margin-top: 10px; display: inline-block; text-decoration: none;">📄 Ver artículo en la web</a>
               </div>
             </div>
             <div class="pub-card" style="display: flex; gap: 24px; padding: 24px; border-radius: var(--radius-md); background: var(--white); border: 1px solid rgba(0,0,0,0.05);">
               <div class="pub-card-content">
-                <span class="pub-card-tag" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--gold-500); margin-bottom: 6px; display: block;">Math & Risk</span>
+                <span class="pub-card-tag" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #8c6c1f; margin-bottom: 6px; display: block;">Math & Risk</span>
                 <h3 class="pub-card-title" style="font-family: var(--font-heading); font-weight: 600; font-size: 1.1rem; color: var(--text-dark); margin-bottom: 6px; line-height: 1.3;">Markov Chains & Monte Carlo Method</h3>
                 <p class="pub-card-desc" style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">Discover how mathematical models predict weather or analyze stock markets using randomness to solve complex engineering and financial problems.</p>
-                <a href="articulos/markov-montecarlo.html" style="font-size: 0.85rem; color: var(--gold-500); font-weight: 600; margin-top: 10px; display: inline-block; text-decoration: none;">📄 Ver artículo en la web</a>
+                <a href="articulos/markov-montecarlo.html" style="font-size: 0.85rem; color: #8c6c1f; font-weight: 600; margin-top: 10px; display: inline-block; text-decoration: none;">📄 Ver artículo en la web</a>
               </div>
             </div>
             <div class="pub-card" style="display: flex; gap: 24px; padding: 24px; border-radius: var(--radius-md); background: var(--white); border: 1px solid rgba(0,0,0,0.05);">
               <div class="pub-card-content">
-                <span class="pub-card-tag" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--gold-500); margin-bottom: 6px; display: block;">Geopolitics</span>
+                <span class="pub-card-tag" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #8c6c1f; margin-bottom: 6px; display: block;">Geopolitics</span>
                 <h3 class="pub-card-title" style="font-family: var(--font-heading); font-weight: 600; font-size: 1.1rem; color: var(--text-dark); margin-bottom: 6px; line-height: 1.3;">The Day Qatar Burned</h3>
                 <p class="pub-card-desc" style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">Analysis of the global energy crisis of March 2026, triggered by the attacks on Ras Laffan facilities and the Strait of Hormuz blockade.</p>
-                <a href="articulos/qatar.html" style="font-size: 0.85rem; color: var(--gold-500); font-weight: 600; margin-top: 10px; display: inline-block; text-decoration: none;">📄 Ver artículo en la web</a>
+                <a href="articulos/qatar.html" style="font-size: 0.85rem; color: #8c6c1f; font-weight: 600; margin-top: 10px; display: inline-block; text-decoration: none;">📄 Ver artículo en la web</a>
               </div>
             </div>
             <div class="pub-card" style="display: flex; gap: 24px; padding: 24px; border-radius: var(--radius-md); background: var(--white); border: 1px solid rgba(0,0,0,0.05);">
               <div class="pub-card-content">
-                <span class="pub-card-tag" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--gold-500); margin-bottom: 6px; display: block;">Models</span>
+                <span class="pub-card-tag" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #8c6c1f; margin-bottom: 6px; display: block;">Models</span>
                 <h3 class="pub-card-title" style="font-family: var(--font-heading); font-weight: 600; font-size: 1.1rem; color: var(--text-dark); margin-bottom: 6px; line-height: 1.3;">Models & Automation</h3>
                 <p class="pub-card-desc" style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">Dr. Muro presents a collection of mathematical models, AI automation algorithms, and business process optimization frameworks.</p>
-                <a href="articulos/models.html" style="font-size: 0.85rem; color: var(--gold-500); font-weight: 600; margin-top: 10px; display: inline-block; text-decoration: none;">📄 Ver artículo en la web</a>
+                <a href="articulos/models.html" style="font-size: 0.85rem; color: #8c6c1f; font-weight: 600; margin-top: 10px; display: inline-block; text-decoration: none;">📄 Ver artículo en la web</a>
               </div>
             </div>
             <div class="pub-card" style="display: flex; gap: 24px; padding: 24px; border-radius: var(--radius-md); background: var(--white); border: 1px solid rgba(0,0,0,0.05);">
               <div class="pub-card-content">
-                <span class="pub-card-tag" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--gold-500); margin-bottom: 6px; display: block;">Geopolitics</span>
+                <span class="pub-card-tag" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #8c6c1f; margin-bottom: 6px; display: block;">Geopolitics</span>
                 <h3 class="pub-card-title" style="font-family: var(--font-heading); font-weight: 600; font-size: 1.1rem; color: var(--text-dark); margin-bottom: 6px; line-height: 1.3;">Fertilizer Crisis & Famine Risks in Peru</h3>
                 <p class="pub-card-desc" style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">Analysis of agricultural vulnerability and international supply chain disruptions affecting national food security.</p>
-                <a href="articulos/fertilizantes.html" style="font-size: 0.85rem; color: var(--gold-500); font-weight: 600; margin-top: 10px; display: inline-block; text-decoration: none;">📄 Ver artículo en la web</a>
+                <a href="articulos/fertilizantes.html" style="font-size: 0.85rem; color: #8c6c1f; font-weight: 600; margin-top: 10px; display: inline-block; text-decoration: none;">📄 Ver artículo en la web</a>
               </div>
             </div>
           </div>
