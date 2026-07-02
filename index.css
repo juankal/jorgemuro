@@ -1341,6 +1341,9 @@ p {
 }
 
 .footer-credit-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   color: rgba(255,255,255,0.55);
   font-size: 0.85rem;
   transition: color 0.3s ease;
@@ -1348,20 +1351,19 @@ p {
 
 .footer-credit-link:hover {
   color: var(--gold-400);
-  text-decoration: underline;
 }
 
-.footer-web-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(255,255,255,0.35);
-  transition: color 0.3s ease, transform 0.3s ease;
+.footer-logo-img {
+  height: 22px;
+  width: auto;
+  opacity: 0.7;
+  transition: opacity 0.3s ease, transform 0.3s ease, filter 0.3s ease;
 }
 
-.footer-web-icon:hover {
-  color: var(--gold-400);
-  transform: scale(1.15);
+.footer-credit-link:hover .footer-logo-img {
+  opacity: 1;
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 6px rgba(201, 168, 76, 0.4));
 }
 
 
