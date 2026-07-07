@@ -1340,17 +1340,16 @@ p {
   transform: scale(1.15);
 }
 
-.footer-credit-link {
+.footer-credit {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   color: rgba(255,255,255,0.55);
   font-size: 0.85rem;
-  transition: color 0.3s ease;
 }
 
-.footer-credit-link:hover {
-  color: var(--white);
+.footer-credit-link {
+  text-decoration: none;
 }
 
 .brand-green {
@@ -1359,7 +1358,7 @@ p {
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-.footer-credit-link:hover .brand-green {
+.brand-green:hover {
   color: #00e676;
   text-shadow: 0 0 8px rgba(0, 230, 118, 0.5);
 }
