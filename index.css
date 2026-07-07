@@ -1350,7 +1350,18 @@ p {
 }
 
 .footer-credit-link:hover {
-  color: var(--gold-400);
+  color: var(--white);
+}
+
+.brand-green {
+  color: #00c853;
+  font-weight: 600;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.footer-credit-link:hover .brand-green {
+  color: #00e676;
+  text-shadow: 0 0 8px rgba(0, 230, 118, 0.5);
 }
 
 .footer-logo-img {
