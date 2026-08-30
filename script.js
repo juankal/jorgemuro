@@ -13,6 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
       readTime: { en: '7 min read', es: '7 min de lectura' },
       image: 'images/resonancia-magnetica.svg',
       thumbnail: 'images/resonancia-magnetica.svg',
+      pdfLink: {
+        en: 'articulos/resonancia-magnetica.html?lang=en',
+        es: 'articulos/resonancia-magnetica.html?lang=es'
+      },
       en: {
         tag: 'Physics & Medicine',
         title: 'The Epic of Magnetic Resonance',
