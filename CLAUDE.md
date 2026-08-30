@@ -35,7 +35,15 @@ Para previsualizar cambios localmente, sirve el directorio con cualquier servido
 - **Contenido de publicaciones**: el array `publications` dentro de `script.js` (~línea 8) es la
   fuente de verdad de las tarjetas de la sección "Publications" — cada entrada trae textos en `en`
   y `es`, imagen, thumbnail y opcionalmente `youtubeId` o `pdfLink`. El modal de detalle
-  (`#pubModal`) se puebla desde este array en runtime.
+  (`#pubModal`) se puebla desde este array en runtime. El botón "Ver Artículo Completo" del modal
+  **solo se renderiza si la entrada tiene `pdfLink`** (string único o `{ en, es }`) — sin ese campo
+  el modal se queda solo con el resumen de 3 párrafos, sin link a nada. Cuando el artículo completo
+  vive en el propio sitio (`articulos/<id>.html`) en vez de un PDF externo, `pdfLink` puede apuntar
+  ahí (ej. `articulos/<id>.html?lang=es` / `?lang=en`), no solo a Google Drive.
+- Al agregar/editar un artículo hay que tocar 4 archivos en sync: `script.js` (fuente), `script.min.js`
+  (el que carga `index.html`, sin minificador automático), la tarjeta `<noscript>` correspondiente en
+  `index.html` (fallback sin JS — ya está incompleta respecto a los artículos reales, falta al menos
+  `quantum-advances`) y `sitemap.xml`.
 - **i18n**: bilingüe ES/EN client-side, sin rutas separadas. El diccionario `translations` vive en
   `script.js` (~línea 495) y se aplica vía atributos `data-i18n`, `data-i18n-title`,
   `data-i18n-aria`, `data-i18n-href` sobre el DOM. El toggle de idioma (`#langToggle`) dispara el
@@ -44,7 +52,13 @@ Para previsualizar cambios localmente, sirve el directorio con cualquier servido
   Netlify (o compatible), no hay backend propio en este repo.
 - **`_headers`**: headers HTTP (CSP, cache-control, etc.) en formato Netlify/Cloudflare Pages — al
   agregar un recurso externo nuevo (script, iframe, fuente), hay que actualizar la CSP aquí o se
-  bloqueará en producción.
+  bloqueará en producción. `script.js`, `script.min.js`, `index.css` y `critical.css` llevan
+  `Cache-Control: immutable, max-age=31536000` (un año) **sin versionar el nombre del archivo** —
+  cada deploy que toque alguno de esos 4 archivos queda cacheado en el edge de Cloudflare hasta que
+  alguien purgue manualmente esa URL en el dashboard de Cloudflare (Custom Purge). Sin la purga, el
+  cambio no se ve en producción aunque el deploy haya sido exitoso (confirmar con `curl -sI` si
+  `cf-cache-status` da `HIT` en vez de `MISS`/`DYNAMIC`). Decisión 2026-08-30: no versionar el
+  nombre de archivo por ahora, mitigar con purga manual caso por caso.
 - **SEO**: `sitemap.xml` y `robots.txt` en la raíz deben actualizarse manualmente si se agrega o
   quita una página (p. ej. un nuevo artículo en `articulos/`).
 - **Analytics**: Google tag (`gtag.js`, `G-SJXJT6BQH3`) embebido inline en cada página — presente
