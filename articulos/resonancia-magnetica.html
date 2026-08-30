@@ -1,0 +1,914 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SJXJT6BQH3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-SJXJT6BQH3');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Epopeya de la Resonancia Magnética | Dr. Jorge Muro</title>
+  <meta name="description" content="Ocho décadas y seis premios Nobel: la historia del experimento prohibido de 1896 que, encadenado a otros hallazgos casuales, terminó dando origen a la resonancia magnética.">
+  <link rel="canonical" href="https://www.jorgemuro.net/articulos/resonancia-magnetica.html">
+  <link rel="alternate" hreflang="es" href="https://www.jorgemuro.net/articulos/resonancia-magnetica.html?lang=es">
+  <link rel="alternate" hreflang="en" href="https://www.jorgemuro.net/articulos/resonancia-magnetica.html?lang=en">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <style>
+/* ============================================
+   Jorge Muro - Modern Academic Landing Page
+   Design System & Core Styles
+   ============================================ */
+
+/* ---- CSS Custom Properties ---- */
+:root {
+  /* Color Palette - Navy / Gold / Cream */
+  --navy-900: #0a1628;
+  --navy-800: #0f2140;
+  --navy-700: #1a3158;
+  --navy-600: #1d3557;
+  --navy-500: #264d73;
+  --navy-400: #457b9d;
+  --navy-300: #6b9dbd;
+  
+  --gold-500: #c9a84c;
+  --gold-400: #d4b86a;
+  --gold-300: #e0c988;
+  --gold-200: #f0dfa8;
+  
+  --cream-100: #faf8f5;
+  --cream-200: #f5f0e8;
+  --cream-300: #ede5d5;
+  
+  --white: #ffffff;
+  --text-dark: #1a1a2e;
+  --text-body: #3d3d5c;
+  --text-muted: #6b6b8a;
+  --text-light: #a3a3c2;
+  
+  --accent-red: #e63946;
+  --accent-teal: #2ec4b6;
+  
+  /* Typography */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  
+  /* Spacing */
+  --section-pad: clamp(4rem, 8vw, 8rem);
+  --container-max: 1200px;
+  
+  /* Transitions */
+  --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(10, 22, 40, 0.08);
+  --shadow-md: 0 8px 24px rgba(10, 22, 40, 0.12);
+  --shadow-lg: 0 16px 48px rgba(10, 22, 40, 0.16);
+  --shadow-xl: 0 24px 64px rgba(10, 22, 40, 0.2);
+  --shadow-glow: 0 0 40px rgba(201, 168, 76, 0.15);
+  
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+}
+
+/* ---- Reset & Base ---- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-body);
+  background: var(--cream-100);
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s var(--ease-out);
+}
+
+/* Skip to content - Accessibility */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  background: var(--gold-500);
+  color: var(--navy-900);
+  padding: 12px 24px;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+  z-index: 10000;
+  transition: top 0.3s;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* Focus visible for keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--gold-500);
+  outline-offset: 2px;
+}
+
+ul, ol { list-style: none; }
+
+/* ---- Typography ---- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-dark);
+}
+
+h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+h2 { font-size: clamp(2rem, 4vw, 3rem); }
+h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+h4 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
+
+p {
+  font-size: clamp(1rem, 1.1vw, 1.125rem);
+  line-height: 1.8;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--gold-500), var(--gold-300));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-label {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--gold-500);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+.section-label::before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 2px;
+  background: var(--gold-500);
+}
+
+/* ---- Container ---- */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 4vw, 3rem);
+}
+
+/* ---- Buttons ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s var(--ease-out);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.btn:hover::after { opacity: 1; }
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold-500), var(--gold-400));
+  color: var(--navy-900);
+  box-shadow: 0 4px 16px rgba(201, 168, 76, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(201, 168, 76, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary:hover {
+  border-color: var(--gold-400);
+  color: var(--gold-400);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--navy-600);
+  border: 2px solid var(--navy-600);
+}
+
+.btn-outline:hover {
+  background: var(--navy-600);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.btn-sm {
+  padding: 8px 20px;
+  font-size: 0.85rem;
+}
+
+/* ---- Navigation ---- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 16px 0;
+  transition: all 0.4s var(--ease-out);
+  background: transparent;
+}
+
+.navbar.scrolled {
+  background: rgba(10, 22, 40, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 10px 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 4vw, 3rem);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-logo-svg {
+  height: 28px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  transition: opacity 0.3s;
+}
+
+.nav-logo-icon-img {
+  height: 32px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  transition: opacity 0.3s;
+}
+
+.nav-logo-svg:hover {
+  opacity: 0.85;
+}
+
+.nav-logo-icon {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, var(--gold-500), var(--gold-300));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--navy-900);
+}
+
+.nav-logo-text {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--white);
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.nav-links a {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  position: relative;
+  padding: 4px 0;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold-500);
+  transition: width 0.3s var(--ease-out);
+}
+
+.nav-links a:hover { color: var(--white); }
+.nav-links a:hover::after { width: 100%; }
+
+.nav-lang {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 50px;
+  border: 1px solid rgba(255,255,255,0.2);
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.7);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.nav-lang:hover {
+  border-color: var(--gold-400);
+  color: var(--gold-400);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 4px;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 2px;
+  background: var(--white);
+  transition: all 0.3s var(--ease-out);
+  border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ---- Hero Section ---- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: var(--navy-900);
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+}
+
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg, 
+    rgba(10, 22, 40, 0.95) 0%, 
+    rgba(10, 22, 40, 0.7) 50%,
+    rgba(26, 49, 88, 0.8) 100%
+  );
+}
+
+/* Animated particles */
+.hero-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: var(--gold-500);
+  border-radius: 50%;
+  opacity: 0;
+  animation: float-particle 8s infinite;
+}
+
+@keyframes float-particle {
+  0% { opacity: 0; transform: translateY(100vh) scale(0); }
+  10% { opacity: 0.6; }
+  90% { opacity: 0.6; }
+  100% { opacity: 0; transform: translateY(-100px) scale(1); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+
+.hero-text {
+  animation: fadeSlideUp 1s var(--ease-out) 0.3s both;
+}
+
+.hero-subtitle {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--gold-500);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-subtitle::before {
+  content: '';
+  width: 40px;
+  height: 2px;
+  background: var(--gold-500);
+}
+
+.hero-title {
+  color: var(--white);
+  font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.hero-title .highlight {
+  background: linear-gradient(135deg, var(--gold-500), var(--gold-300));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-description {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  max-width: 520px;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.hero-stat-number {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--gold-500);
+  line-height: 1;
+}
+
+.hero-stat-label {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-image {
+  position: relative;
+  animation: fadeSlideUp 1s var(--ease-out) 0.6s both;
+  max-width: 420px;
+  margin-left: auto;
+}
+
+.hero-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image-wrapper::before {
+  display: none;
+}
+
+.hero-image-wrapper::after {
+  display: none;
+}
+
+.hero-image-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  object-position: center top;
+  mix-blend-mode: lighten;
+}
+
+.hero-badge {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background: linear-gradient(135deg, var(--gold-500), var(--gold-400));
+  color: var(--navy-900);
+  padding: 16px 24px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+  animation: fadeSlideUp 1s var(--ease-out) 1s both;
+}
+
+.hero-badge-icon {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
+.hero-badge-text {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.85rem;
+  line-height: 1.3;
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.4);
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: bounce 2s infinite;
+}
+
+.scroll-indicator .arrow {
+  width: 24px;
+  height: 24px;
+  border-right: 2px solid rgba(255,255,255,0.4);
+  border-bottom: 2px solid rgba(255,255,255,0.4);
+  transform: rotate(45deg);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+  40% { transform: translateX(-50%) translateY(-10px); }
+  60% { transform: translateX(-50%) translateY(-5px); }
+}
+
+/* ---- About Section ---- */
+
+  </style>
+  <link rel="stylesheet" href="../index.css" media="print" onload="this.media='all'">
+  <style>
+    .article-page {
+      padding: 120px 0 80px 0;
+      background: var(--cream-100);
+      min-height: 80vh;
+    }
+    .article-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .article-header {
+      margin-bottom: 2.5rem;
+    }
+    .article-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--navy-900);
+      line-height: 1.2;
+      margin-top: 1rem;
+    }
+    .article-meta {
+      display: flex;
+      gap: 15px;
+      color: var(--gold-500);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .article-media {
+      margin: 2rem 0;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+    .article-media img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .article-content {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: var(--text-body);
+    }
+    .article-content p {
+      margin-bottom: 1.5rem;
+    }
+    .back-btn-container {
+      margin-top: 3rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip to content -->
+  <a href="#main-content" class="skip-to-content">Saltar al contenido</a>
+
+  <!-- ====== NAVIGATION ====== -->
+  <nav class="navbar scrolled" id="navbar" aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a href="../" class="nav-logo">
+        <img src="../images/logo.webp" alt="Logo Dr. Jorge Muro" class="nav-logo-icon-img" width="32" height="32">
+        <img src="../images/logo.svg" alt="Jorge Muro" class="nav-logo-svg" width="160" height="28">
+      </a>
+      
+      <div class="nav-links" id="navLinks">
+        <a href="../#about">Sobre Mí</a>
+        <a href="../#expertise">Especialidades</a>
+        <a href="../#publications">Publicaciones</a>
+        <a href="../#books">Libros</a>
+        <a href="../#contact">Contacto</a>
+        <div class="nav-lang" id="langToggle" title="Cambiar a Inglés">
+          🌐 ES | EN
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="article-page" id="main-content">
+    <article class="article-container">
+      <header class="article-header">
+        <div class="article-meta">
+          <span class="lang-es">Física y Medicina</span>
+          <span class="lang-en">Physics & Medicine</span>
+          <span>• 📅 2026</span>
+          <span>• ⏱️ 7 min</span>
+        </div>
+        <h1 class="article-title">
+          <span class="lang-es">La Epopeya de la Resonancia Magnética</span>
+          <span class="lang-en">The Epic of Magnetic Resonance</span>
+        </h1>
+        <p class="lang-es" style="color: var(--text-muted); margin-top: 0.5rem;">El experimento prohibido, hecho a escondidas en 1896, que terminó salvando vidas</p>
+        <p class="lang-en" style="color: var(--text-muted); margin-top: 0.5rem;">The forbidden experiment, carried out in secret in 1896, that ended up saving lives</p>
+      </header>
+
+      <div class="article-media">
+        <img src="../images/resonancia-magnetica.svg" alt="La Epopeya de la Resonancia Magnética" width="1200" height="630">
+      </div>
+
+      <div class="article-content">
+        <div class="lang-es">
+          <p>Hay inventos que nacen de un plan, y hay otros que nacen de la curiosidad de un estudiante que aprovecha que su jefe se ausenta para hacer el experimento que le habían prohibido. La máquina de resonancia magnética —ese túnel blanco que hoy detecta tumores sin un solo corte— pertenece a la segunda clase. Su historia tardó ochenta y un años en escribirse y reunió a media docena de premios Nobel que, en su mayoría, no tenían ni idea de lo que estaban empezando.</p>
+          <blockquote style="border-left: 3px solid var(--gold-500); padding-left: 1.25rem; margin: 2rem 0; font-style: italic; color: var(--text-dark); font-size: 1.15rem;">Cinco escalones y casi ocho décadas: cada descubrimiento parecía inútil hasta que el siguiente lo completó.</blockquote>
+
+          <h3 style="margin: 2rem 0 1rem;">1896: el experimento que se hizo a escondidas</h3>
+          <p>Esta historia empieza en 1896, en la Universidad de Leiden, en Holanda, antes de la existencia de la mecánica cuántica. Un joven llamado Pieter Zeeman trabajaba como asistente de un profesor pragmático, Kamerlingh Onnes, de esos que solo quieren resultados publicables y no perder el tiempo con ideas raras de sus ayudantes.</p>
+          <p>Zeeman sentía curiosidad y la pregunta: ¿los átomos son magnéticos? Quería ver qué le pasaba a la luz de un átomo si lo metía dentro de un campo magnético. Su jefe pensaba que el efecto, si existía, sería tan débil que no se vería nada, y le prohibió el experimento. Así que Zeeman esperó. En cuanto Onnes se ausentó, encendió los aparatos.</p>
+          <p>Calentó un gas de sodio —el mismo que da el color anaranjado a las farolas— y observó la luz que emitía. El sodio produce dos líneas amarillas características. Entonces aplicó el imán, y las dos líneas se multiplicaron en varias.</p>
+          <blockquote style="border-left: 3px solid var(--gold-500); padding-left: 1.25rem; margin: 2rem 0; font-style: italic; color: var(--text-dark); font-size: 1.15rem;">Efecto Zeeman: el magnetismo deja una huella visible en la luz que emite el átomo.</blockquote>
+          <p>Zeeman descubrió que la luz emitida por los átomos cambia cuando se aplica un campo magnético. Hendrik Lorentz, su maestro y director de tesis, explicó el fenómeno combinando las ideas de Maxwell sobre electricidad, magnetismo y luz con la existencia de pequeñas cargas eléctricas dentro de la materia. Por estos trabajos, ambos recibieron el Premio Nobel de Física en 1902. Lo sorprendente es que Zeeman había encontrado una de las primeras pistas experimentales sobre la estructura interna del átomo y sobre fenómenos que muchos años después serían explicados por la física cuántica, en una época en que esa teoría todavía no existía.</p>
+
+          <h3 style="margin: 2rem 0 1rem;">1922: dos manchas que no deberían estar ahí</h3>
+          <p>Adelantemos veintiséis años en el tiempo. Dos físicos alemanes, Otto Stern y Walther Gerlach, deciden afinar la idea. Lanzan un chorro fino de átomos de plata en línea recta hacia una pantalla y, en mitad del camino, lo hacen atravesar un campo magnético. Si los átomos se comportan como pequeños imanes, el campo debería desviarlos.</p>
+          <p>La física de la época predecía una mancha central difuminada: los átomos, orientados al azar, se desviarían un poco hacia todos lados. Pero lo que apareció en la pantalla fue otra cosa: dos manchas nítidas, una arriba, otra abajo, y nada en medio.</p>
+          <blockquote style="border-left: 3px solid var(--gold-500); padding-left: 1.25rem; margin: 2rem 0; font-style: italic; color: var(--text-dark); font-size: 1.15rem;">El haz no se difumina: se parte en dos. La naturaleza solo permite dos respuestas.</blockquote>
+          <p>Sin pretenderlo, Stern y Gerlach habían tropezado con una de las propiedades más extrañas de la materia: el spin. Era una pista de que ciertas propiedades magnéticas del átomo no podían orientarse de cualquier manera, sino que aparecían en estados discretos: en aquel experimento, dos. Ni a medias, ni de lado. Otto Stern estaba tan seguro de haber confirmado las nuevas ideas cuánticas que tomó la foto de las dos manchas y se las envió a Niels Bohr con la siguiente nota: "Profesor Bohr, le adjuntamos la prueba experimental de que su teoría es correcta".</p>
+
+          <h3 style="margin: 2rem 0 1rem;">1938–1946: aprender a hablar con los spines</h3>
+          <p>El siguiente paso lo dio en 1938, desde Columbia, Isidor Rabi. Tomó el montaje de Stern y Gerlach y le añadió un ingrediente: además del imán, un segundo campo que oscilaba como una emisora de radio. Descubrió que, al sintonizar la frecuencia justa, los spines del haz cambiaban de orientación de manera coordinada. Por primera vez, alguien no solo observaba cómo respondían los núcleos atómicos, sino que podía actuar sobre ellos de forma controlada. El método le valió el Nobel de 1944 —Stern había recibido el suyo apenas un año antes—, aunque con una limitación: funcionaba con moléculas en el vacío, no con la materia cotidiana.</p>
+          <p>Otro salto, hasta después de la Segunda Guerra Mundial. En Stanford, Félix Bloch; y en Harvard, Edward Purcell con su equipo. Ambos persiguen la misma idea, y los dos acabarán compartiendo otro Nobel.</p>
+          <p>La técnica es elegante. Primero se aplica un campo magnético fuerte que hace que una pequeña mayoría de los spines se oriente preferentemente en la dirección del campo. Luego se les envían ondas de radio y se va cambiando poco a poco su frecuencia. Durante un rato no pasa nada hasta que, en una frecuencia muy concreta —la de resonancia—, los spines cambian de orientación al mismo tiempo. Han encontrado la nota exacta a la que responde el núcleo.</p>
+          <blockquote style="border-left: 3px solid var(--gold-500); padding-left: 1.25rem; margin: 2rem 0; font-style: italic; color: var(--text-dark); font-size: 1.15rem;">Como una copa que vibra con una nota precisa: cada núcleo responde a su propia frecuencia.</blockquote>
+          <p>¿Por qué importa tanto? Porque esa frecuencia depende del campo magnético que siente cada núcleo, y ese campo cambia según las moléculas que lo rodean. Midiendo la frecuencia, los físicos podían de pronto espiar el interior de la materia sin tocarla. Acababa de nacer la Resonancia Magnética Nuclear (RMN). Por ahora solo servía para los químicos: daba gráficos de espectros, no imágenes.</p>
+
+          <h3 style="margin: 2rem 0 1rem;">1973: del gráfico a la fotografía del interior</h3>
+          <p>Llega 1973 y con él dos personajes que la convertirán en imprescindible para la medicina.</p>
+          <p>Un médico, Raymond Damadian, había observado algo crucial: ciertos tejidos tumorales presentaban tiempos de relajación distintos de los tejidos sanos. Dicho en términos simples, después de ser excitados por la señal de radio, no volvían al equilibrio al mismo ritmo. La RMN podía, en principio, distinguir tejido enfermo de tejido sano.</p>
+          <p>Pero había un problema enorme: la técnica decía que había un tumor, no dónde. Y un "tiene usted un tumor en algún lugar del cuerpo" no le sirve de mucho a un cirujano. Es aquí donde entra Paul Lauterbur con una idea tan simple como poderosa: en lugar de un campo magnético uniforme, usar un gradiente, un campo que cambia de intensidad punto por punto a lo largo del cuerpo.</p>
+          <blockquote style="border-left: 3px solid var(--gold-500); padding-left: 1.25rem; margin: 2rem 0; font-style: italic; color: var(--text-dark); font-size: 1.15rem;">El gradiente convierte cada frecuencia en una coordenada: la resonancia aprende a dar direcciones.</blockquote>
+          <p>El efecto es sorprendente. Como la frecuencia de resonancia depende del campo, y ahora el campo es distinto en cada punto, cada posición del cuerpo responde con su propia frecuencia, que se convierte así como una especie de dirección postal: si se escucha tal nota, el tumor está exactamente ahí. La resonancia magnética dejaba de dar gráficos y empezaba a dar imágenes. Eso sí, con cautela: el primer aparato era tan pequeño que, como mucho, cabía apenas un dedo dentro.</p>
+
+          <h3 style="margin: 2rem 0 1rem;">El obstáculo final, resuelto sesenta años antes</h3>
+          <p>¿Y por qué no agrandar la máquina para meter un cuerpo entero? Por un muro tecnológico. Para ver el cuerpo completo hacía falta un campo magnético muy potente, y eso exigía corrientes eléctricas tan fuertes por las bobinas de cobre que los cables se fundían. Es el efecto Joule: la resistencia del metal convierte la corriente en calor. Nadie sabía cómo sortearlo.</p>
+          <p>Es aquí donde la historia hace un giro de guion perfecto. La solución ya existía desde 1911. La había descubierto, sin buscarla, Kamerlingh Onnes: el mismo profesor pragmático que se había ausentado mientras Zeeman desobedecía sus disposiciones. Estudiando la materia a temperaturas extremadamente bajas, Onnes observó algo extraordinario: por debajo de cierta temperatura, la resistencia eléctrica del mercurio desaparecía prácticamente por completo. La corriente podía circular sin las pérdidas habituales por calentamiento. Había descubierto la superconductividad.</p>
+          <p>El jefe que prohibió el experimento del que nació la resonancia fue, sin saberlo, quien descubrió lo que la haría posible. La ciencia rara vez sabe para qué servirá lo que encuentra.</p>
+          <p>Con bobinas superconductoras se pueden crear corrientes persistentes y campos magnéticos durante tiempos extraordinariamente largos con pérdidas despreciables, sin que nada se funda. Ese fue el último ladrillo. Juntando las cinco piezas —la luz que se parte, el spin de dos caras, la resonancia, el gradiente y la superconductividad— nació por fin la Imagen por Resonancia Magnética (IRM): una ventana al interior del cuerpo humano que no necesita bisturí.</p>
+          <blockquote style="border-left: 3px solid var(--gold-500); padding-left: 1.25rem; margin: 2rem 0; font-style: italic; color: var(--text-dark); font-size: 1.15rem;">Tres campos que varían punto a punto convierten cada frecuencia en una dirección postal dentro del cuerpo: eso es una imagen por resonancia.</blockquote>
+
+          <h3 style="margin: 2rem 0 1rem;">1977: la primera foto de un cuerpo entero</h3>
+          <p>Faltaba la prueba definitiva: un ser humano adentro. Damadian se propuso construir el primer resonador de cuerpo entero y lo bautizó, con toda la intención, Indomitable: el indomable. El primer intento lo hizo consigo mismo dentro del túnel, y no funcionó —la señal no aparecía; sus estudiantes sospecharon, con sorna, que el jefe era demasiado corpulento para su propia máquina—. Semanas más tarde se ofreció como voluntario uno de esos estudiantes, Larry Minkoff, bastante más delgado. Y el 3 de julio de 1977, tras casi cinco horas de escaneo, apareció la primera imagen del interior de un tórax humano vivo. Aquel primer resonador descansa hoy en el Instituto Smithsonian como testimonio de una etapa pionera de la medicina: una máquina rudimentaria para nuestros ojos, pero capaz de inaugurar una forma completamente nueva de mirar dentro del cuerpo humano.</p>
+          <p>Quedaba un problema práctico: la lentitud. Con el método original, cada imagen tomaba horas; ningún paciente aguanta eso quieto, y ningún hospital lo paga. En Inglaterra, el físico británico Peter Mansfield desarrolló métodos que permitieron acelerar enormemente la adquisición y reconstrucción de imágenes, abriendo el camino a exploraciones mucho más rápidas. En 1976, su equipo había logrado la primera imagen de una parte del cuerpo humano —el dedo de uno de sus estudiantes— y poco después Mansfield probó el escáner completo del modo más convincente posible: metiéndose él mismo.</p>
+          <p>Un último detalle, de puro marketing, cierra la mudanza al hospital. La técnica se llamaba resonancia magnética nuclear, porque habla con el núcleo del átomo. Pero en los años ochenta esa palabra evocaba bombas y centrales, y los pacientes se asustaban de una máquina que no emite radiación ionizante alguna, es decir el tipo de radiación de alta energía que puede dañar tejidos y ADN. Los hospitales borraron discretamente la N del cartel, y la RMN pasó a llamarse simplemente resonancia magnética. La física era la misma; el miedo, no.</p>
+
+          <h3 style="margin: 2rem 0 1rem;">2003: un Nobel con guerra incluida</h3>
+          <p>La historia tiene un epílogo humano, menos luminoso y muy instructivo. En 2003, el Premio Nobel de Medicina reconoció por fin las imágenes por resonancia magnética. Lo recibieron Lauterbur y Mansfield. Faltaba un nombre, y su dueño no se lo tomó bien: Damadian pagó avisos a página completa en The New York Times, The Washington Post y Los Angeles Times bajo un título de batalla: "La vergonzosa injusticia que debe ser corregida". Declaró a la prensa que sin él hoy no existiría la resonancia magnética.</p>
+          <p>¿Tenía razón? Las reglas del Nobel permiten hasta tres galardonados, así que lugar había; y nadie discute que su hallazgo de 1971 —los tejidos enfermos relajan sus spines a otro ritmo— fue la chispa médica de todo el asunto. Pero detectar no es lo mismo que fotografiar, y el premio eligió la fotografía: el gradiente de Lauterbur y la velocidad de Mansfield son lo que funciona dentro de cada resonador del mundo. El comité, cuyas actas se sellan por cincuenta años, jamás explicó la exclusión. En el fondo es un problema clásico de asignación de crédito: el mérito científico es continuo y se reparte en cadena, pero los premios son discretos y cortan la cadena en un punto, donde caiga el corte.</p>
+          <p>Como ironía final, el artículo de Lauterbur de 1973, la semilla de la que brotó todo, fue rechazado por Nature en su primera versión. Lauterbur insistió, lo reescribió y la revista terminó publicándolo en marzo de 1973. Desde luego, no era el único en sufrir la miopía de los editores: cuarenta años antes, en 1933, la misma revista Nature había rechazado inicialmente un trabajo de Enrico Fermi sobre la desintegración beta, por considerarlo demasiado especulativo para la evidencia disponible en ese momento<sup>[1]</sup>. Décadas después, el propio Lauterbur se cobró la revancha con una frase que todo investigador debería enmarcar: "con los papers rechazados por Science y Nature, decía, podría escribirse la historia entera de la ciencia del último medio siglo".</p>
+
+          <h3 style="margin: 2rem 0 1rem;">Investigar sin saber adónde lleva</h3>
+          <p>Si algo enseña esta historia es que ninguno de sus protagonistas estaba inventando la resonancia magnética. Zeeman quería saber si los átomos eran magnéticos. Stern y Gerlach perseguían una rareza cuántica. Onnes jugaba con el frío extremo. Ninguno imaginó que, encadenados, sus hallazgos terminarían iluminando tumores en un hospital ochenta años después.</p>
+          <blockquote style="border-left: 3px solid var(--gold-500); padding-left: 1.25rem; margin: 2rem 0; font-style: italic; color: var(--text-dark); font-size: 1.15rem;">Seis Premios Nobel —y dos ausencias célebres— confluyen en el túnel blanco. Nadie planificó la máquina: la construyó la curiosidad encadenada.</blockquote>
+          <p>La resonancia magnética es una de las tecnologías médicas más extraordinarias surgidas de la física del siglo XX, y aun así no siempre gana la batalla: todavía mueren demasiadas personas de cáncer. Pero la naturaleza guarda aún muchos secretos por descubrir, y por eso hay que seguir buscando.</p>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 2.5rem;">[1] Fermi utilizó la teoría de perturbaciones dependiente del tiempo para calcular la probabilidad de que ocurriera una transición entre estados cuánticos. Actualmente de estudio obligado en cursos avanzados, desarrollado con la intuición única del propio autor en su clásico Nuclear Physics (1949), y magistralmente explicado desde un enfoque formal moderno en Mécanique Quantique de Cohen-Tannoudji, Diu y Laloë.</p>
+        </div>
+        <div class="lang-en">
+          <p>Some inventions are born from a plan, and others from the curiosity of a student who seizes the moment his boss steps out to run the experiment he'd been forbidden to try. The magnetic resonance machine — that white tunnel that today detects tumors without a single incision — belongs to the second kind. Its story took eighty-one years to write itself, and gathered half a dozen Nobel laureates who, for the most part, had no idea what they were starting.</p>
+          <blockquote style="border-left: 3px solid var(--gold-500); padding-left: 1.25rem; margin: 2rem 0; font-style: italic; color: var(--text-dark); font-size: 1.15rem;">Five steps and nearly eight decades: each discovery looked useless until the next one completed it.</blockquote>
+
+          <h3 style="margin: 2rem 0 1rem;">1896: The Experiment Done in Secret</h3>
+          <p>This story begins in 1896 at the University of Leiden, in the Netherlands, before quantum mechanics even existed. A young man named Pieter Zeeman worked as an assistant to a pragmatic professor, Kamerlingh Onnes — the kind who wants only publishable results and has no patience for his assistants' odd ideas.</p>
+          <p>Zeeman had a nagging question: are atoms magnetic? He wanted to see what would happen to an atom's light if he placed it inside a magnetic field. His boss believed that, if the effect existed at all, it would be too weak to observe, and forbade the experiment. So Zeeman waited. The moment Onnes stepped out, he switched on the equipment.</p>
+          <p>He heated a sodium gas — the same element that gives streetlamps their orange glow — and observed the light it emitted. Sodium produces two characteristic yellow lines. Then he applied the magnet, and the two lines split into several.</p>
+          <blockquote style="border-left: 3px solid var(--gold-500); padding-left: 1.25rem; margin: 2rem 0; font-style: italic; color: var(--text-dark); font-size: 1.15rem;">The Zeeman effect: magnetism leaves a visible imprint on the light an atom emits.</blockquote>
+          <p>Zeeman had discovered that the light emitted by atoms changes when a magnetic field is applied. Hendrik Lorentz, his mentor and thesis advisor, explained the phenomenon by combining Maxwell's ideas on electricity, magnetism, and light with the existence of tiny electric charges inside matter. For this work, both men received the 1902 Nobel Prize in Physics. What's remarkable is that Zeeman had stumbled onto one of the earliest experimental clues about the atom's internal structure — clues that quantum physics would only explain decades later, at a time when that theory didn't yet exist.</p>
+
+          <h3 style="margin: 2rem 0 1rem;">1922: Two Spots That Shouldn't Be There</h3>
+          <p>Fast-forward twenty-six years. Two German physicists, Otto Stern and Walther Gerlach, set out to sharpen the idea. They fired a thin beam of silver atoms in a straight line toward a screen, sending it through a magnetic field along the way. If atoms behave like tiny magnets, the field should deflect them.</p>
+          <p>The physics of the day predicted a single blurred smudge: atoms, randomly oriented, would scatter a little in every direction. But what appeared on the screen was something else entirely — two sharp spots, one above, one below, and nothing in between.</p>
+          <blockquote style="border-left: 3px solid var(--gold-500); padding-left: 1.25rem; margin: 2rem 0; font-style: italic; color: var(--text-dark); font-size: 1.15rem;">The beam doesn't blur — it splits in two. Nature allows only two answers.</blockquote>
+          <p>Without meaning to, Stern and Gerlach had stumbled onto one of the strangest properties of matter: spin. It was a clue that certain magnetic properties of the atom couldn't point just anywhere, but only appeared in discrete states — in that experiment, two. Not halfway, not sideways. Otto Stern was so certain he had confirmed the new quantum ideas that he sent Niels Bohr the photograph of the two spots with a note: "Professor Bohr, enclosed is the experimental proof that your theory is correct."</p>
+
+          <h3 style="margin: 2rem 0 1rem;">1938–1946: Learning to Talk to Spins</h3>
+          <p>The next step came in 1938, from Columbia, courtesy of Isidor Rabi. He took the Stern-Gerlach setup and added one ingredient: alongside the magnet, a second field that oscillated like a radio transmitter. He found that, by tuning to just the right frequency, the spins in the beam would flip orientation in a coordinated way. For the first time, someone wasn't just observing how atomic nuclei responded — they could act on them in a controlled way. The method earned him the 1944 Nobel Prize (Stern had received his just a year earlier), though with one limitation: it only worked on molecules in a vacuum, not on everyday matter.</p>
+          <p>Another leap forward, to just after World War II. At Stanford, Felix Bloch; at Harvard, Edward Purcell and his team. Both were chasing the same idea, and both would end up sharing another Nobel Prize.</p>
+          <p>The technique is elegant. First, a strong magnetic field is applied, nudging a small majority of the spins to align with it. Then radio waves are sent in, and their frequency is slowly swept. Nothing happens for a while — until, at one very specific frequency, the resonance frequency, the spins all flip orientation at once. They've found the exact note the nucleus responds to.</p>
+          <blockquote style="border-left: 3px solid var(--gold-500); padding-left: 1.25rem; margin: 2rem 0; font-style: italic; color: var(--text-dark); font-size: 1.15rem;">Like a glass that hums at one precise note: every nucleus answers to its own frequency.</blockquote>
+          <p>Why does this matter so much? Because that frequency depends on the magnetic field each nucleus actually feels, and that field shifts depending on the surrounding molecules. By measuring the frequency, physicists could suddenly eavesdrop on the inside of matter without touching it. Nuclear Magnetic Resonance (NMR) had just been born. For now, it was purely a chemist's tool: it produced spectral graphs, not images.</p>
+
+          <h3 style="margin: 2rem 0 1rem;">1973: From Graph to Photograph of the Inside</h3>
+          <p>1973 arrives, bringing with it two figures who would make the technique indispensable to medicine.</p>
+          <p>A physician, Raymond Damadian, had noticed something crucial: certain tumor tissues showed relaxation times different from healthy tissue. In simple terms, after being excited by the radio signal, they didn't return to equilibrium at the same rate. NMR could, in principle, tell diseased tissue apart from healthy tissue.</p>
+          <p>But there was a huge problem: the technique could say there was a tumor, not where. And "you have a tumor somewhere in your body" isn't much use to a surgeon. This is where Paul Lauterbur stepped in with an idea as simple as it was powerful: instead of a uniform magnetic field, use a gradient — a field whose strength changes point by point across the body.</p>
+          <blockquote style="border-left: 3px solid var(--gold-500); padding-left: 1.25rem; margin: 2rem 0; font-style: italic; color: var(--text-dark); font-size: 1.15rem;">The gradient turns every frequency into a coordinate: resonance learns to give directions.</blockquote>
+          <p>The effect is striking. Since the resonance frequency depends on the field, and the field now differs at every point, each position in the body answers with its own frequency — which becomes, in effect, a kind of postal address: hear that particular note, and the tumor is exactly there. Magnetic resonance stopped producing graphs and started producing images. Cautiously, at first: the earliest device was so small that, at most, a single finger could fit inside.</p>
+
+          <h3 style="margin: 2rem 0 1rem;">The Final Obstacle, Solved Sixty Years Earlier</h3>
+          <p>So why not simply scale up the machine to fit an entire body? Because of a technological wall. Imaging the whole body required a very powerful magnetic field, which meant currents so strong through the copper coils that the wires would melt. That's the Joule effect: a metal's resistance turns current into heat. Nobody knew how to get around it.</p>
+          <p>This is where the story takes a perfect narrative turn. The solution had already existed since 1911. It had been discovered, unintentionally, by Kamerlingh Onnes — the very same pragmatic professor who had stepped out while Zeeman defied his orders. While studying matter at extremely low temperatures, Onnes observed something extraordinary: below a certain temperature, mercury's electrical resistance vanished almost entirely. Current could flow without the usual heat losses. He had discovered superconductivity.</p>
+          <p>The boss who forbade the experiment that gave birth to magnetic resonance was, without knowing it, the very person who discovered what would make it possible. Science rarely knows what use its discoveries will eventually serve.</p>
+          <p>Superconducting coils make it possible to sustain persistent currents and magnetic fields for extraordinarily long stretches, with negligible losses and nothing melting. That was the final brick. Putting together the five pieces — the splitting light, the two-faced spin, resonance, the gradient, and superconductivity — Magnetic Resonance Imaging (MRI) was finally born: a window into the human body that needs no scalpel.</p>
+          <blockquote style="border-left: 3px solid var(--gold-500); padding-left: 1.25rem; margin: 2rem 0; font-style: italic; color: var(--text-dark); font-size: 1.15rem;">Three fields that vary point by point turn every frequency into a postal address inside the body: that is what a resonance image is.</blockquote>
+
+          <h3 style="margin: 2rem 0 1rem;">1977: The First Photograph of a Whole Body</h3>
+          <p>The definitive test was still missing: a human being inside. Damadian set out to build the first whole-body scanner and named it, quite deliberately, Indomitable. His first attempt used himself as the subject inside the tunnel, and it failed — no signal appeared; his students suspected, half-joking, that the boss was simply too large for his own machine. Weeks later, one of those students, Larry Minkoff — considerably slimmer — volunteered instead. On July 3, 1977, after nearly five hours of scanning, the first image of the inside of a living human chest appeared. That original scanner rests today at the Smithsonian Institution, a testament to a pioneering stage in medicine: a crude machine by today's standards, yet capable of opening up an entirely new way of seeing inside the human body.</p>
+          <p>One practical problem remained: speed. With the original method, each image took hours; no patient can hold still that long, and no hospital can afford it. In England, physicist Peter Mansfield developed methods that dramatically sped up image acquisition and reconstruction, paving the way for much faster scans. In 1976, his team had produced the first image of a human body part — a student's finger — and shortly afterward Mansfield tested the full-body scanner in the most convincing way possible: by climbing in himself.</p>
+          <p>One last, purely marketing detail sealed the technique's move into hospitals. It was called nuclear magnetic resonance, because it speaks to the atom's nucleus. But in the 1980s, that word evoked bombs and power plants, and patients grew wary of a machine that in fact emits no ionizing radiation whatsoever — the high-energy kind that can damage tissue and DNA. Hospitals quietly dropped the N from the sign, and NMR simply became MRI. The physics stayed the same; the fear didn't.</p>
+
+          <h3 style="margin: 2rem 0 1rem;">2003: A Nobel Prize, War Included</h3>
+          <p>The story has a human epilogue — less luminous, and quite instructive. In 2003, the Nobel Prize in Medicine finally recognized magnetic resonance imaging. Lauterbur and Mansfield received it. One name was missing, and its owner did not take it well: Damadian paid for full-page ads in The New York Times, The Washington Post, and the Los Angeles Times under a battle-cry headline: "The Shameful Wrong That Must Be Righted." He told the press that without him, magnetic resonance imaging would not exist today.</p>
+          <p>Was he right? The Nobel rules allow up to three laureates, so there was room; and no one disputes that his 1971 finding — diseased tissue relaxes its spins at a different rate — was the medical spark behind the whole affair. But detecting is not the same as photographing, and the prize chose the photograph: Lauterbur's gradient and Mansfield's speed are what actually runs inside every scanner in the world. The committee, whose records stay sealed for fifty years, never explained the exclusion. At bottom, it's a classic problem of assigning credit: scientific merit is continuous and passed along in a chain, but prizes are discrete and cut that chain at one point, wherever the cut happens to fall.</p>
+          <p>As a final irony, Lauterbur's 1973 paper — the seed from which everything sprouted — was rejected by Nature in its first version. Lauterbur pushed back, rewrote it, and the journal ultimately published it in March 1973. He was hardly alone in suffering the editors' shortsightedness: forty years earlier, in 1933, the same journal Nature had initially rejected a paper by Enrico Fermi on beta decay, deeming it too speculative for the evidence available at the time<sup>[1]</sup>. Decades later, Lauterbur got his own revenge with a line every researcher should frame: "You could write the entire history of science in the last 50 years from papers rejected by Science or Nature."</p>
+
+          <h3 style="margin: 2rem 0 1rem;">Researching Without Knowing Where It Leads</h3>
+          <p>If this story teaches anything, it's that none of its protagonists were trying to invent magnetic resonance imaging. Zeeman wanted to know if atoms were magnetic. Stern and Gerlach were chasing a quantum oddity. Onnes was playing with extreme cold. None of them imagined that, chained together, their findings would end up lighting up tumors in a hospital eighty years later.</p>
+          <blockquote style="border-left: 3px solid var(--gold-500); padding-left: 1.25rem; margin: 2rem 0; font-style: italic; color: var(--text-dark); font-size: 1.15rem;">Six Nobel Prizes — and two famous absences — converge in the white tunnel. No one planned the machine: chained curiosity built it.</blockquote>
+          <p>Magnetic resonance imaging is one of the most extraordinary medical technologies to emerge from twentieth-century physics, and yet it still doesn't always win the battle: too many people still die of cancer. But nature still holds many secrets waiting to be found, which is precisely why the search must go on.</p>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 2.5rem;">[1] Fermi used time-dependent perturbation theory to calculate the probability of a transition between quantum states. It is now required study in advanced courses, developed with the author's own singular intuition in his classic Nuclear Physics (1949), and masterfully explained from a modern formal approach in Mécanique Quantique by Cohen-Tannoudji, Diu, and Laloë.</p>
+        </div>
+      </div>
+
+      <div class="back-btn-container">
+        <a href="../#publications" class="btn btn-secondary" style="text-decoration: none;">
+          <span class="lang-es">← Volver a Publicaciones</span>
+          <span class="lang-en">← Back to Publications</span>
+        </a>
+      </div>
+    </article>
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; text-align: center; padding: 2rem 0;">
+      <p class="lang-es" style="color: var(--text-muted); font-size: 0.9rem; margin: 0;">© 2026 Jorge Muro. Todos los derechos reservados. Lima, Perú</p>
+      <p class="lang-en" style="color: var(--text-muted); font-size: 0.9rem; margin: 0;">© 2026 Jorge Muro. All rights reserved. Lima, Peru</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let currentLang = 'es';
+      const langToggle = document.getElementById('langToggle');
+
+      const updateUI = () => {
+        langToggle.textContent = currentLang === 'en' ? '🌐 EN | ES' : '🌐 ES | EN';
+        langToggle.setAttribute('title', currentLang === 'en' ? 'Cambiar a Español' : 'Change to English');
+        document.documentElement.lang = currentLang;
+      };
+
+      langToggle.addEventListener('click', () => {
+        currentLang = currentLang === 'en' ? 'es' : 'en';
+        updateUI();
+        const newUrl = `${window.location.protocol}//${window.location.host}${window.location.pathname}?lang=${currentLang}`;
+        window.history.pushState({ path: newUrl }, '', newUrl);
+      });
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const langParam = urlParams.get('lang');
+      if (langParam === 'es' || langParam === 'en') {
+        currentLang = langParam;
+      }
+      updateUI();
+    });
+  </script>
+</body>
+</html>

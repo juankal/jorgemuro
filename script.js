@@ -7,6 +7,34 @@ document.addEventListener('DOMContentLoaded', () => {
   // ---- Publications Data ----
   const publications = [
     {
+      id: 'resonancia-magnetica',
+      category: 'physics',
+      date: '2026',
+      readTime: { en: '7 min read', es: '7 min de lectura' },
+      image: 'images/resonancia-magnetica.svg',
+      thumbnail: 'images/resonancia-magnetica.svg',
+      en: {
+        tag: 'Physics & Medicine',
+        title: 'The Epic of Magnetic Resonance',
+        desc: 'The forbidden experiment, carried out in secret in 1896, that ended up saving lives — how eight decades of curiosity-driven physics produced the MRI.',
+        content: [
+          "Some inventions are born from a plan, and others from the curiosity of a student who seizes the moment his boss steps out to run the experiment he'd been forbidden to try. The magnetic resonance machine belongs to the second kind.",
+          "From Zeeman's forbidden 1896 experiment to Stern and Gerlach's discovery of spin, from nuclear magnetic resonance to Lauterbur's imaging gradient, five unrelated discoveries chained together across eighty-one years and six Nobel Prizes to produce a technology nobody set out to invent.",
+          "Dr. Muro traces this chain of curiosity-driven science, including the human epilogue: the 2003 Nobel Prize dispute over who deserved credit for the machine that today looks inside the body without a single incision."
+        ]
+      },
+      es: {
+        tag: 'Física y Medicina',
+        title: 'La Epopeya de la Resonancia Magnética',
+        desc: 'El experimento prohibido, hecho a escondidas en 1896, que terminó salvando vidas: ocho décadas de física guiada por la curiosidad hasta llegar a la resonancia magnética.',
+        content: [
+          "Hay inventos que nacen de un plan, y hay otros que nacen de la curiosidad de un estudiante que aprovecha que su jefe se ausenta para hacer el experimento que le habían prohibido. La máquina de resonancia magnética pertenece a la segunda clase.",
+          "Desde el experimento prohibido de Zeeman en 1896 hasta el descubrimiento del spin por Stern y Gerlach, pasando por la resonancia magnética nuclear y el gradiente de Lauterbur, cinco hallazgos sin relación aparente se encadenaron durante ochenta y un años y seis premios Nobel para producir una tecnología que nadie se propuso inventar.",
+          "El Dr. Muro recorre esta cadena de ciencia guiada por la curiosidad, incluyendo el epílogo humano: la disputa del Nobel 2003 sobre quién merecía el crédito por la máquina que hoy mira dentro del cuerpo sin un solo corte."
+        ]
+      }
+    },
+    {
       id: 'quantum-computing',
       category: 'physics',
       date: '2025',
@@ -555,8 +583,6 @@ document.addEventListener('DOMContentLoaded', () => {
       book2_title: 'El Conflicto Perú - Ecuador: La Historia No Contada',
       book2_desc: 'Un análisis sin precedentes de la resolución de 1998 del conflicto territorial entre Perú y Ecuador, combinando la metodología del Proyecto de Negociación de Harvard.',
       books_cta: 'Consultar sobre Libros',
-      book1_cta: 'Comprar en Amazon',
-      book1_link: 'https://www.amazon.com/-/es/Jorge-Eduardo-Muro-Arbul%C3%BA-ebook/dp/B0BWFTJJ7G/ref=sr_1_1?sr=8-1',
       book2_cta: 'Leer Libro',
 
       // Contact
@@ -652,8 +678,6 @@ document.addEventListener('DOMContentLoaded', () => {
       book2_title: 'The Peru - Ecuador Conflict: The Untold Story',
       book2_desc: 'An unprecedented analysis of the 1998 resolution of the territorial conflict between Peru and Ecuador, combining the Harvard Negotiation Project methodology with deep geopolitical insight. A unique perspective on shifting from positions to underlying interests.',
       books_cta: 'Inquire About Books',
-      book1_cta: 'Buy on Amazon',
-      book1_link: 'https://www.amazon.com/dp/B0BWFTJJ7G',
       book2_cta: 'Read Book',
 
       // Contact
