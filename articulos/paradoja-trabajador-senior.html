@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SJXJT6BQH3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-SJXJT6BQH3');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Paradoja del Trabajador Sénior en la Era de la IA | Dr. Jorge Muro</title>
+  <meta name="description" content="La IA acelera tareas de procesamiento, pero en decisiones complejas el valor está en el criterio y la memoria institucional del trabajador sénior. El Dr. Muro analiza evidencia OCDE y psicología cognitiva.">
+  <link rel="canonical" href="https://www.jorgemuro.net/articulos/paradoja-trabajador-senior.html">
+  <link rel="alternate" hreflang="es" href="https://www.jorgemuro.net/articulos/paradoja-trabajador-senior.html?lang=es">
+  <link rel="alternate" hreflang="en" href="https://www.jorgemuro.net/articulos/paradoja-trabajador-senior.html?lang=en">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <style>
+/* ============================================
+   Jorge Muro - Modern Academic Landing Page
+   Design System & Core Styles
+   ============================================ */
+
+/* ---- CSS Custom Properties ---- */
+:root {
+  /* Color Palette - Navy / Gold / Cream */
+  --navy-900: #0a1628;
+  --navy-800: #0f2140;
+  --navy-700: #1a3158;
+  --navy-600: #1d3557;
+  --navy-500: #264d73;
+  --navy-400: #457b9d;
+  --navy-300: #6b9dbd;
+
+  --gold-500: #c9a84c;
+  --gold-400: #d4b86a;
+  --gold-300: #e0c988;
+  --gold-200: #f0dfa8;
+
+  --cream-100: #faf8f5;
+  --cream-200: #f5f0e8;
+  --cream-300: #ede5d5;
+
+  --white: #ffffff;
+  --text-dark: #1a1a2e;
+  --text-body: #3d3d5c;
+  --text-muted: #6b6b8a;
+  --text-light: #a3a3c2;
+
+  --accent-red: #e63946;
+  --accent-teal: #2ec4b6;
+
+  /* Typography */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Spacing */
+  --section-pad: clamp(4rem, 8vw, 8rem);
+  --container-max: 1200px;
+
+  /* Transitions */
+  --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(10, 22, 40, 0.08);
+  --shadow-md: 0 8px 24px rgba(10, 22, 40, 0.12);
+  --shadow-lg: 0 16px 48px rgba(10, 22, 40, 0.16);
+  --shadow-xl: 0 24px 64px rgba(10, 22, 40, 0.2);
+  --shadow-glow: 0 0 40px rgba(201, 168, 76, 0.15);
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+}
+
+/* ---- Reset & Base ---- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-body);
+  background: var(--cream-100);
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s var(--ease-out);
+}
+
+/* Skip to content - Accessibility */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  background: var(--gold-500);
+  color: var(--navy-900);
+  padding: 12px 24px;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+  z-index: 10000;
+  transition: top 0.3s;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* Focus visible for keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--gold-500);
+  outline-offset: 2px;
+}
+
+ul, ol { list-style: none; }
+
+/* ---- Typography ---- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-dark);
+}
+
+h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+h2 { font-size: clamp(2rem, 4vw, 3rem); }
+h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+h4 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
+
+p {
+  font-size: clamp(1rem, 1.1vw, 1.125rem);
+  line-height: 1.8;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--gold-500), var(--gold-300));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-label {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--gold-500);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+.section-label::before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 2px;
+  background: var(--gold-500);
+}
+
+/* ---- Container ---- */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 4vw, 3rem);
+}
+
+/* ---- Buttons ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s var(--ease-out);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.btn:hover::after { opacity: 1; }
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold-500), var(--gold-400));
+  color: var(--navy-900);
+  box-shadow: 0 4px 16px rgba(201, 168, 76, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(201, 168, 76, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary:hover {
+  border-color: var(--gold-400);
+  color: var(--gold-400);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--navy-600);
+  border: 2px solid var(--navy-600);
+}
+
+.btn-outline:hover {
+  background: var(--navy-600);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.btn-sm {
+  padding: 8px 20px;
+  font-size: 0.85rem;
+}
+
+/* ---- Navigation ---- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 16px 0;
+  transition: all 0.4s var(--ease-out);
+  background: transparent;
+}
+
+.navbar.scrolled {
+  background: rgba(10, 22, 40, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 10px 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 4vw, 3rem);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-logo-svg {
+  height: 28px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  transition: opacity 0.3s;
+}
+
+.nav-logo-icon-img {
+  height: 32px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  transition: opacity 0.3s;
+}
+
+.nav-logo-svg:hover {
+  opacity: 0.85;
+}
+
+.nav-logo-icon {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, var(--gold-500), var(--gold-300));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--navy-900);
+}
+
+.nav-logo-text {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--white);
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.nav-links a {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  position: relative;
+  padding: 4px 0;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold-500);
+  transition: width 0.3s var(--ease-out);
+}
+
+.nav-links a:hover { color: var(--white); }
+.nav-links a:hover::after { width: 100%; }
+
+.nav-lang {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 50px;
+  border: 1px solid rgba(255,255,255,0.2);
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.7);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.nav-lang:hover {
+  border-color: var(--gold-400);
+  color: var(--gold-400);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 4px;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 2px;
+  background: var(--white);
+  transition: all 0.3s var(--ease-out);
+  border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ---- Hero Section ---- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: var(--navy-900);
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+}
+
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(10, 22, 40, 0.95) 0%,
+    rgba(10, 22, 40, 0.7) 50%,
+    rgba(26, 49, 88, 0.8) 100%
+  );
+}
+
+/* Animated particles */
+.hero-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: var(--gold-500);
+  border-radius: 50%;
+  opacity: 0;
+  animation: float-particle 8s infinite;
+}
+
+@keyframes float-particle {
+  0% { opacity: 0; transform: translateY(100vh) scale(0); }
+  10% { opacity: 0.6; }
+  90% { opacity: 0.6; }
+  100% { opacity: 0; transform: translateY(-100px) scale(1); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+
+.hero-text {
+  animation: fadeSlideUp 1s var(--ease-out) 0.3s both;
+}
+
+.hero-subtitle {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--gold-500);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-subtitle::before {
+  content: '';
+  width: 40px;
+  height: 2px;
+  background: var(--gold-500);
+}
+
+.hero-title {
+  color: var(--white);
+  font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.hero-title .highlight {
+  background: linear-gradient(135deg, var(--gold-500), var(--gold-300));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-description {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  max-width: 520px;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.hero-stat-number {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--gold-500);
+  line-height: 1;
+}
+
+.hero-stat-label {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-image {
+  position: relative;
+  animation: fadeSlideUp 1s var(--ease-out) 0.6s both;
+  max-width: 420px;
+  margin-left: auto;
+}
+
+.hero-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image-wrapper::before {
+  display: none;
+}
+
+.hero-image-wrapper::after {
+  display: none;
+}
+
+.hero-image-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  object-position: center top;
+  mix-blend-mode: lighten;
+}
+
+.hero-badge {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background: linear-gradient(135deg, var(--gold-500), var(--gold-400));
+  color: var(--navy-900);
+  padding: 16px 24px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+  animation: fadeSlideUp 1s var(--ease-out) 1s both;
+}
+
+.hero-badge-icon {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
+.hero-badge-text {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.85rem;
+  line-height: 1.3;
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.4);
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: bounce 2s infinite;
+}
+
+.scroll-indicator .arrow {
+  width: 24px;
+  height: 24px;
+  border-right: 2px solid rgba(255,255,255,0.4);
+  border-bottom: 2px solid rgba(255,255,255,0.4);
+  transform: rotate(45deg);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+  40% { transform: translateX(-50%) translateY(-10px); }
+  60% { transform: translateX(-50%) translateY(-5px); }
+}
+
+/* ---- About Section ---- */
+
+  </style>
+  <link rel="stylesheet" href="../index.css" media="print" onload="this.media='all'">
+  <style>
+    .article-page {
+      padding: 120px 0 80px 0;
+      background: var(--cream-100);
+      min-height: 80vh;
+    }
+    .article-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .article-header {
+      margin-bottom: 2.5rem;
+    }
+    .article-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--navy-900);
+      line-height: 1.2;
+      margin-top: 1rem;
+    }
+    .article-meta {
+      display: flex;
+      gap: 15px;
+      color: var(--gold-500);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .article-media {
+      margin: 2rem 0;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+    .article-media img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .article-content {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: var(--text-body);
+    }
+    .article-content p {
+      margin-bottom: 1.5rem;
+    }
+    .back-btn-container {
+      margin-top: 3rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip to content -->
+  <a href="#main-content" class="skip-to-content">Saltar al contenido</a>
+
+  <!-- ====== NAVIGATION ====== -->
+  <nav class="navbar scrolled" id="navbar" aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a href="../" class="nav-logo">
+        <img src="../images/logo.webp" alt="Logo Dr. Jorge Muro" class="nav-logo-icon-img" width="32" height="32">
+        <img src="../images/logo.svg" alt="Jorge Muro" class="nav-logo-svg" width="160" height="28">
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="../#about">Sobre Mí</a>
+        <a href="../#expertise">Especialidades</a>
+        <a href="../#publications">Publicaciones</a>
+        <a href="../#books">Libros</a>
+        <a href="../#contact">Contacto</a>
+        <div class="nav-lang" id="langToggle" title="Cambiar a Inglés">
+          🌐 ES | EN
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="article-page" id="main-content">
+    <article class="article-container">
+      <header class="article-header">
+        <div class="article-meta">
+          <span class="lang-es">IA y Talento</span>
+          <span class="lang-en">AI & Talent</span>
+          <span>• 📅 2026</span>
+          <span>• ⏱️ 2 min</span>
+        </div>
+        <h1 class="article-title">
+          <span class="lang-es">La Paradoja del Trabajador Sénior en la Era de la IA</span>
+          <span class="lang-en">The Senior Worker's Paradox in the Age of AI</span>
+        </h1>
+        <p class="lang-es" style="color: var(--text-muted); margin-top: 0.5rem;">Por qué la automatización puede volver más valioso el criterio acumulado</p>
+        <p class="lang-en" style="color: var(--text-muted); margin-top: 0.5rem;">Why automation may make accumulated judgment more valuable, not less</p>
+      </header>
+
+      <div class="article-media">
+        <img src="../images/paradoja-trabajador-senior.svg" alt="La Paradoja del Trabajador Sénior en la Era de la IA" width="1200" height="630">
+      </div>
+
+      <div class="article-content">
+        <div class="lang-es">
+          <p>La discusión pública sobre los trabajadores mayores de 50 años suele reducirse a la edad, cuando la variable decisiva en la era de la IA es otra: qué parte del trabajo es automatizable y qué parte depende del criterio y la memoria institucional.</p>
+          <p>Apoyado en evidencia de la OCDE y en la distinción de la psicología cognitiva entre inteligencia fluida (velocidad, memoria de corto plazo) e inteligencia cristalizada (criterio, conocimiento acumulado), el Dr. Muro muestra por qué la IA generativa puede volver más valiosa —no menos— la experiencia sénior.</p>
+          <p>El artículo repasa el origen histórico de la jubilación anticipada como "salida natural" en las reestructuraciones industriales, y propone seis medidas prácticas para que las organizaciones combinen velocidad de IA con juicio experto en lugar de expulsarlo.</p>
+        </div>
+        <div class="lang-en">
+          <p>Public debate about workers over 50 usually collapses into a single variable: age. In the AI era, the variable that actually matters is different: how much of the work is automatable, and how much depends on judgment and institutional memory.</p>
+          <p>Drawing on OECD evidence and the cognitive-psychology distinction between fluid intelligence (speed, short-term memory) and crystallized intelligence (judgment, accumulated knowledge), Dr. Muro shows why generative AI can make senior experience more valuable — not less.</p>
+          <p>The article traces how early retirement became the "natural" exit route during industrial restructuring, and proposes six practical measures for organizations to pair AI's speed with expert judgment instead of discarding it.</p>
+        </div>
+      </div>
+
+      <div class="back-btn-container">
+        <a href="https://docs.google.com/document/d/1bxqLZMDXsmrF7qEDcRugL2MtRdqnlrtd/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="text-decoration: none;">
+          <span class="lang-es">📄 Leer Artículo Completo</span>
+          <span class="lang-en">📄 Read Full Article</span>
+        </a>
+        <a href="../#publications" class="btn btn-secondary" style="text-decoration: none;">
+          <span class="lang-es">← Volver a Publicaciones</span>
+          <span class="lang-en">← Back to Publications</span>
+        </a>
+      </div>
+    </article>
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; text-align: center; padding: 2rem 0;">
+      <p class="lang-es" style="color: var(--text-muted); font-size: 0.9rem; margin: 0;">© 2026 Jorge Muro. Todos los derechos reservados. Lima, Perú</p>
+      <p class="lang-en" style="color: var(--text-muted); font-size: 0.9rem; margin: 0;">© 2026 Jorge Muro. All rights reserved. Lima, Peru</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let currentLang = 'es';
+      const langToggle = document.getElementById('langToggle');
+
+      const updateUI = () => {
+        langToggle.textContent = currentLang === 'en' ? '🌐 EN | ES' : '🌐 ES | EN';
+        langToggle.setAttribute('title', currentLang === 'en' ? 'Cambiar a Español' : 'Change to English');
+        document.documentElement.lang = currentLang;
+      };
+
+      langToggle.addEventListener('click', () => {
+        currentLang = currentLang === 'en' ? 'es' : 'en';
+        updateUI();
+        const newUrl = `${window.location.protocol}//${window.location.host}${window.location.pathname}?lang=${currentLang}`;
+        window.history.pushState({ path: newUrl }, '', newUrl);
+      });
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const langParam = urlParams.get('lang');
+      if (langParam === 'es' || langParam === 'en') {
+        currentLang = langParam;
+      }
+      updateUI();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Ilustración abstracta de anillos de experiencia acumulada conectados a una red de inteligencia artificial">
+  <defs>
+    <radialGradient id="bgGlow2" cx="50%" cy="50%" r="80%">
+      <stop offset="0%" stop-color="#1a3158"/>
+      <stop offset="55%" stop-color="#0f2140"/>
+      <stop offset="100%" stop-color="#0a1628"/>
+    </radialGradient>
+    <radialGradient id="ringGlow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c9a84c" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="netGlow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#457b9d" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#457b9d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ringStroke2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0c988"/>
+      <stop offset="100%" stop-color="#c9a84c"/>
+    </linearGradient>
+    <linearGradient id="bridgeStroke" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c9a84c" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#6b9dbd" stop-opacity="0.7"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bgGlow2)"/>
+
+  <!-- Left: growth rings, representing accumulated experience (crystallized intelligence) -->
+  <circle cx="360" cy="315" r="240" fill="url(#ringGlow2)"/>
+  <g fill="none" stroke="url(#ringStroke2)" stroke-width="1.4" opacity="0.85">
+    <circle cx="360" cy="315" r="40"/>
+    <circle cx="358" cy="313" r="72"/>
+    <circle cx="363" cy="318" r="102"/>
+    <circle cx="357" cy="310" r="134"/>
+    <circle cx="362" cy="320" r="168"/>
+    <circle cx="358" cy="312" r="204"/>
+  </g>
+  <circle cx="360" cy="315" r="10" fill="#e0c988"/>
+
+  <!-- Right: node network, representing AI processing -->
+  <circle cx="840" cy="315" r="240" fill="url(#netGlow2)"/>
+  <g stroke="#6b9dbd" stroke-width="1.2" opacity="0.65">
+    <line x1="840" y1="315" x2="740" y2="220"/>
+    <line x1="840" y1="315" x2="760" y2="410"/>
+    <line x1="840" y1="315" x2="930" y2="200"/>
+    <line x1="840" y1="315" x2="950" y2="330"/>
+    <line x1="840" y1="315" x2="900" y2="430"/>
+    <line x1="740" y1="220" x2="930" y2="200"/>
+    <line x1="760" y1="410" x2="900" y2="430"/>
+    <line x1="930" y1="200" x2="950" y2="330"/>
+  </g>
+  <g fill="#a3c6e0">
+    <circle cx="840" cy="315" r="9"/>
+    <circle cx="740" cy="220" r="5"/>
+    <circle cx="760" cy="410" r="5"/>
+    <circle cx="930" cy="200" r="5"/>
+    <circle cx="950" cy="330" r="5"/>
+    <circle cx="900" cy="430" r="5"/>
+  </g>
+
+  <!-- Bridge linking both, representing complementarity -->
+  <line x1="470" y1="315" x2="730" y2="315" stroke="url(#bridgeStroke)" stroke-width="2" stroke-dasharray="2 10" opacity="0.8"/>
+</svg>

@@ -11,6 +11,15 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.jorgemuro.net/articulos/paradoja-trabajador-senior.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jorgemuro.net/articulos/paradoja-trabajador-senior.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.jorgemuro.net/articulos/paradoja-trabajador-senior.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jorgemuro.net/articulos/paradoja-trabajador-senior.html?lang=es"/>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.jorgemuro.net/articulos/resonancia-magnetica.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.jorgemuro.net/articulos/resonancia-magnetica.html?lang=en"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.jorgemuro.net/articulos/resonancia-magnetica.html?lang=es"/>
