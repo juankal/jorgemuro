@@ -165,10 +165,9 @@ document.addEventListener('DOMContentLoaded', () => {
       image: 'images/models.webp',
       thumbnail: 'images/models-thumb.webp',
       thumbnail: 'images/models-thumb.webp',
-      pdfLink: {
-        en: 'https://drive.google.com/file/d/1i9b9wVyYNdidtEKSR1k1QEOOUlNxDQ1m/view?usp=sharing',
-        es: 'https://drive.google.com/file/d/1gk3ZRkhni5mu59GlVgFwLoUTQL3SaP1l/view?usp=sharing'
-      },
+      pdfLink: 'https://drive.google.com/drive/folders/1EtrrkFtdnwvt7h6Dz77M2H5IDTrSUXsf?usp=sharing',
+      pdfLinkLabel: { en: 'View Models Repository', es: 'Ver Repositorio de Modelos' },
+      pdfLinkIcon: '📁',
       en: {
         tag: 'Models',
         title: 'Models',
@@ -830,11 +829,12 @@ document.addEventListener('DOMContentLoaded', () => {
       let actionBtnHtml = '';
       if (pub.pdfLink) {
         const link = typeof pub.pdfLink === 'object' ? (currentLang === 'en' ? pub.pdfLink.en : pub.pdfLink.es) : pub.pdfLink;
-        const btnLabel = currentLang === 'en' ? 'Read Full Article' : 'Ver Artículo Completo';
+        const btnLabel = pub.pdfLinkLabel ? (currentLang === 'en' ? pub.pdfLinkLabel.en : pub.pdfLinkLabel.es) : (currentLang === 'en' ? 'Read Full Article' : 'Ver Artículo Completo');
+        const btnIcon = pub.pdfLinkIcon || '📄';
         actionBtnHtml = `
           <div class="modal-action-row" style="margin-top: 2.5rem; display: flex; justify-content: center; width: 100%;">
             <a href="${link}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="text-decoration: none;">
-              📄 ${btnLabel}
+              ${btnIcon} ${btnLabel}
             </a>
           </div>
         `;
