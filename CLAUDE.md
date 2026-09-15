@@ -54,11 +54,15 @@ Para previsualizar cambios localmente, sirve el directorio con cualquier servido
   agregar un recurso externo nuevo (script, iframe, fuente), hay que actualizar la CSP aquí o se
   bloqueará en producción. `script.js`, `script.min.js`, `index.css` y `critical.css` llevan
   `Cache-Control: immutable, max-age=31536000` (un año) **sin versionar el nombre del archivo** —
-  cada deploy que toque alguno de esos 4 archivos queda cacheado en el edge de Cloudflare hasta que
-  alguien purgue manualmente esa URL en el dashboard de Cloudflare (Custom Purge). Sin la purga, el
-  cambio no se ve en producción aunque el deploy haya sido exitoso (confirmar con `curl -sI` si
-  `cf-cache-status` da `HIT` en vez de `MISS`/`DYNAMIC`). Decisión 2026-08-30: no versionar el
-  nombre de archivo por ahora, mitigar con purga manual caso por caso.
+  cualquier deploy que toque alguno de esos 4 archivos queda cacheado en el edge de Cloudflare hasta
+  que alguien purgue manualmente esa URL en el dashboard de Cloudflare (Custom Purge), o hasta que
+  cambie la URL con la que se pide. Confirmar con `curl -sI` si `cf-cache-status` da `HIT` en vez de
+  `MISS`/`DYNAMIC`. Decisión 2026-09-15: para `script.min.js` (el único de los cuatro cargado desde
+  un `<script src>` en `index.html`) se adoptó cache-busting por query string — el tag es
+  `script.min.js?v=N` — así que **cada vez que cambie `script.min.js` hay que subir el número de
+  `v=` en `index.html`** en vez de depender de la purga manual. `index.css` y `critical.css` (cargados
+  sin query string) y el propio `script.js` (no se sirve directo, solo es la fuente legible) siguen
+  dependiendo de la purga manual si alguna vez cambian.
 - **SEO**: `sitemap.xml` y `robots.txt` en la raíz deben actualizarse manualmente si se agrega o
   quita una página (p. ej. un nuevo artículo en `articulos/`).
 - **Analytics**: Google tag (`gtag.js`, `G-SJXJT6BQH3`) embebido inline en cada página — presente
