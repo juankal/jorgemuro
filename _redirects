@@ -1,0 +1,5 @@
+# Bloquear acceso público a archivos de instrucciones de agentes (regla forzada 404! en Netlify)
+/CLAUDE.md /404 404!
+/claude.md /404 404!
+/AGENTS.md /404 404!
+/agents.md /404 404!
