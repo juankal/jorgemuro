@@ -519,12 +519,16 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.textContent = currentLang === 'es' ? 'Enviando...' : 'Sending...';
       btn.disabled = true;
       
-      // Submit to Netlify Forms
-      fetch('/', {
+      // Conservar también el formulario del sitio de Netlify durante la transición.
+      const endpoint = location.hostname === 'jorgemuro.netlify.app' ? '/' : contactForm.action;
+      const sendForm = (url) => fetch(url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(formData).toString()
-      })
+      });
+
+      sendForm(endpoint)
+      .then(response => (!response.ok && endpoint !== '/' ? sendForm('/') : response))
       .then(response => {
         if (response.ok) {
           btn.textContent = currentLang === 'es' ? '✓ ¡Mensaje Enviado!' : '✓ Message Sent!';

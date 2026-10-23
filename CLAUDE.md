@@ -26,8 +26,11 @@ el Dr. Jorge Muro — físico, especialista en liderazgo y negociación (credenc
 - Vista previa del nuevo alojamiento: `https://limegreen-deer-833586.hostingersite.com/`.
 - El dominio público continúa en Netlify detrás de Cloudflare; el cambio de DNS y la validación
   del certificado SSL de Hostinger siguen pendientes. No dar la migración por terminada.
-- El formulario sigue dependiendo de Netlify Forms. Su adaptación a PHP/SMTP y el correo de
-  destino quedaron pendientes por indicación de Juan Carlos; no cambiar su destinatario.
+- El formulario cuenta con un endpoint puente en PHP (`contacto.php`) que valida
+  los envíos y los despacha a Netlify Forms mediante cURL. De este modo funciona tanto
+  en Hostinger como en Netlify sin requerir credenciales SMTP locales ni alterar el
+  destinatario. Pruebas de validación y transporte en `tests/contacto_test.py`
+  (protegido contra acceso público vía `.htaccess` y `_redirects`).
 
 Para previsualizar cambios localmente, sirve el directorio con cualquier servidor estático (p. ej.
 `npx serve .` o la extensión Live Server) y abre `index.html`.
@@ -63,8 +66,9 @@ Para previsualizar cambios localmente, sirve el directorio con cualquier servido
   `script.js` (~línea 495) y se aplica vía atributos `data-i18n`, `data-i18n-title`,
   `data-i18n-aria`, `data-i18n-href` sobre el DOM. El toggle de idioma (`#langToggle`) dispara el
   swap; no hay build-time generation de páginas por idioma.
-- **Formulario de contacto** (`#contactForm`): usa `data-netlify="true"` + honeypot — el hosting es
-  Netlify (o compatible), no hay backend propio en este repo.
+- **Formulario de contacto** (`#contactForm`): usa `action="/contacto.php"` con validación y
+  despacho a Netlify Forms (y fallback en cliente a `/`). No requiere credenciales SMTP locales
+  mientras se completa la migración.
 - **`_headers`**: headers HTTP (CSP, cache-control, etc.) en formato Netlify/Cloudflare Pages — al
   agregar un recurso externo nuevo (script, iframe, fuente), hay que actualizar la CSP aquí o se
   bloqueará en producción. `script.js`, `script.min.js`, `index.css` y `critical.css` llevan

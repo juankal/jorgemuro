@@ -6,6 +6,7 @@ DirectoryIndex index.html
   RewriteRule (^|/)\.(?!well-known(?:/|$)) - [R=404,L]
   RewriteRule ^(?:AGENTS|CLAUDE)\.md$ - [R=404,L,NC]
   RewriteRule ^_(?:headers|redirects)$ - [R=404,L,NC]
+  RewriteRule ^tests(?:/|$) - [R=404,L,NC]
 </IfModule>
 
 <IfModule mod_headers.c>
