@@ -19,6 +19,16 @@ Sitio web estático (HTML/CSS/JS vanilla, sin build tooling, sin `package.json`,
 el Dr. Jorge Muro — físico, especialista en liderazgo y negociación (credencial Harvard). Deploy en
 `https://www.jorgemuro.net`. No hay comandos de build/lint/test: se edita el HTML/CSS/JS directamente.
 
+## Despliegue y migración a Hostinger (2026-10-23)
+
+- Hostinger importa `juankal/jorgemuro`, rama `main`, directamente en `public_html`, con
+  implementación automática activa. No hay build step ni subida manual de un ZIP.
+- Vista previa del nuevo alojamiento: `https://limegreen-deer-833586.hostingersite.com/`.
+- El dominio público continúa en Netlify detrás de Cloudflare; el cambio de DNS y la validación
+  del certificado SSL de Hostinger siguen pendientes. No dar la migración por terminada.
+- El formulario sigue dependiendo de Netlify Forms. Su adaptación a PHP/SMTP y el correo de
+  destino quedaron pendientes por indicación de Juan Carlos; no cambiar su destinatario.
+
 Para previsualizar cambios localmente, sirve el directorio con cualquier servidor estático (p. ej.
 `npx serve .` o la extensión Live Server) y abre `index.html`.
 
