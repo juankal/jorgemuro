@@ -72,7 +72,8 @@ Para previsualizar cambios localmente, sirve el directorio con cualquier servido
   `/modelos-del-libro/` sirve `articulos/models.html` mediante reglas equivalentes en `.htaccess` y
   `_redirects`; sus archivos originales de Analytica viven en `modelos-del-libro/archivos/`.
   Google Drive conserva los originales de trabajo; los archivos publicados son copias que hay que
-  actualizar y versionar manualmente. PDF/ANA revalidan caché al reutilizar una URL. Comprueba
+  actualizar y versionar manualmente. PDF/ANA usan `Cache-Control: no-cache`; en Cloudflare,
+  Browser Cache TTL debe conservar `Respect Existing Headers` para permitir su revalidación. Comprueba
   enlaces, destinos y sitemap con `python tests/local_downloads_test.py`; al cambiar el modelo,
   actualiza también su descripción y tamaño en la página.
 - **i18n**: bilingüe ES/EN client-side, sin rutas separadas. El diccionario `translations` vive en
