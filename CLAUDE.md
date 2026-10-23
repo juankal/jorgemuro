@@ -68,6 +68,9 @@ Para previsualizar cambios localmente, sirve el directorio con cualquier servido
   `v=` en `index.html`** en vez de depender de la purga manual. `index.css` y `critical.css` (cargados
   sin query string) y el propio `script.js` (no se sirve directo, solo es la fuente legible) siguen
   dependiendo de la purga manual si alguna vez cambian.
+- **`.htaccess`**: configuración para Hostinger (Apache/LiteSpeed). Replica las cabeceras/CSP y
+  caché de `_headers`, bloquea archivos ocultos e instrucciones de agentes y deshabilita el listado
+  de directorios. Al cambiar cabeceras compartidas, mantener ambos archivos sincronizados.
 - **SEO**: `sitemap.xml` y `robots.txt` en la raíz deben actualizarse manualmente si se agrega o
   quita una página (p. ej. un nuevo artículo en `articulos/`).
 - **Analytics**: Google tag (`gtag.js`, `G-SJXJT6BQH3`) embebido inline en cada página — presente
