@@ -24,13 +24,18 @@ el Dr. Jorge Muro — físico, especialista en liderazgo y negociación (credenc
 - Hostinger importa `juankal/jorgemuro`, rama `main`, directamente en `public_html`, con
   implementación automática activa. No hay build step ni subida manual de un ZIP.
 - Vista previa del nuevo alojamiento: `https://limegreen-deer-833586.hostingersite.com/`.
-- El dominio público continúa en Netlify detrás de Cloudflare; el cambio de DNS y la validación
-  del certificado SSL de Hostinger siguen pendientes. No dar la migración por terminada.
+- El dominio público ya se sirve desde Hostinger detrás de Cloudflare. Los registros A de `@` y
+  `www` apuntan a `147.93.14.104`, ambos con proxy activo; Cloudflare usa `Full (strict)` y el
+  Lifetime SSL de Hostinger está activo. `.htaccess` redirige el dominio sin `www` a
+  `https://www.jorgemuro.net`, conserva ruta/query y excluye `.well-known` para validar certificados.
 - El formulario cuenta con un endpoint puente en PHP (`contacto.php`) que valida
   los envíos y los despacha a Netlify Forms mediante cURL. De este modo funciona tanto
   en Hostinger como en Netlify sin requerir credenciales SMTP locales ni alterar el
   destinatario. Pruebas de validación y transporte en `tests/contacto_test.py`
   (protegido contra acceso público vía `.htaccess` y `_redirects`).
+- Conservar el sitio de Netlify y Forms mientras este puente siga en uso. En producción se
+  comprobó transporte con honeypot (`200 {"ok":true}`), validación y bloqueos; la recepción de un
+  correo real sigue sin comprobarse. La migración a SMTP directo es un trabajo posterior.
 
 Para previsualizar cambios localmente, sirve el directorio con cualquier servidor estático (p. ej.
 `npx serve .` o la extensión Live Server) y abre `index.html`.
