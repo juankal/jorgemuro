@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
       readTime: { en: '2 min read', es: '2 min de lectura' },
       image: 'images/paradoja-trabajador-senior.svg',
       thumbnail: 'images/paradoja-trabajador-senior.svg',
-      pdfLink: 'https://docs.google.com/document/d/1bxqLZMDXsmrF7qEDcRugL2MtRdqnlrtd/edit?usp=sharing',
+      pdfLink: '/documentos/paradoja-trabajador-senior.pdf',
       en: {
         tag: 'AI & Talent',
         title: "The Senior Worker's Paradox in the Age of AI",
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
       readTime: { en: '1 min read', es: '1 min de lectura' },
       image: 'images/resonancia-magnetica.svg',
       thumbnail: 'images/resonancia-magnetica.svg',
-      pdfLink: 'https://docs.google.com/document/d/1EnLLjtT21ILuz245UpgbE9mE1MrhMeOEYWGkuEsiPPQ/edit?tab=t.0',
+      pdfLink: '/documentos/resonancia-magnetica.pdf',
       en: {
         tag: 'Physics & Medicine',
         title: 'The Epic of Magnetic Resonance',
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
       image: 'images/ia-trabajo.webp',
       thumbnail: 'images/ia-trabajo-thumb.webp',
       thumbnail: 'images/ia-trabajo-thumb.webp',
-      pdfLink: 'https://drive.google.com/file/d/1iPWRU-EyuyIV_O37vQ4g8BbWz5j4Jlc9/view?usp=sharing',
+      pdfLink: '/documentos/ia-trabajo.pdf',
       en: {
         tag: 'AI & Work',
         title: 'AI & the Future of Work',
@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
       image: 'images/markov-montecarlo.webp',
       thumbnail: 'images/markov-montecarlo-thumb.webp',
       thumbnail: 'images/markov-montecarlo-thumb.webp',
-      pdfLink: 'https://drive.google.com/file/d/1YBjvFmIByX7sXqmBOni_PRlRjWSfOyUb/view?usp=sharing',
+      pdfLink: '/documentos/markov-montecarlo.pdf',
       en: {
         tag: 'Math & Risk',
         title: 'Markov Chains & Monte Carlo Method',
@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
       image: 'images/qatar.webp',
       thumbnail: 'images/qatar-thumb.webp',
       thumbnail: 'images/qatar-thumb.webp',
-      pdfLink: 'https://drive.google.com/file/d/1Bmqz-c6ItMFxyRNSP4NSkIImEivtTfN6/view?usp=sharing',
+      pdfLink: '/documentos/qatar.pdf',
       en: {
         tag: 'Geopolitics',
         title: 'The Day Qatar Burned',
@@ -194,8 +194,8 @@ document.addEventListener('DOMContentLoaded', () => {
       image: 'images/models.webp',
       thumbnail: 'images/models-thumb.webp',
       thumbnail: 'images/models-thumb.webp',
-      pdfLink: 'https://drive.google.com/drive/folders/1EtrrkFtdnwvt7h6Dz77M2H5IDTrSUXsf?usp=sharing',
-      pdfLinkLabel: { en: 'View Models Repository', es: 'Ver Repositorio de Modelos' },
+      pdfLink: { en: '/modelos-del-libro/?lang=en', es: '/modelos-del-libro/?lang=es' },
+      pdfLinkLabel: { en: 'View Book Models', es: 'Ver Modelos del Libro' },
       pdfLinkIcon: '📁',
       en: {
         tag: 'Models',

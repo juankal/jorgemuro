@@ -67,6 +67,14 @@ Para previsualizar cambios localmente, sirve el directorio con cualquier servido
   (el que carga `index.html`, sin minificador automático), la tarjeta `<noscript>` correspondiente en
   `index.html` (fallback sin JS — ya está incompleta respecto a los artículos reales, falta al menos
   `quantum-advances`) y `sitemap.xml`.
+- **Documentos y modelos en el dominio propio (2026-10-23):** `documentos/` contiene cinco PDF de
+  artículos y el PDF enlazado desde la sección de libros. Los botones usan rutas locales, sin Drive.
+  `/modelos-del-libro/` sirve `articulos/models.html` mediante reglas equivalentes en `.htaccess` y
+  `_redirects`; sus archivos originales de Analytica viven en `modelos-del-libro/archivos/`.
+  Google Drive conserva los originales de trabajo; los archivos publicados son copias que hay que
+  actualizar y versionar manualmente. PDF/ANA revalidan caché al reutilizar una URL. Comprueba
+  enlaces, destinos y sitemap con `python tests/local_downloads_test.py`; al cambiar el modelo,
+  actualiza también su descripción y tamaño en la página.
 - **i18n**: bilingüe ES/EN client-side, sin rutas separadas. El diccionario `translations` vive en
   `script.js` (~línea 495) y se aplica vía atributos `data-i18n`, `data-i18n-title`,
   `data-i18n-aria`, `data-i18n-href` sobre el DOM. El toggle de idioma (`#langToggle`) dispara el

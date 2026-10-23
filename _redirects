@@ -4,3 +4,5 @@
 /AGENTS.md /404 404!
 /agents.md /404 404!
 /tests/* /404 404!
+/modelos-del-libro/ /articulos/models.html 200
+/modelos-del-libro /modelos-del-libro/ 301
