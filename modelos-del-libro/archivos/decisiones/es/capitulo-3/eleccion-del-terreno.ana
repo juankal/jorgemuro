@@ -1,0 +1,321 @@
+{ Modelo de Analytica Untitled, encoding="UTF-8" }
+SoftwareVersion 7.2.1
+
+
+{ System Variables with non-default values: }
+SampleSize := 1000
+TypeChecking := 1
+Checking := 1
+SaveOptions := 2
+SaveValues := 0
+{!40400|Sys_WindowsMaximized := 1}
+
+{!-50299|DiagramColor Model: 0x00ffffff}
+{!-50299|DiagramColor Module: 0x00ffffff}
+{!-50299|DiagramColor LinkModule: 0x00ffffff}
+{!-50299|DiagramColor Library: 0x00ffffff}
+{!-50299|DiagramColor LinkLibrary: 0x00ffffff}
+{!-50299|DiagramColor Form: 0x00ffffff}
+NodeInfo FormNode: 1,0,0,,0,0,,,,0,,,0
+{!-50299|NodeColor Text: 0x00f3f3f3}
+
+
+
+
+Model Untitled
+Title: Elección del terreno — Distribuidora S.A.
+Description: Elección del terreno del centro de distribución de Distribuidora S.A. Criterio: minimizar el VPN esperado de costos, sumando costo inicial en t=0 y costo logístico anual constante al final de los años 1 a 10, descontado al 10% anual. Estados del suelo ponderados por 0.25, 0.60 y 0.15. Se interpretan los importes monetarios de la etapa 1 como US$ para mantener coherencia con los costos logísticos dados. Sin ingresos, inflación explícita ni valor residual. Documentación financiera: https://docs.analytica.com/index.php/Npv y https://docs.analytica.com/index.php/Financial_functions
+Author: Jorge Muro
+Date: Fri, Oct 9, 2026 2:09 PM
+DiagState: 2,0,1,738,346,17,10
+WindState: 2,98,82,720,350
+FontStyle: Arial,15
+FileInfo: 0,Model Untitled,2,2,0,0,D:\DATA JORGE\Documents\0000 Libro estadística con Assista\Cap 3.5\Elección del terreno — Distribuidora S.A. primera y segunda parte.ana
+{!70104|Att_GUID: 0f3e98c2-f090-4127-98d0-34cca1def3c2 cb7e36e6-87ba-4bf7-8173-264659baab2c}
+
+Index Sitio
+Title: Sitio
+Description: Alternativas de terreno para el nuevo centro de distribución.
+Definition: ['Sitio A','Sitio B']
+NodeLocation: 160,64,2
+NodeSize: 80,24
+NodeInfo: 1,,,,,,1,0,,,0,,,0
+Aliases: Alias Sitio_en_Paso_2
+NodeFont: Arial Rounded MT Bold,15
+
+Index Estado_del_suelo
+Title: Estado del suelo
+Description: Estados posibles del suelo utilizados para evaluar el costo adicional de cimentación.
+Definition: ['Adecuado','Requiere refuerzo','Peor caso']
+NodeLocation: 400,64,2
+NodeSize: 96,24
+NodeInfo: 1,,,,,,1,0,,,0,,,0
+Aliases: Alias Estado_del_suelo_en_Paso_2
+NodeFont: Arial Rounded MT Bold,15
+
+Variable Precio_del_terreno
+Title: Precio del terreno
+Units: US$
+Description: Precio de adquisición del terreno por Sitio.
+Definition: Table(Sitio)(2100000, 4350000)
+NodeLocation: 160,200,2
+NodeSize: 88,24
+NodeInfo: 1,,,,,,1,0,,,0,,,0
+NodeFont: Arial Rounded MT Bold,15
+
+Variable Costo_de_construcción
+Title: Costo de construcción
+Units: US$
+Description: Costo de construcción común a ambos sitios, sin cimentación.
+Definition: 14200000
+NodeLocation: 160,272,2
+NodeSize: 88,24
+NodeInfo: 1,,,,,,1,0,,,0,,,0
+NodeFont: Arial Rounded MT Bold,15
+
+Variable Cimentación_base
+Title: Cimentación base
+Units: US$
+Description: Costo base de cimentación común a ambos sitios y estados del suelo.
+Definition: 900000
+NodeLocation: 160,344,2
+NodeSize: 88,24
+NodeInfo: 1,,,,,,1,0,,,0,,,0
+NodeFont: Arial Rounded MT Bold,15
+
+Variable Costo_adicional_de_cimentación
+Title: Costo adicional de cimentación
+Units: US$
+Description: Costo adicional a la cimentación base por Sitio y Estado del suelo. En Sitio B es cero en todos los estados.
+Definition: Table(Sitio, Estado_del_suelo)(~
+    0, 650000, 1600000,~
+    0, 0, 0~
+)
+NodeLocation: 160,416,2
+NodeSize: 96,24
+NodeInfo: 1,,,,,,1,0,,,0,,,0
+NodeFont: Arial Rounded MT Bold,15
+
+Variable Costo_inicial
+Title: Costo inicial
+Units: US$
+Description: Costo total inicial por Sitio y Estado del suelo: terreno, construcción, cimentación base y cimentación adicional.
+Definition: Precio_del_terreno~
+    + Costo_de_construcción~
+    + Cimentación_base~
+    + Costo_adicional_de_cimentación
+NodeLocation: 400,312,2
+NodeSize: 96,24
+NodeInfo: 1,,,,,,1,0,,,0,,,0
+ValueState: 2,0,0,400,600,,MIDM
+Aliases: Alias Costo_inicial_en_Paso_2
+NodeFont: Arial Rounded MT Bold,15
+
+Chance Probabilidad_del_suelo
+Title: Probabilidad del suelo
+Units: probabilidad
+Description: Probabilidades de los estados del suelo: 0.25, 0.60 y 0.15. Tabla de ponderaciones que suma 1; no es una muestra simulada del estado del suelo.
+Definition: Table(Estado_del_suelo)(0.25, 0.60, 0.15)
+NodeLocation: 400,136,2
+NodeSize: 96,24
+NodeInfo: 1,,,,,,1,0,,,0,,,0
+Aliases: Alias Probabilidad_del_suelo_en_Paso_2
+NodeFont: Arial Rounded MT Bold,15
+
+Variable Costo_inicial_esperado
+Title: Costo inicial esperado
+Units: US$
+Description: Costo inicial esperado por Sitio, ponderando cada estado del suelo por su probabilidad.
+Definition: Sum(~
+    Costo_inicial * Probabilidad_del_suelo,~
+    Estado_del_suelo~
+)
+NodeLocation: 400,216,2
+NodeSize: 96,24
+NodeInfo: 1,,,,,,1,0,,,0,,,0
+ValueState: 2,0,0,400,600,,MIDM
+NodeFont: Arial Rounded MT Bold,15
+
+Decision Sitio_a_comprar
+Title: Sitio a comprar
+Description: Terreno elegido para el centro de distribución. Alternativas definidas por el índice Sitio.
+Definition: Choice(Self, 1)
+NodeLocation: 688,480,2
+NodeSize: 96,32
+NodeInfo: 1,,,,,,1,0,,,0,,,0
+NodeFont: Arial Rounded MT Bold,15
+{!40300|DomainExpr: Sitio}
+
+Objective Costo_inicial_esperado_del_sitio_elegido
+Title: VPN esperado del sitio elegido
+Units: US$
+Description: Objetivo a minimizar: VPN esperado del Sitio a comprar. Sustituye el criterio de costo inicial esperado; conserva su identificador anterior para no romper referencias. La elección se compara entre Sitio A y Sitio B; no se ejecuta un optimizador automático.
+Definition: VPN_esperado[Sitio = Sitio_a_comprar]
+NodeLocation: 976,312,2
+NodeSize: 96,32
+NodeInfo: 1,,,,,,1,0,,,0,,,0
+ValueState: 2,40,50,400,300,0,MIDM
+NodeColor: 0x00990000
+NodeFont: Arial Rounded MT Bold,16
+NumberFormat: 2,F,,0,1
+NodeFontColor: 0x00ffffff
+
+{!50500|ArrowClass Arrow1021946283}
+{!50500|Att_HeadNode: Costo_inicial_esperado_del_sitio_elegido}
+{!50500|Att_TailNode: Sitio_a_comprar}
+{!50500|Att_ArrowWayPoints: [Null,Null]}
+{!50500|Att_ArrowProperties: 0}
+
+Text Documentación_financiera
+Title: Documentación financiera — VPN de costos
+Description: CRITERIO: minimizar el VPN esperado de costos del terreno elegido.~
+VALOR PRESENTE: VP = suma de Costo anual / (1+r)^t, para t = 1,...,10.~
+Pagos iguales al final de cada año: factor = [1−(1+r)^(-n)]/r = 6.1445671057.~
+TASA: 10% efectivo anual; supuesto de costo de oportunidad, no tasa estimada. Flujos y tasa deben ser coherentes en inflación y moneda.~
+HORIZONTE: 10 años de análisis, con diez pagos; no implica vida física de diez años. Sin valor residual ni costos posteriores.~
+VPN de costos = costo inicial en t=0 + VP logístico. Costos positivos: se minimizan; no se incluyen ingresos.~
+US$: se interpretan en dólares los importes de la etapa 1. Logística constante: A 2.1 M/año; B 2.6 M/año.~
+ESPERANZA: ponderar estados del suelo con 0.25, 0.60 y 0.15; no requiere simulación.~
+VERIFICACIÓN (redondeo a US$): A 30,733,591; B 35,425,874. Preferido: Sitio A.~
+Fuentes: https://docs.analytica.com/index.php/Npv~
+https://docs.analytica.com/index.php/Financial_functions~
+PASO 2: agrega reparto descontado al 10% durante 10 años; mantiene preferido al Sitio A. Ver el módulo «Paso 2. Costo de reparto y VPN» y su documentación propia.
+NodeLocation: 568,760,1
+NodeSize: 528,192
+NodeInfo: 1,,,,,1,1,0,,,,,0,0
+NodeColor: 0xffadd8e6
+NodeFont: ,14
+NodeFontColor: 0xff000000
+
+Module Paso_2_Costo_de_reparto_y_VPN
+Title: Paso 2. Costo de reparto y VPN
+Description: Agrega el valor presente del costo anual de reparto al costo inicial por sitio y estado del suelo. Tasa efectiva anual del 10%, horizonte de 10 años y pagos al final de cada año. Calcula el VPN esperado para comparar los sitios sin cambiar los costos ni las probabilidades del paso 1.
+NodeLocation: 688,312,2
+NodeSize: 128,32
+NodeInfo: 1,,,,,,,0,,,,,,0
+DiagState: 2,0,0,752,372,17,10
+
+Variable Costo_logístico_anual
+Title: Costo logístico anual
+Units: US$/año
+Description: Costo de reparto anual constante por Sitio: US$ 2,100,000 en A y US$ 2,600,000 en B. Se paga al final de cada año, durante el Horizonte. No incluye inflación, crecimiento ni valor residual.
+Definition: Table(Sitio)(2100000, 2600000)
+NodeLocation: 384,296,2
+NodeSize: 112,24
+NodeInfo: 1,,,,,,,0,,,,,,0
+
+Variable Tasa_de_descuento
+Title: Tasa de descuento
+Units: fracción anual
+Description: Tasa efectiva anual del 10% para convertir costos futuros a su equivalente en el momento inicial. Representa el costo de oportunidad del capital; aquí es un supuesto dado, no una tasa estimada. La tasa y los flujos deben ser coherentes en moneda y tratamiento de inflación (ambos reales o ambos nominales). Fuente: https://docs.analytica.com/index.php/Financial_functions
+Definition: 10%
+NodeLocation: 128,160,2
+NodeSize: 96,24
+NodeInfo: 1,,,,,,,0,,,,,,0
+NumberFormat: 2,%,,0
+
+Variable Horizonte
+Title: Horizonte
+Units: años
+Description: Horizonte de análisis de 10 años: se incluyen diez pagos anuales al final de los años 1 a 10. No es necesariamente la vida física del centro; es el período elegido para comparar alternativas. No se consideran costos posteriores ni valor residual al final. Fuente: https://docs.analytica.com/index.php/Financial_functions
+Definition: 10
+NodeLocation: 128,240,2
+NodeSize: 96,24
+NodeInfo: 1,,,,,,,0,,,,,,0
+NumberFormat: 2,I
+
+Variable Factor_de_valor_presente
+Title: Factor de valor presente
+Units: adimensional
+Description: Factor de una anualidad vencida constante: suma de (1+r)^(-t) para t=1,...,Horizonte. Equivale a [1-(1+r)^(-Horizonte)]/r; con tasa cero es Horizonte. Para 10% y 10 años vale 6.1445671057. El primer pago ocurre al final del año 1, no hoy. Fuente: https://docs.analytica.com/index.php/Npv
+Definition: If Tasa_de_descuento = 0 Then~
+    Horizonte~
+Else~
+    (1 - (1 + Tasa_de_descuento)^(-Horizonte))~
+        / Tasa_de_descuento
+NodeLocation: 384,200,2
+NodeSize: 112,24
+NodeInfo: 1,,,,,,,0,,,,,,0
+
+Variable Valor_presente_del_costo_logístico
+Title: Valor presente del costo logístico
+Units: US$
+Description: Costo logístico de los diez pagos anuales expresado en dólares del momento inicial: costo anual constante por Sitio multiplicado por el factor de anualidad vencida. Los costos se registran positivos para minimizar su suma, no con la convención de flujos negativos de Npv(). Fuente: https://docs.analytica.com/index.php/Npv
+Definition: Costo_logístico_anual * Factor_de_valor_presente
+NodeLocation: 640,248,2
+NodeSize: 112,32
+NodeInfo: 1,,,,,,,0,,,,,,0
+NumberFormat: 2,F,,0,1
+
+Variable VPN_de_costos
+Title: VPN de costos
+Units: US$
+Description: Valor presente total de costos por Sitio y Estado del suelo: desembolso inicial en t=0 (sin descuento) más valor presente de los pagos logísticos en t=1,...,10. No es una medida de rentabilidad: no incluye ingresos. Se minimiza el costo positivo. Fuente: https://docs.analytica.com/index.php/Npv
+Definition: Costo_inicial + Valor_presente_del_costo_logístico
+NodeLocation: 640,400,2
+NodeSize: 112,24
+NodeInfo: 1,,,,,,,0,,,,,,0
+NumberFormat: 2,F,,0,1
+
+Variable VPN_esperado
+Title: VPN esperado
+Units: US$
+Description: Valor esperado del VPN de costos por Sitio, ponderando cada Estado del suelo con su probabilidad 0.25, 0.60 o 0.15. Elimina la dimensión Estado del suelo y conserva Sitio. Es una esperanza calculada directamente, no una simulación. Comparar y minimizar entre sitios.
+Definition: Sum(~
+    VPN_de_costos * Probabilidad_del_suelo,~
+    Estado_del_suelo~
+)
+NodeLocation: 896,400,2
+NodeSize: 96,24
+NodeInfo: 1,,,,,,,0,,,,,,0
+NumberFormat: 2,F,,0,1
+
+Text Documentación_del_Paso_2
+Title: Paso 2 — Costo de reparto y VPN
+Description: QUÉ AGREGA~
+Suma al costo inicial del paso 1 el valor presente del reparto: Sitio A, US$ 2,1 millones/año; Sitio B, US$ 2,6 millones/año. Conserva los costos y las probabilidades del suelo del paso 1 (0,25; 0,60; 0,15).~
+~
+SUPUESTOS NUEVOS~
+Tasa de descuento: 10% efectivo anual, como costo de oportunidad supuesto. Horizonte: 10 años, con pagos iguales al final de los años 1 a 10. Costo inicial en el año 0. Sin ingresos, inflación explícita, valor residual ni costos posteriores; importes en US$ y tasa coherente con los flujos.~
+~
+CÁLCULO Y RESULTADO~
+VP del reparto = costo anual × [1 − (1 + 0,10)^(-10)] / 0,10; factor = 6,144567.~
+VPN de costos = costo inicial + VP del reparto. El VPN esperado pondera los estados del suelo.~
+Sitio A: US$ 30.733.591; Sitio B: US$ 35.425.874 (redondeados).~
+Criterio: minimizar costos. Preferido: Sitio A, con US$ 4.692.284 menos de VPN esperado.~
+Referencia: https://docs.analytica.com/index.php/Npv
+NodeLocation: 512,752,1
+NodeSize: 488,192
+NodeInfo: 1,,,,,1,1,0,,,,,0,0
+NodeColor: 0xffadd8e6
+NodeFont: ,14
+NodeFontColor: 0xff000000
+
+Alias Costo_inicial_en_Paso_2
+NodeLocation: 384,400,2
+NodeSize: 112,24
+NodeInfo: 1,,,,,,1,0,,,0,,,0
+Original: Costo_inicial
+
+Alias Probabilidad_del_suelo_en_Paso_2
+NodeLocation: 896,504,2
+NodeSize: 96,24
+NodeInfo: 1,,,,,,1,0,,,0,,,0
+Original: Probabilidad_del_suelo
+
+Alias Sitio_en_Paso_2
+NodeLocation: 128,64,2
+NodeSize: 80,24
+NodeInfo: 1,,,,,,1,0,,,0,,,0
+Original: Sitio
+
+Alias Estado_del_suelo_en_Paso_2
+NodeLocation: 384,64,2
+NodeSize: 96,24
+NodeInfo: 1,,,,,,1,0,,,0,,,0
+Original: Estado_del_suelo
+
+Close Paso_2_Costo_de_reparto_y_VPN
+
+Close Untitled
+

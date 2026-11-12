@@ -73,11 +73,14 @@ Para previsualizar cambios localmente, sirve el directorio con cualquier servido
   del diccionario JS. Los enlaces apuntan a la portada con idioma/anchor y a `/modelos` o
   `/models` según el idioma. Al editar el footer, replicar el bloque en todos los HTML y verificar
   su igualdad con `python tests/local_downloads_test.py`.
-- **Segunda edición del libro (2026-11-12):** `modelos.html` y
+- **Modelos de «Decisiones: el Valor de lo que no Sabes» (2026-11-12):** `modelos.html` y
   `models.html` son catálogos independientes para las ediciones española e inglesa, accesibles
   mediante `/modelos` y `/models` (sin barra final; reglas en `.htaccess` y `_redirects`).
-  Cada página fija su idioma sin JavaScript y enlaza la otra edición. Todavía no tienen archivos:
-  añadir secciones por capítulo, nombre y enlaces con `download` solo cuando el cliente entregue
+  Cada página fija su idioma sin JavaScript y enlaza la otra edición. `/modelos` tiene un modelo
+  del capítulo 3, «Elección del terreno — Distribuidora S.A. primera y segunda parte»; la copia
+  original está en `modelos-del-libro/archivos/decisiones/es/capitulo-3/`. Los cuatro modelos
+  «Paso 1» a «Paso 4» y todos los modelos en inglés siguen pendientes. No inventar traducción
+  del título al inglés. Añadir secciones por capítulo, nombre y enlaces `download` cuando entregue
   los `.ana` e identifique la edición. No asignar el modelo antiguo a la segunda edición sin
   confirmación. Conservar `/modelos-del-libro/` y su descarga existente. Mantener las dos rutas
   cortas estables porque se usarán en los prefacios; no sustituirlas por parámetros de idioma.
