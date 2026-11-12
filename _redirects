@@ -6,3 +6,7 @@
 /tests/* /404 404!
 /modelos-del-libro/ /articulos/models.html 200
 /modelos-del-libro /modelos-del-libro/ 301
+/modelos/ /modelos 301
+/modelos /modelos.html 200
+/models/ /models 301
+/models /models.html 200

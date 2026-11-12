@@ -67,6 +67,20 @@ Para previsualizar cambios localmente, sirve el directorio con cualquier servido
   (el que carga `index.html`, sin minificador automático), la tarjeta `<noscript>` correspondiente en
   `index.html` (fallback sin JS — ya está incompleta respecto a los artículos reales, falta al menos
   `quantum-advances`) y `sitemap.xml`.
+- **Footer común (2026-11-12):** todas las páginas HTML usan el mismo bloque de footer
+  completo de la portada: perfil, redes, navegación, recursos, temas, copyright y crédito de
+  Soluciones Takana. Los textos ES/EN usan `.lang-es`/`.lang-en` según `html[lang]`, sin depender
+  del diccionario JS. Los enlaces apuntan a la portada con idioma/anchor y a `/modelos` o
+  `/models` según el idioma. Al editar el footer, replicar el bloque en todos los HTML y verificar
+  su igualdad con `python tests/local_downloads_test.py`.
+- **Segunda edición del libro (2026-11-12):** `modelos.html` y
+  `models.html` son catálogos independientes para las ediciones española e inglesa, accesibles
+  mediante `/modelos` y `/models` (sin barra final; reglas en `.htaccess` y `_redirects`).
+  Cada página fija su idioma sin JavaScript y enlaza la otra edición. Todavía no tienen archivos:
+  añadir secciones por capítulo, nombre y enlaces con `download` solo cuando el cliente entregue
+  los `.ana` e identifique la edición. No asignar el modelo antiguo a la segunda edición sin
+  confirmación. Conservar `/modelos-del-libro/` y su descarga existente. Mantener las dos rutas
+  cortas estables porque se usarán en los prefacios; no sustituirlas por parámetros de idioma.
 - **Documentos y modelos en el dominio propio (2026-10-23):** `documentos/` contiene cinco PDF de
   artículos y el PDF enlazado desde la sección de libros. Los botones usan rutas locales, sin Drive.
   `/modelos-del-libro/` sirve `articulos/models.html` mediante reglas equivalentes en `.htaccess` y

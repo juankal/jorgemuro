@@ -10,6 +10,8 @@ DirectoryIndex index.html
   RewriteRule ^(?:AGENTS|CLAUDE)\.md$ - [R=404,L,NC]
   RewriteRule ^_(?:headers|redirects)$ - [R=404,L,NC]
   RewriteRule ^tests(?:/|$) - [R=404,L,NC]
+  RewriteRule ^(modelos|models)/$ /$1 [R=301,L]
+  RewriteRule ^(modelos|models)$ $1.html [L]
   RewriteRule ^modelos-del-libro/?$ articulos/models.html [L]
 </IfModule>
 
